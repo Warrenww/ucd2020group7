@@ -8,9 +8,10 @@ import {
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
+import Sidebar from './Components/Sidebar.js';
+
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-import Sidebar from './Components/Sidebar.js';
 
 const styles = {
   App: {
@@ -39,6 +40,8 @@ function App(props) {
     const {id} = useParams();
     return <h1>Milestone {id}</h1>;
   }
+  const Home = props => (<h1>Home</h1>);
+  const About = props => (<h1>About</h1>);
   useEffect(()=>{
     console.log(process.env.PUBLIC_URL);
   });
@@ -56,19 +59,19 @@ function App(props) {
           </div>
         </Toolbar>
       </AppBar>
-      <Sidebar
-        open={open}
-        handleDrawerOpen={handleDrawerOpen}
-        handleDrawerClose={handleDrawerClose}
-      />
 
       <Router basename={process.env.PUBLIC_URL}>
+          <Sidebar
+            open={open}
+            handleDrawerOpen={handleDrawerOpen}
+            handleDrawerClose={handleDrawerClose}
+          />
           <Switch>
             <Route exact path="/">
-              <h1>Home</h1>
+              <Home />
             </Route>
             <Route path="/about">
-              <h1>about</h1>
+              <About />
             </Route>
             <Route path="/milestone/:id">
               <Milestone />

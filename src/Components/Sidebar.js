@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import Avatar from '@material-ui/core/Avatar';
 import List from '@material-ui/core/List';
@@ -7,7 +7,9 @@ import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
+
 import HomeIcon from '@material-ui/icons/Home';
+import InfoIcon from '@material-ui/icons/Info';
 
 const styles = {
   Menu: {
@@ -17,9 +19,9 @@ const styles = {
     color: "#000",
     textDecoration: "none",
   },
-}
+};
+
 const DrawerContent = ({handleDrawerClose}) => (
-  <Router basename={process.env.PUBLIC_URL}>
     <div
       role="presentation"
       onClick={handleDrawerClose}
@@ -46,10 +48,16 @@ const DrawerContent = ({handleDrawerClose}) => (
       </List>
       <Divider />
       <List>
-
+        <Link style={styles.link} to="/about">
+          <ListItem button>
+            <ListItemIcon>
+              <InfoIcon />
+            </ListItemIcon>
+            <ListItemText primary="About" />
+          </ListItem>
+        </Link>
       </List>
     </div>
-  </Router>
 );
 
 const Sidebar = ({
