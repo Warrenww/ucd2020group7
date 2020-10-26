@@ -3,43 +3,44 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  useParams,
 } from "react-router-dom";
+import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Button from '@material-ui/core/Button';
-import Sidebar from './Components/Sidebar.js';
+
+import Sidebar from './Components/Sidebar';
+import Milestone from './Milestone';
+
 
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 
-const styles = {
+const useStyles = makeStyles({
   App: {
     backgroundColor: "#ccc",
     height: "100vh",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    justifyContent: "center",
     fontSize: "1em",
     color: "white",
     overflowY: "scroll",
+    '&::-webkit-scrollbar': {
+      width: 0,
+    },
   },
   AppBar: {
-    backgroundColor: "#33333333",
+    backgroundColor: "#33333388",
     backdropFilter: "blur(5px)",
   },
-};
+});
 
 function App(props) {
+  const classes = useStyles();
   const [open, setOpen] = useState(false);
   const handleDrawerOpen = _ => setOpen(true);
   const handleDrawerClose = _ => setOpen(false);
 
-  const Milestone = props => {
-    const {id} = useParams();
-    return <h1>Milestone {id}</h1>;
-  }
   const Home = props => (<h1>Home</h1>);
   const About = props => (<h1>About</h1>);
   useEffect(()=>{
@@ -48,8 +49,8 @@ function App(props) {
 
 
   return (
-    <div style={styles.App}>
-      <AppBar position="fixed" style={styles.AppBar}>
+    <div className={classes.App}>
+      <AppBar position="fixed" className={classes.AppBar}>
         <Toolbar>
           <IconButton edge="start" color="inherit" aria-label="menu" onClick={handleDrawerOpen}>
             <MenuIcon/>

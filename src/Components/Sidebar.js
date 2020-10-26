@@ -19,7 +19,27 @@ const styles = {
     color: "#000",
     textDecoration: "none",
   },
+  avatar: {
+    width: 24,
+    height: 24,
+    fontSize: 12,
+  },
 };
+
+const ListItemGenerator = ({
+  link,
+  icon,
+  text,
+}) => (
+  <Link style={styles.link} to={link}>
+    <ListItem button>
+      <ListItemIcon>
+        {icon}
+      </ListItemIcon>
+      <ListItemText primary={text} />
+    </ListItem>
+  </Link>
+);
 
 const DrawerContent = ({handleDrawerClose}) => (
     <div
@@ -29,33 +49,24 @@ const DrawerContent = ({handleDrawerClose}) => (
       style={styles.Menu}
     >
       <List>
-        <Link style={styles.link} to="/">
-          <ListItem button>
-            <ListItemIcon>
-              <HomeIcon />
-            </ListItemIcon>
-            <ListItemText primary="Home page" />
-          </ListItem>
-        </Link>
-        <Link style={styles.link} to="/milestone/1">
-          <ListItem button>
-            <ListItemIcon>
-              <Avatar>M1</Avatar>
-            </ListItemIcon>
-            <ListItemText primary="Milestone 1" />
-          </ListItem>
-        </Link>
+        <ListItemGenerator
+          link='/'
+          icon={<HomeIcon />}
+          text="Home Page"
+        />
+        <ListItemGenerator
+          link='/milestone/1'
+          icon={<Avatar style={styles.avatar}>M1</Avatar>}
+          text="Milestone 1"
+        />
       </List>
       <Divider />
       <List>
-        <Link style={styles.link} to="/about">
-          <ListItem button>
-            <ListItemIcon>
-              <InfoIcon />
-            </ListItemIcon>
-            <ListItemText primary="About" />
-          </ListItem>
-        </Link>
+        <ListItemGenerator
+          link='/about'
+          icon={<InfoIcon />}
+          text="About"
+        />
       </List>
     </div>
 );
