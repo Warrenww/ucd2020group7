@@ -26,6 +26,7 @@ const useStyles = makeStyles({
     fontSize: "1em",
     color: "white",
     overflowY: "scroll",
+    scrollBehavior: "smooth",
     '&::-webkit-scrollbar': {
       width: 0,
     },
@@ -50,7 +51,7 @@ function App(props) {
     const params = (new URL(document.location)).searchParams;
     const path = params.get('path');
     if (path){
-    setRedirect(path);  
+    setRedirect(path);
     }
   },[])
 
