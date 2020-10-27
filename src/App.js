@@ -3,6 +3,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  Redirect,
 } from "react-router-dom";
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -38,15 +39,20 @@ const useStyles = makeStyles({
 function App(props) {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
+  const [redirect, setRedirect] = useState(false);
   const handleDrawerOpen = _ => setOpen(true);
   const handleDrawerClose = _ => setOpen(false);
 
   const Home = props => (<h1>Home</h1>);
   const About = props => (<h1>About</h1>);
-  useEffect(()=>{
-    console.log(process.env.PUBLIC_URL);
-  });
 
+  useEffect(()=>{
+    const params = (new URL(document.location)).searchParams;
+    const path = params.get('path');
+    if (path){
+    setRedirect(path);  
+    }
+  },[])
 
   return (
     <div className={classes.App}>
@@ -67,6 +73,7 @@ function App(props) {
             handleDrawerOpen={handleDrawerOpen}
             handleDrawerClose={handleDrawerClose}
           />
+          {redirect ? <Redirect to={redirect} /> : null}
           <Switch>
             <Route exact path="/">
               <Home />
