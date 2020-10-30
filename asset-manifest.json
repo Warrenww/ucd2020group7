@@ -1,26 +1,27 @@
 {
   "files": {
     "main.css": "/ucd2020group7/static/css/main.69eda509.chunk.css",
-    "main.js": "/ucd2020group7/static/js/main.ee357e24.chunk.js",
-    "main.js.map": "/ucd2020group7/static/js/main.ee357e24.chunk.js.map",
+    "main.js": "/ucd2020group7/static/js/main.4831d820.chunk.js",
+    "main.js.map": "/ucd2020group7/static/js/main.4831d820.chunk.js.map",
     "runtime-main.js": "/ucd2020group7/static/js/runtime-main.a75d693d.js",
     "runtime-main.js.map": "/ucd2020group7/static/js/runtime-main.a75d693d.js.map",
-    "static/js/2.e8d23f39.chunk.js": "/ucd2020group7/static/js/2.e8d23f39.chunk.js",
-    "static/js/2.e8d23f39.chunk.js.map": "/ucd2020group7/static/js/2.e8d23f39.chunk.js.map",
+    "static/js/2.22aaa8f5.chunk.js": "/ucd2020group7/static/js/2.22aaa8f5.chunk.js",
+    "static/js/2.22aaa8f5.chunk.js.map": "/ucd2020group7/static/js/2.22aaa8f5.chunk.js.map",
     "index.html": "/ucd2020group7/index.html",
-    "precache-manifest.707eb8ac52cc352763cae602112ef85e.js": "/ucd2020group7/precache-manifest.707eb8ac52cc352763cae602112ef85e.js",
+    "precache-manifest.b6244015ec511ea688f5632f7c9d7fbd.js": "/ucd2020group7/precache-manifest.b6244015ec511ea688f5632f7c9d7fbd.js",
     "service-worker.js": "/ucd2020group7/service-worker.js",
     "static/css/main.69eda509.chunk.css.map": "/ucd2020group7/static/css/main.69eda509.chunk.css.map",
-    "static/js/2.e8d23f39.chunk.js.LICENSE.txt": "/ucd2020group7/static/js/2.e8d23f39.chunk.js.LICENSE.txt",
-    "static/media/cabinet.jpg": "/ucd2020group7/static/media/cabinet.5e85e8ad.jpg",
-    "static/media/discussion.jpg": "/ucd2020group7/static/media/discussion.a4b47c08.jpg",
-    "static/media/phone_older.jpg": "/ucd2020group7/static/media/phone_older.8fcea0c9.jpg",
-    "static/media/walking.jpg": "/ucd2020group7/static/media/walking.73cbfa12.jpg"
+    "static/js/2.22aaa8f5.chunk.js.LICENSE.txt": "/ucd2020group7/static/js/2.22aaa8f5.chunk.js.LICENSE.txt",
+    "static/media/cabinet.jpg": "/ucd2020group7/static/media/cabinet.f4e17f44.jpg",
+    "static/media/discussion-2.jpg": "/ucd2020group7/static/media/discussion-2.9542e2f0.jpg",
+    "static/media/discussion.jpg": "/ucd2020group7/static/media/discussion.10203450.jpg",
+    "static/media/phone_older.jpg": "/ucd2020group7/static/media/phone_older.2a336c74.jpg",
+    "static/media/walking.jpg": "/ucd2020group7/static/media/walking.531e3d87.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.a75d693d.js",
-    "static/js/2.e8d23f39.chunk.js",
+    "static/js/2.22aaa8f5.chunk.js",
     "static/css/main.69eda509.chunk.css",
-    "static/js/main.ee357e24.chunk.js"
+    "static/js/main.4831d820.chunk.js"
   ]
 }
