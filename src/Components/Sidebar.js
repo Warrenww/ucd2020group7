@@ -59,6 +59,16 @@ const DrawerContent = ({handleDrawerClose}) => (
           icon={<Avatar style={styles.avatar}>M1</Avatar>}
           text="Milestone 1"
         />
+        <ListItemGenerator
+          link='/milestone/2'
+          icon={<Avatar style={styles.avatar}>M2</Avatar>}
+          text="Milestone 2"
+        />
+        <ListItemGenerator
+          link='/milestone/3'
+          icon={<Avatar style={styles.avatar}>M3</Avatar>}
+          text="Milestone 3"
+        />
       </List>
       <Divider />
       <List>

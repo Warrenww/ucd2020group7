@@ -15,10 +15,11 @@ const useStyles = makeStyles({
     paddingTop: 64,
     boxShadow: '0px 0px 10px 0px #333',
     backgroundAttachment: 'fixed',
+    backgroundPosition: 'center',
     '& .BG': {
       width: '100%',
       height: '100%',
-      background: '#33333333',
+      background: '#333333aa',
       color: 'white',
       backdropFilter: 'blur(5px)',
       position: 'absolute',
@@ -45,7 +46,7 @@ const Header = ({
       <div className={classes.header}>
         <div className='BG'>
           <h1>{title}</h1>
-          <Container>
+          <Container maxWidth="sm">
             {intro}
           </Container>
         </div>
