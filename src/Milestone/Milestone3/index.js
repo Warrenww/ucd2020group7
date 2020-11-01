@@ -18,6 +18,8 @@ import PersonIcon from '@material-ui/icons/Person';
 import { steps, contents, behaviorVariables } from './data';
 import personaImage1 from '../../images/persona 1.png';
 import personaImage2 from '../../images/persona 2.png';
+import senarioImage1 from '../../images/senario 1.png';
+import senarioImage2 from '../../images/senario 2.png';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -189,28 +191,27 @@ const Milestone3 = props => {
             </Paper>
         </Grid>
       </Slide>
+
+      <Slide direction="left" in={activeStep === 2} mountOnEnter unmountOnExit>
+        <Grid item xs={12} md={6}>
+        <Paper className={classes.personaImage} onClick={() => handleBackDrop(senarioImage1, true)}>
+          <img src={senarioImage1} alt="senario 1"/>
+        </Paper>
+        </Grid>
+      </Slide>
+      <Slide direction="left" in={activeStep === 2} mountOnEnter unmountOnExit>
+        <Grid item xs={12} md={6}>
+        <Paper className={classes.personaImage} onClick={() => handleBackDrop(senarioImage2, true)}>
+          <img src={senarioImage2} alt="senario 2"/>
+        </Paper>
+        </Grid>
+      </Slide>
+
       <Backdrop className={classes.backdrop} open={showPersona} onClick={() => handleBackDrop(null, false)}>
         <Zoom in={showPersona}>
           <img src={activePersona} alt="persona big" width="80%"/>
         </Zoom>
       </Backdrop>
-
-      <Slide direction="left" in={activeStep === 2} mountOnEnter unmountOnExit>
-        <Grid item xs={12} md={6}>
-            <Paper className={classes.paper}>
-              <h2>Senario 1</h2>
-
-            </Paper>
-        </Grid>
-      </Slide>
-      <Slide direction="left" in={activeStep === 2} mountOnEnter unmountOnExit>
-        <Grid item xs={12} md={6}>
-            <Paper className={classes.paper}>
-              <h2>Senario 2</h2>
-
-            </Paper>
-        </Grid>
-      </Slide>
     </Grid>
   );
 };

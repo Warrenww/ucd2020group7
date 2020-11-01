@@ -364,10 +364,10 @@ const contents = [
   </div>,
   <div>
     根據前一個步驟得到的分群，我們從本次訪談的受訪者得到兩種Persona:
-    <h3>Persona 1</h3>
 
   </div>,
   <div>
+  再根據Persona，我們分別描述了他們可能遇到的困境與如何透過我們的APP解決困難的流程:
 
   </div>,
 ];
