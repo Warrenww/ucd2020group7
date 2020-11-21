@@ -6,13 +6,13 @@ import discussionImage from '../images/discussion.jpg';
 
 const useStyles = makeStyles({
   header: {
-    minHeight: 200,
+    minHeight: 300,
     backgroundImage: props => `url(${props.image})`,
     width: '100vw',
     backgroundSize: 'cover',
     marginBottom: 20,
     position: 'relative',
-    paddingTop: 64,
+    paddingTop: 72,
     boxShadow: '0px 0px 10px 0px #333',
     backgroundAttachment: 'fixed',
     backgroundPosition: 'center',

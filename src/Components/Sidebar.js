@@ -62,12 +62,17 @@ const DrawerContent = ({handleDrawerClose}) => (
         <ListItemGenerator
           link='/milestone/2'
           icon={<Avatar style={styles.avatar}>M2</Avatar>}
-          text="Milestone 2"
+          text="Affinity Diagram"
         />
         <ListItemGenerator
           link='/milestone/3'
           icon={<Avatar style={styles.avatar}>M3</Avatar>}
-          text="Milestone 3"
+          text="Persona & Scenario"
+        />
+        <ListItemGenerator
+          link='/milestone/4'
+          icon={<Avatar style={styles.avatar}>M3</Avatar>}
+          text="Lo-Fi Propotype"
         />
       </List>
       <Divider />
