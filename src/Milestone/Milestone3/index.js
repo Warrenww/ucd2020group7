@@ -68,7 +68,7 @@ const useStyles = makeStyles((theme) => ({
   content: {
     width: '100%',
     textAlign: 'justify',
-    padding: '0 2em',
+    padding: '0 3em',
   },
   buttonGroup: {
     margin: 10,

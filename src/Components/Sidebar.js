@@ -71,7 +71,7 @@ const DrawerContent = ({handleDrawerClose}) => (
         />
         <ListItemGenerator
           link='/milestone/4'
-          icon={<Avatar style={styles.avatar}>M3</Avatar>}
+          icon={<Avatar style={styles.avatar}>M4</Avatar>}
           text="Lo-Fi Propotype"
         />
       </List>
