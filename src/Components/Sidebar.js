@@ -78,9 +78,9 @@ const DrawerContent = ({handleDrawerClose}) => (
       <Divider />
       <List>
         <ListItemGenerator
-          link='/about'
+          link='/aboutUs'
           icon={<InfoIcon />}
-          text="About"
+          text="About us"
         />
       </List>
     </div>
