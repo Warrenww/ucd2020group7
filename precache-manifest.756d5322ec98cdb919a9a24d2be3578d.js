@@ -1,0 +1,266 @@
+self.__precacheManifest = (self.__precacheManifest || []).concat([
+  {
+    "revision": "6737157ef12fb45357a10406fddddcb8",
+    "url": "/ucd2020group7/index.html"
+  },
+  {
+    "revision": "d731b59b2b436af8108b",
+    "url": "/ucd2020group7/static/css/main.69eda509.chunk.css"
+  },
+  {
+    "revision": "c59ccd0a850ea1f680bb",
+    "url": "/ucd2020group7/static/js/2.5e09e574.chunk.js"
+  },
+  {
+    "revision": "d5b6f83463005ace9277a3d56ad2f047",
+    "url": "/ucd2020group7/static/js/2.5e09e574.chunk.js.LICENSE.txt"
+  },
+  {
+    "revision": "d731b59b2b436af8108b",
+    "url": "/ucd2020group7/static/js/main.4a595c3f.chunk.js"
+  },
+  {
+    "revision": "e06442d49b0024ed3b48",
+    "url": "/ucd2020group7/static/js/runtime-main.a75d693d.js"
+  },
+  {
+    "revision": "6172e05ebcc14c0b9670d287e0089662",
+    "url": "/ucd2020group7/static/media/001.6172e05e.jpg"
+  },
+  {
+    "revision": "f557bb1a0d5755a07c1c0faa0fc09083",
+    "url": "/ucd2020group7/static/media/002.f557bb1a.jpg"
+  },
+  {
+    "revision": "2dc6210dc81ba820c9390e3408dd87fd",
+    "url": "/ucd2020group7/static/media/003.2dc6210d.jpg"
+  },
+  {
+    "revision": "a01f504d005061b7f101fb9db051b36e",
+    "url": "/ucd2020group7/static/media/004.a01f504d.jpg"
+  },
+  {
+    "revision": "5c6dd51fdacdd4da0b007b7639617842",
+    "url": "/ucd2020group7/static/media/005.5c6dd51f.jpg"
+  },
+  {
+    "revision": "6046abe5d4a919ad3350a62645fff8de",
+    "url": "/ucd2020group7/static/media/R1C1.6046abe5.jpg"
+  },
+  {
+    "revision": "76245b07ff0ea92b09b5472b6e273db7",
+    "url": "/ucd2020group7/static/media/R1C1.76245b07.jpg"
+  },
+  {
+    "revision": "a0bad722105244b55bf76a55f8821b1a",
+    "url": "/ucd2020group7/static/media/R1C1.a0bad722.jpg"
+  },
+  {
+    "revision": "c7e2e04ef920722fe78b5557f0a13bd5",
+    "url": "/ucd2020group7/static/media/R1C1.c7e2e04e.png"
+  },
+  {
+    "revision": "eb74dfe2ad07fe5192798497a3faa018",
+    "url": "/ucd2020group7/static/media/R1C1.eb74dfe2.JPG"
+  },
+  {
+    "revision": "13bd6a00dba0668d72818089208d898d",
+    "url": "/ucd2020group7/static/media/R1C2.13bd6a00.JPG"
+  },
+  {
+    "revision": "28cf6ef9ec909a5eb66c2d44373731ec",
+    "url": "/ucd2020group7/static/media/R1C2.28cf6ef9.jpg"
+  },
+  {
+    "revision": "6f89f8763d954b1aca1181178515bda1",
+    "url": "/ucd2020group7/static/media/R1C2.6f89f876.jpg"
+  },
+  {
+    "revision": "8757fe55afaea3c4683c0b6235a2f21f",
+    "url": "/ucd2020group7/static/media/R1C2.8757fe55.png"
+  },
+  {
+    "revision": "aff14a25ae3eabb896ab5f9595867ecb",
+    "url": "/ucd2020group7/static/media/R1C2.aff14a25.jpg"
+  },
+  {
+    "revision": "4d8fcddefcaf05231e35ae33554e224d",
+    "url": "/ucd2020group7/static/media/R1C3.4d8fcdde.jpg"
+  },
+  {
+    "revision": "71f4227c435805d57d41196e0167790e",
+    "url": "/ucd2020group7/static/media/R1C3.71f4227c.jpg"
+  },
+  {
+    "revision": "a64f71149fcc6b1f0abb9191cba1e81e",
+    "url": "/ucd2020group7/static/media/R1C3.a64f7114.JPG"
+  },
+  {
+    "revision": "a8694feecbcb2c330e28718e8e2b959f",
+    "url": "/ucd2020group7/static/media/R1C3.a8694fee.png"
+  },
+  {
+    "revision": "e99dcf0922eba266a06c1e713547519a",
+    "url": "/ucd2020group7/static/media/R1C3.e99dcf09.jpg"
+  },
+  {
+    "revision": "1552cc377ad99314a63ce1ac330286f1",
+    "url": "/ucd2020group7/static/media/R2C1.1552cc37.png"
+  },
+  {
+    "revision": "59873000c5355431696ac35d674b9960",
+    "url": "/ucd2020group7/static/media/R2C1.59873000.jpg"
+  },
+  {
+    "revision": "788b1d10b5974178077bbf0480cf10b2",
+    "url": "/ucd2020group7/static/media/R2C1.788b1d10.jpg"
+  },
+  {
+    "revision": "a4ab3994b3ec067dae06f76a65a91fbe",
+    "url": "/ucd2020group7/static/media/R2C1.a4ab3994.JPG"
+  },
+  {
+    "revision": "b8503fd92843551b4da2d84ed41f0d8b",
+    "url": "/ucd2020group7/static/media/R2C1.b8503fd9.jpg"
+  },
+  {
+    "revision": "07b090b200390af55303b6a04f4bc8cc",
+    "url": "/ucd2020group7/static/media/R2C2.07b090b2.jpg"
+  },
+  {
+    "revision": "21d281f4e872b46c0fa8ab481a4ad05f",
+    "url": "/ucd2020group7/static/media/R2C2.21d281f4.jpg"
+  },
+  {
+    "revision": "a681ad525136cbc61ea2cdf23e1fc582",
+    "url": "/ucd2020group7/static/media/R2C2.a681ad52.JPG"
+  },
+  {
+    "revision": "adb3639c9773feb62161aefe39839696",
+    "url": "/ucd2020group7/static/media/R2C2.adb3639c.png"
+  },
+  {
+    "revision": "c6dd1433112e9250adc7f26c02f258b3",
+    "url": "/ucd2020group7/static/media/R2C2.c6dd1433.jpg"
+  },
+  {
+    "revision": "34cbd64beeef08e1848606fb64c22b32",
+    "url": "/ucd2020group7/static/media/R2C3.34cbd64b.JPG"
+  },
+  {
+    "revision": "7895b2e22b08cc29df0afa226d94663e",
+    "url": "/ucd2020group7/static/media/R2C3.7895b2e2.jpg"
+  },
+  {
+    "revision": "b6dd0247f89cb0b5a6494c255f68b4cb",
+    "url": "/ucd2020group7/static/media/R2C3.b6dd0247.png"
+  },
+  {
+    "revision": "d2542adf0957771b6c21fed8f7f64882",
+    "url": "/ucd2020group7/static/media/R2C3.d2542adf.jpg"
+  },
+  {
+    "revision": "f2e08d7fe28d2fba6f140affc1101618",
+    "url": "/ucd2020group7/static/media/R2C3.f2e08d7f.jpg"
+  },
+  {
+    "revision": "2365da90618f2680e4bc7ce3353216e2",
+    "url": "/ucd2020group7/static/media/R3C1.2365da90.png"
+  },
+  {
+    "revision": "68c43138b4ee9045570d212efb85157b",
+    "url": "/ucd2020group7/static/media/R3C1.68c43138.jpg"
+  },
+  {
+    "revision": "73e2e0344642334f3331a5dad0c4d046",
+    "url": "/ucd2020group7/static/media/R3C1.73e2e034.JPG"
+  },
+  {
+    "revision": "97bef4d4ac0fa96163ba84614a1f5523",
+    "url": "/ucd2020group7/static/media/R3C1.97bef4d4.jpg"
+  },
+  {
+    "revision": "fdeda5f49527271e5da30f8257fa9e75",
+    "url": "/ucd2020group7/static/media/R3C1.fdeda5f4.jpg"
+  },
+  {
+    "revision": "2365da90618f2680e4bc7ce3353216e2",
+    "url": "/ucd2020group7/static/media/R3C2.2365da90.png"
+  },
+  {
+    "revision": "37e2dad26dbf50e738c6a55b99d8fad6",
+    "url": "/ucd2020group7/static/media/R3C2.37e2dad2.jpg"
+  },
+  {
+    "revision": "6c7c9a78947d522a83333a1e9721982c",
+    "url": "/ucd2020group7/static/media/R3C2.6c7c9a78.jpg"
+  },
+  {
+    "revision": "b476950c83fdc9a94cd820e1b7509ca7",
+    "url": "/ucd2020group7/static/media/R3C2.b476950c.jpg"
+  },
+  {
+    "revision": "daada39c1284267f731e4031c08a768c",
+    "url": "/ucd2020group7/static/media/R3C2.daada39c.JPG"
+  },
+  {
+    "revision": "3bfe6825ada5c4e5a961a92e3fc838c1",
+    "url": "/ucd2020group7/static/media/R3C3.3bfe6825.png"
+  },
+  {
+    "revision": "675226197c2e3209472da745c4376125",
+    "url": "/ucd2020group7/static/media/R3C3.67522619.jpg"
+  },
+  {
+    "revision": "72e1d2f7bb284982093f96de3b6c00a7",
+    "url": "/ucd2020group7/static/media/R3C3.72e1d2f7.jpg"
+  },
+  {
+    "revision": "8d258e84826d08804f08f7dacc7128d5",
+    "url": "/ucd2020group7/static/media/R3C3.8d258e84.JPG"
+  },
+  {
+    "revision": "b3b04652ac260d2389a66438ee41ca2f",
+    "url": "/ucd2020group7/static/media/R3C3.b3b04652.jpg"
+  },
+  {
+    "revision": "f4e17f44cec5bdd440c3f6f114bab00e",
+    "url": "/ucd2020group7/static/media/cabinet.f4e17f44.jpg"
+  },
+  {
+    "revision": "9542e2f03e4fa8d32a74034b60dddf8c",
+    "url": "/ucd2020group7/static/media/discussion-2.9542e2f0.jpg"
+  },
+  {
+    "revision": "10203450032319e1c4004046afb12d16",
+    "url": "/ucd2020group7/static/media/discussion.10203450.jpg"
+  },
+  {
+    "revision": "16057bf6712be2fb36c9211b68ec17e3",
+    "url": "/ucd2020group7/static/media/persona 1.16057bf6.png"
+  },
+  {
+    "revision": "ebc8072fd5b6e728b6670701f03db469",
+    "url": "/ucd2020group7/static/media/persona 2.ebc8072f.png"
+  },
+  {
+    "revision": "2a336c74eac1461fbdaea580cc37e3e1",
+    "url": "/ucd2020group7/static/media/phone_older.2a336c74.jpg"
+  },
+  {
+    "revision": "6e6c1c1cbc29d24d9814754f10d7dc1c",
+    "url": "/ucd2020group7/static/media/prototype.6e6c1c1c.jpg"
+  },
+  {
+    "revision": "a2519c745bf24fb55d36337a80636e63",
+    "url": "/ucd2020group7/static/media/senario 1.a2519c74.png"
+  },
+  {
+    "revision": "9c720157b494249c57b29c611b89c794",
+    "url": "/ucd2020group7/static/media/senario 2.9c720157.png"
+  },
+  {
+    "revision": "531e3d8771d4b7a50cfb4c7f2e483c61",
+    "url": "/ucd2020group7/static/media/walking.531e3d87.jpg"
+  }
+]);
