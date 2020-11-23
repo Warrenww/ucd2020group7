@@ -11,6 +11,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 
 import Sidebar from './Components/Sidebar';
 import Milestone from './Milestone';
+import AboutUs from './AboutUs';
 
 
 import IconButton from '@material-ui/core/IconButton';
@@ -45,7 +46,6 @@ function App(props) {
   const handleDrawerClose = _ => setOpen(false);
 
   const Home = props => (<h1>Home</h1>);
-  const About = props => (<h1>About</h1>);
 
   useEffect(()=>{
     const params = (new URL(document.location)).searchParams;
@@ -79,8 +79,8 @@ function App(props) {
             <Route exact path="/">
               <Home />
             </Route>
-            <Route path="/about">
-              <About />
+            <Route path="/aboutUs">
+              <AboutUs />
             </Route>
             <Route path="/milestone/:id">
               <Milestone />

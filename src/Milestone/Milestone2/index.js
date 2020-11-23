@@ -135,22 +135,22 @@ const Milestone2 = props => {
         <Grid item xs={12}>
             <Paper className={classes.paper}>
               <h2>訪談主軸</h2>
-              <Alert severity="info" className={classes.highlight} icon={<SearchIcon />}>
+              <Alert variant="outlined" severity="info" className={classes.highlight} icon={<SearchIcon />}>
                 <AlertTitle>找東西的情況</AlertTitle>
                 描述找到/找不到東西的情況，物品的性質(使用頻率、重要性等等)。為什麼會找不到?用什麼方式找東西?
               </Alert>
-              <Alert severity="info" className={classes.highlight} icon={<EmojiPeopleIcon />}>
+              <Alert variant="outlined" severity="info" className={classes.highlight} icon={<EmojiPeopleIcon />}>
                 <AlertTitle>個人習慣</AlertTitle>
                 收納、整理、歸位物品的習慣，對於尋找物品的影響。
               </Alert>
-              <Alert severity="info" className={classes.highlight}>
+              <Alert variant="outlined" severity="info" className={classes.highlight}>
                 <AlertTitle>使用其他協助方式的情況</AlertTitle>
                 <ul>
                   <li>使用其他管理物品方式的情況?</li>
                   <li>使用其他尋找物品方式的情況?</li>
                 </ul>
               </Alert>
-              <Alert severity="info" className={classes.highlight} icon={<ExploreIcon />}>
+              <Alert variant="outlined" severity="info" className={classes.highlight} icon={<ExploreIcon />}>
                 <AlertTitle>對於協助管理及找尋物品之系統的需求與期望</AlertTitle>
                 介面、功能、使用意願
               </Alert>
