@@ -9,6 +9,7 @@ import {
   Avatar,
   Backdrop,
   Zoom,
+  Tooltip,
 } from '@material-ui/core';
 import { Alert, AlertTitle, Skeleton } from '@material-ui/lab';
 import SearchIcon from '@material-ui/icons/Search';
@@ -16,12 +17,14 @@ import CategoryIcon from '@material-ui/icons/Category';
 import PeopleIcon from '@material-ui/icons/People';
 import PhoneIphoneIcon from '@material-ui/icons/PhoneIphone';
 import WidgetsIcon from '@material-ui/icons/Widgets';
+import AddLocationIcon from '@material-ui/icons/AddLocation';
+import EditIcon from '@material-ui/icons/Edit';
 import Photo001 from '../../images/001.jpg';
 import Photo002 from '../../images/002.jpg';
 import Photo003 from '../../images/003.jpg';
 import Photo004 from '../../images/004.jpg';
 import Photo005 from '../../images/005.jpg';
-import { sketch } from './data';
+import { sketch, situation, videoList } from './data';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -73,6 +76,10 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 600,
     marginBottom: 20,
   },
+  videoDescription: {
+    width: '80%',
+    marginBottom: 20,
+  },
   backdrop: {
     zIndex: theme.zIndex.drawer + 1,
     color: '#fff',
@@ -90,6 +97,7 @@ const Milestone4 = props => {
   const [activeAvatar, setActiveAvatar] = useState(0);
   const [showSketch, setShowSketch] = useState(false);
   const [activeSketch, setActiveSketch] = useState(null);
+  const [activeVideo, setActiveVideo] = useState(0);
 
   const handleBackDrop = (image, open) => {
     setActiveSketch(image);
@@ -144,6 +152,10 @@ const Milestone4 = props => {
       <Grid item xs={12}>
         <Paper className={classes.paper}>
           <h2>Sketch</h2>
+          <p>
+            以下是組員們對於每個Design Requirement畫出來的3個發想<br/>
+            請選擇一個requirement與一位組員查看他的sketch
+          </p>
           <div>
             <Chip
               icon={<PeopleIcon />}
@@ -171,11 +183,21 @@ const Milestone4 = props => {
             />
           </div>
           <div className="AvatarContainer">
-            <Avatar onClick={()=>setActiveAvatar(1)} className={activeAvatar === 1 ? "active" : ""} alt="邱筠絜" src={Photo001} />
-            <Avatar onClick={()=>setActiveAvatar(2)} className={activeAvatar === 2 ? "active" : ""} alt="嚴銘浩" src={Photo002} />
-            <Avatar onClick={()=>setActiveAvatar(3)} className={activeAvatar === 3 ? "active" : ""} alt="黃元廷" src={Photo003} />
-            <Avatar onClick={()=>setActiveAvatar(4)} className={activeAvatar === 4 ? "active" : ""} alt="郭佩璇" src={Photo004} />
-            <Avatar onClick={()=>setActiveAvatar(5)} className={activeAvatar === 5 ? "active" : ""} alt="方偉綸" src={Photo005} />
+            <Tooltip title="邱筠絜">
+              <Avatar onClick={()=>setActiveAvatar(1)} className={activeAvatar === 1 ? "active" : ""} alt="邱筠絜" src={Photo001} />
+            </Tooltip>
+            <Tooltip title="嚴銘浩">
+              <Avatar onClick={()=>setActiveAvatar(2)} className={activeAvatar === 2 ? "active" : ""} alt="嚴銘浩" src={Photo002} />
+            </Tooltip>
+            <Tooltip title="黃元廷">
+              <Avatar onClick={()=>setActiveAvatar(3)} className={activeAvatar === 3 ? "active" : ""} alt="黃元廷" src={Photo003} />
+            </Tooltip>
+            <Tooltip title="郭佩璇">
+              <Avatar onClick={()=>setActiveAvatar(4)} className={activeAvatar === 4 ? "active" : ""} alt="郭佩璇" src={Photo004} />
+            </Tooltip>
+            <Tooltip title="方偉綸">
+              <Avatar onClick={()=>setActiveAvatar(5)} className={activeAvatar === 5 ? "active" : ""} alt="方偉綸" src={Photo005} />
+            </Tooltip>
           </div>
           <Grid container justify="center" className="sketchHolder" spacing={3}>
             <Grid item container justify="center" xs={12} md={4}> <h3>Concept 1</h3> </Grid>
@@ -187,7 +209,7 @@ const Milestone4 = props => {
               <Paper onClick={() => handleBackDrop(sketch[(activeAvatar - 1) * 9 + (activeRequirement - 1) * 3 + 0], true)}>
                 <img src={sketch[(activeAvatar - 1) * 9 + (activeRequirement - 1) * 3 + 0]} alt={`00${activeAvatar}R${activeRequirement}C1`}/>
               </Paper>
-              : <Skeleton variant="rect" width="90%" height={120} />
+              : <Skeleton variant="rect" width="90%" height={200} />
             }
             </Grid>
             <Grid item container justify="center" xs={12} md={4}>
@@ -196,7 +218,7 @@ const Milestone4 = props => {
               <Paper onClick={() => handleBackDrop(sketch[(activeAvatar - 1) * 9 + (activeRequirement - 1) * 3 + 1], true)}>
                 <img src={sketch[(activeAvatar - 1) * 9 + (activeRequirement - 1) * 3 + 1]} alt={`00${activeAvatar}R${activeRequirement}C2`}/>
               </Paper>
-              : <Skeleton variant="rect" width="90%" height={120} />
+              : <Skeleton variant="rect" width="90%" height={200} />
             }
               </Grid>
             <Grid item container justify="center" xs={12} md={4}>
@@ -205,10 +227,54 @@ const Milestone4 = props => {
               <Paper onClick={() => handleBackDrop(sketch[(activeAvatar - 1) * 9 + (activeRequirement - 1) * 3 + 2], true)}>
                 <img src={sketch[(activeAvatar - 1) * 9 + (activeRequirement - 1) * 3 + 2]} alt={`00${activeAvatar}R${activeRequirement}C3`}/>
               </Paper>
-              : <Skeleton variant="rect" width="90%" height={120} />
+              : <Skeleton variant="rect" width="90%" height={200} />
             }
             </Grid>
           </Grid>
+        </Paper>
+      </Grid>
+
+      <Grid item xs={12}>
+        <Paper className={classes.paper}>
+          <h2>LoFi Prototype</h2>
+          <p>
+          最後決定使用APP來達成我們的 Design Requirements，以下是3個使用情境與對應的操作影片
+          </p>
+          <div>
+            <Chip
+              icon={<EditIcon />}
+              label="情境 1 記錄物品"
+              clickable
+              color="primary"
+              variant={activeVideo === 1 ? "default" : "outlined"}
+              onClick={activeVideo === 1 ? () => setActiveVideo(0) : () => setActiveVideo(1)}
+            />
+            <Chip
+              icon={<AddLocationIcon />}
+              label="情境 2 新增地點及空間，並設定權限"
+              clickable
+              color="primary"
+              variant={activeVideo === 2 ? "default" : "outlined"}
+              onClick={activeVideo === 2 ? () => setActiveVideo(0) : () => setActiveVideo(2)}
+            />
+            <Chip
+              icon={<SearchIcon />}
+              label="情境 3 找物品、共編及提醒歸位"
+              clickable
+              color="primary"
+              variant={activeVideo === 3 ? "default" : "outlined"}
+              onClick={activeVideo === 3 ? () => setActiveVideo(0) : () => setActiveVideo(3)}
+            />
+          </div>
+          <div className={classes.videoDescription}>
+            {situation[activeVideo]}
+          </div>
+          {
+            activeVideo ?
+              <iframe width="560" height="315" src={videoList[activeVideo]} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            : <Skeleton variant="rect" width={560} height={315} />
+          }
+
         </Paper>
       </Grid>
 
