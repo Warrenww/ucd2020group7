@@ -10,6 +10,7 @@ import {
   Backdrop,
   Zoom,
   Tooltip,
+  Hidden,
 } from '@material-ui/core';
 import { Alert, AlertTitle, Skeleton } from '@material-ui/lab';
 import SearchIcon from '@material-ui/icons/Search';
@@ -71,6 +72,10 @@ const useStyles = makeStyles((theme) => ({
       }
     }
   },
+  conceptDescription: {
+    padding: '1em',
+    borderTop: '1px solid #ccc',
+  },
   highlight: {
     width: '100%',
     maxWidth: 600,
@@ -93,11 +98,11 @@ const useStyles = makeStyles((theme) => ({
 
 const Milestone4 = props => {
   const classes = useStyles();
-  const [activeRequirement, setActiveRequirement] = useState(0);
-  const [activeAvatar, setActiveAvatar] = useState(0);
+  const [activeRequirement, setActiveRequirement] = useState(1);
+  const [activeAvatar, setActiveAvatar] = useState(1);
   const [showSketch, setShowSketch] = useState(false);
   const [activeSketch, setActiveSketch] = useState(null);
-  const [activeVideo, setActiveVideo] = useState(0);
+  const [activeVideo, setActiveVideo] = useState(1);
 
   const handleBackDrop = (image, open) => {
     setActiveSketch(image);
@@ -200,13 +205,16 @@ const Milestone4 = props => {
             </Tooltip>
           </div>
           <Grid container justify="center" className="sketchHolder" spacing={3}>
-            <Grid item container justify="center" xs={12} md={4}> <h3>Concept 1</h3> </Grid>
-            <Grid item container justify="center" xs={12} md={4}> <h3>Concept 2</h3> </Grid>
-            <Grid item container justify="center" xs={12} md={4}> <h3>Concept 3</h3> </Grid>
+            <Hidden mdDown>
+              <Grid item container justify="center" xs={12} md={4}> <h3>Concept 1</h3> </Grid>
+              <Grid item container justify="center" xs={12} md={4}> <h3>Concept 2</h3> </Grid>
+              <Grid item container justify="center" xs={12} md={4}> <h3>Concept 3</h3> </Grid>
+            </Hidden>
             <Grid item container justify="center" xs={12} md={4}>
             {
               activeAvatar && activeRequirement ?
               <Paper onClick={() => handleBackDrop(sketch[(activeAvatar - 1) * 9 + (activeRequirement - 1) * 3 + 0], true)}>
+                <Hidden mdUp> <h3>Concept 1</h3> </Hidden>
                 <img src={sketch[(activeAvatar - 1) * 9 + (activeRequirement - 1) * 3 + 0]} alt={`00${activeAvatar}R${activeRequirement}C1`}/>
               </Paper>
               : <Skeleton variant="rect" width="90%" height={200} />
@@ -216,6 +224,7 @@ const Milestone4 = props => {
             {
               activeAvatar && activeRequirement ?
               <Paper onClick={() => handleBackDrop(sketch[(activeAvatar - 1) * 9 + (activeRequirement - 1) * 3 + 1], true)}>
+                <Hidden mdUp> <h3>Concept 2</h3> </Hidden>
                 <img src={sketch[(activeAvatar - 1) * 9 + (activeRequirement - 1) * 3 + 1]} alt={`00${activeAvatar}R${activeRequirement}C2`}/>
               </Paper>
               : <Skeleton variant="rect" width="90%" height={200} />
@@ -225,6 +234,7 @@ const Milestone4 = props => {
             {
               activeAvatar && activeRequirement ?
               <Paper onClick={() => handleBackDrop(sketch[(activeAvatar - 1) * 9 + (activeRequirement - 1) * 3 + 2], true)}>
+                <Hidden mdUp> <h3>Concept 3</h3> </Hidden>
                 <img src={sketch[(activeAvatar - 1) * 9 + (activeRequirement - 1) * 3 + 2]} alt={`00${activeAvatar}R${activeRequirement}C3`}/>
               </Paper>
               : <Skeleton variant="rect" width="90%" height={200} />
@@ -236,22 +246,29 @@ const Milestone4 = props => {
 
       <Grid item xs={12}>
         <Paper className={classes.paper}>
+          <h2>Before & After</h2>
+
+        </Paper>
+      </Grid>
+
+      <Grid item xs={12}>
+        <Paper className={classes.paper}>
           <h2>LoFi Prototype</h2>
           <p>
           最後決定使用APP來達成我們的 Design Requirements，以下是3個使用情境與對應的操作影片
           </p>
           <div>
             <Chip
-              icon={<EditIcon />}
-              label="情境 1 記錄物品"
+              icon={<AddLocationIcon />}
+              label="情境 1 新增地點及空間，並設定權限"
               clickable
               color="primary"
               variant={activeVideo === 1 ? "default" : "outlined"}
               onClick={activeVideo === 1 ? () => setActiveVideo(0) : () => setActiveVideo(1)}
             />
             <Chip
-              icon={<AddLocationIcon />}
-              label="情境 2 新增地點及空間，並設定權限"
+              icon={<EditIcon />}
+              label="情境 2 記錄物品"
               clickable
               color="primary"
               variant={activeVideo === 2 ? "default" : "outlined"}

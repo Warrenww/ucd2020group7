@@ -4,18 +4,21 @@ import {
   Switch,
   Route,
   Redirect,
+  Link,
 } from "react-router-dom";
 import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-
+import {
+  AppBar,
+  Toolbar,
+  IconButton,
+  Button,
+} from '@material-ui/core';
 import Sidebar from './Components/Sidebar';
 import Milestone from './Milestone';
 import AboutUs from './AboutUs';
-
-
-import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+
+import routerConfig from './constant/router';
 
 const useStyles = makeStyles({
   App: {
@@ -35,6 +38,20 @@ const useStyles = makeStyles({
   AppBar: {
     backgroundColor: "#33333388",
     backdropFilter: "blur(5px)",
+    "& a": {
+      color: 'inherit',
+      textDecoration: 'none',
+    },
+    "& .links": {
+      flex: 1,
+      padding: '0 2em',
+      display: 'flex',
+      justifyContent: 'flex-end',
+      '& a': {
+        color: 'white',
+        textTransform: 'none',
+      }
+    }
   },
 });
 
@@ -57,18 +74,28 @@ function App(props) {
 
   return (
     <div className={classes.App}>
+    <Router basename={process.env.PUBLIC_URL}>
       <AppBar position="fixed" className={classes.AppBar}>
         <Toolbar>
           <IconButton edge="start" color="inherit" aria-label="menu" onClick={handleDrawerOpen}>
             <MenuIcon/>
           </IconButton>
-          <div>
+          <Link to="/">
             UCD 2020 Group 7
+          </Link>
+          <div className="links">
+            {
+              routerConfig.map(x => (
+                <Button>
+                  <Link to={x.link} key={x.text}> {x.text} </Link>
+                </Button>
+              ))
+            }
           </div>
+
         </Toolbar>
       </AppBar>
 
-      <Router basename={process.env.PUBLIC_URL}>
           <Sidebar
             open={open}
             handleDrawerOpen={handleDrawerOpen}
