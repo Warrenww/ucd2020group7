@@ -12,12 +12,17 @@ import {
   TableContainer,
   TableHead,
   TableRow,
+  Grow,
 } from '@material-ui/core';
 import { Alert, AlertTitle } from '@material-ui/lab';
+import { Pagination } from 'antd';
+
 import SearchIcon from '@material-ui/icons/Search';
 import EmojiPeopleIcon from '@material-ui/icons/EmojiPeople';
 import ExploreIcon from '@material-ui/icons/Explore';
-import { steps, contents, table } from './data';
+
+import AffinityDiagram from './AffinityDiagram';
+import { steps, contents, table, affinityDiagram } from './data';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -43,19 +48,20 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     maxWidth: 600,
     marginBottom: 20,
-  }
+  },
+  pagination: {
+    marginTop: 20,
+  },
 }));
 
 const Milestone2 = props => {
   const classes = useStyles();
   const [value, setValue] = useState(0);
+  const [page, setPage] = useState(1);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-
-
-
 
   return (
     <Grid container spacing={3} justify="center" alignItems="stretch">
@@ -155,6 +161,28 @@ const Milestone2 = props => {
                 介面、功能、使用意願
               </Alert>
             </Paper>
+        </Grid>
+      </Slide>
+
+      <Slide direction="left" in={value === 1} mountOnEnter unmountOnExit>
+        <Grid item xs={12}>
+          <Paper className={classes.paper}>
+            <h2>Affinity Diagram</h2>
+            {
+              affinityDiagram.map((x,i) => (
+                <Grow in={page === i + 1} mountOnEnter unmountOnExit>
+                  <AffinityDiagram data={x} />
+                </Grow>
+              ))
+            }
+            <Pagination
+              className={classes.pagination}
+              current={page}
+              total={affinityDiagram.length}
+              pageSize={1}
+              onChange={page => setPage(page)}
+            />
+          </Paper>
         </Grid>
       </Slide>
 

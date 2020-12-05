@@ -20,6 +20,8 @@ import MenuIcon from '@material-ui/icons/Menu';
 
 import routerConfig from './constant/router';
 
+import 'antd/dist/antd.css';
+
 const useStyles = makeStyles({
   App: {
     backgroundColor: "#ccc",

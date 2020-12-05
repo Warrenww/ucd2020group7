@@ -31,6 +31,7 @@ const useStyles = makeStyles({
       textAlign: 'center',
       '& h1': {
         fontSize: '3em',
+        color: 'white',
       }
     },
   },
