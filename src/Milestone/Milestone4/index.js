@@ -56,6 +56,7 @@ const useStyles = makeStyles((theme) => ({
       "& .active": {
         boxShadow: '2px 2px 10px #7a654d',
         transform: 'scale(1.2)',
+        border: '3px solid #e4988a',
       }
     },
     "& .sketchHolder": {
@@ -98,8 +99,8 @@ const useStyles = makeStyles((theme) => ({
 
 const Milestone4 = props => {
   const classes = useStyles();
-  const [activeRequirement, setActiveRequirement] = useState(1);
-  const [activeAvatar, setActiveAvatar] = useState(1);
+  const [activeRequirement, setActiveRequirement] = useState(parseInt(Math.random() * 3) + 1);
+  const [activeAvatar, setActiveAvatar] = useState(parseInt(Math.random() * 5) + 1);
   const [showSketch, setShowSketch] = useState(false);
   const [activeSketch, setActiveSketch] = useState(null);
   const [activeVideo, setActiveVideo] = useState(1);
@@ -288,7 +289,7 @@ const Milestone4 = props => {
           </div>
           {
             activeVideo ?
-              <iframe width="560" height="315" src={videoList[activeVideo]} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe width="560" height="315" title="video" src={videoList[activeVideo]} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             : <Skeleton variant="rect" width={560} height={315} />
           }
 

@@ -33,12 +33,15 @@ const useStyles = makeStyles({
     },
     '& div': {
       bottom: -120,
+      margin: 0,
     },
     '&:hover div': {
       bottom: 0,
     },
     '& h2': {
-      top: 0
+      top: 0,
+      margin: 0,
+      color: 'white',
     },
     '&:hover h2': {
       top: -120,
@@ -83,7 +86,7 @@ const ImagePaper = ({
 const Milestone1 = props => {
   const classes = useStyles();
   const [active, setActive] = useState(0);
-  
+
   return (
     <Grid container spacing={3} justify="center" alignItems="stretch">
       {

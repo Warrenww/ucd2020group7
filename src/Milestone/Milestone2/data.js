@@ -1,5 +1,5 @@
 import React from 'react';
-import { Statistic, Row, Col } from 'antd';
+import {Link} from 'react-router-dom';
 
 const steps = ['訪談', 'AffiAffinity Diagram', '附錄資料'];
 
@@ -12,22 +12,7 @@ const contents = [
     將上一步做出來的note打亂，再由每位組員隨機抽取數張note，找出其中相近概念的note組成一群，重複這個步驟，
     並在過程中隨時調整分群，並整合各群的概念，做出一個上層標籤統整同一群note的細節。
     接者檢視各類概念，把概念相近的note群統整做出再上一層的標籤。透過這樣的資料整理，我們從潛在使用者的訪談中，
-    得到了4個 key finding。
-    <div style={{padding:10}}/>
-    <Row>
-      <Col span={6}>
-        <Statistic title="Note數" suffix="張" value={120} />
-      </Col>
-      <Col span={6}>
-        <Statistic title="第三層標籤" suffix="張" value={29} />
-      </Col>
-      <Col span={6}>
-        <Statistic title="第二層標籤" suffix="張" value={11} />
-      </Col>
-      <Col span={6}>
-        <Statistic title="第一層標籤" suffix="張" value={4} />
-      </Col>
-    </Row>
+    得到了4個 key finding，做為 <Link to='/milestone/3'>MileStone 3</Link> 建立使用者模型的參考方向。
   </span>,
   <span>
   </span>
@@ -92,11 +77,16 @@ const table = [
 
 const affinityDiagram = [
   {
-    key: "我只有在外力影響(亂、急、規定)或是心情好的時候才整理，而且比起整理，我覺得是要斷捨哩，把不常用的東西丟掉或捐出",
+    key: "",
     children: [
-      {key: "我覺得比起整理，更要能夠段捨離，不要的東西就先捐出或丟掉，就是不要因為捨不得而一直留著，反而造成更大的空間浪費"},
-      {key: "我只有在亂到有點受不了、很急的時候、有空的時候、或是某個想整理的心情，不然就是有外部規定才會影響我去整理。"},
-    ]
+      {
+        key: "我只有在外力影響(亂、急、規定)或是心情好的時候才整理，而且比起整理，我覺得是要斷捨哩，把不常用的東西丟掉或捐出",
+        children: [
+          {key: "我覺得比起整理，更要能夠段捨離，不要的東西就先捐出或丟掉，就是不要因為捨不得而一直留著，反而造成更大的空間浪費"},
+          {key: "我只有在亂到有點受不了、很急的時候、有空的時候、或是某個想整理的心情，不然就是有外部規定才會影響我去整理。"},
+        ]
+      },
+    ],
   },
   {
     key: "好好分類可以方便尋找，但有時候收太密的話，也會忘記自己把東西收到哪裡。",
@@ -202,9 +192,19 @@ const affinityDiagram = [
   },
 ];
 
+const thinkingPoint = [
+  '簡易操作，不希望記錄消耗太多時間',
+  '個人化佈置虛擬空間的自由度',
+  '視覺化的呈現方式',
+  '提醒的形式以及頻率',
+  '共同編輯的編輯權限',
+  '私人物品的隱私問題',
+];
+
 export {
   steps,
   contents,
   table,
   affinityDiagram,
+  thinkingPoint,
 }

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useRef, useEffect} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import {
   Grid,
@@ -13,16 +13,32 @@ import {
   TableHead,
   TableRow,
   Grow,
+  RootRef,
+  List,
+  ListItem,
+  ListItemIcon,
+  Checkbox,
+  ListItemText,
 } from '@material-ui/core';
 import { Alert, AlertTitle } from '@material-ui/lab';
-import { Pagination } from 'antd';
+import { Pagination, Statistic, Row, Col } from 'antd';
 
 import SearchIcon from '@material-ui/icons/Search';
 import EmojiPeopleIcon from '@material-ui/icons/EmojiPeople';
 import ExploreIcon from '@material-ui/icons/Explore';
+import StorageIcon from '@material-ui/icons/Storage';
+import GroupIcon from '@material-ui/icons/Group';
+import PhoneAndroidIcon from '@material-ui/icons/PhoneAndroid';
+import PhotoCameraIcon from '@material-ui/icons/PhotoCamera';
+import MicIcon from '@material-ui/icons/Mic';
+import VisibilityIcon from '@material-ui/icons/Visibility';
+import NotificationsIcon from '@material-ui/icons/Notifications';
+import StreetviewIcon from '@material-ui/icons/Streetview';
+import LocalOfferIcon from '@material-ui/icons/LocalOffer';
+import AddIcon from '@material-ui/icons/Add';
 
 import AffinityDiagram from './AffinityDiagram';
-import { steps, contents, table, affinityDiagram } from './data';
+import { steps, contents, table, affinityDiagram, thinkingPoint } from './data';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -52,12 +68,49 @@ const useStyles = makeStyles((theme) => ({
   pagination: {
     marginTop: 20,
   },
+  affinityDiagramContainer: {
+    display: 'flex',
+    width: 'max-content',
+    '& .holder': {
+      cursor: 'pointer',
+      padding: '2em',
+      borderRadius: '3em',
+      margin: '2em',
+    },
+    '& .holder:hover, & .active': {
+      background: '#ddd6',
+    }
+  },
+  statistic: {
+    width: '100%',
+    margin: '2em',
+    textAlign: 'center',
+  },
+  list: {
+    '& .MuiListItemText-root': {
+      alignItems: 'center',
+      display: 'flex',
+      '& span': {fontSize: '1em'}
+    }
+  },
 }));
 
 const Milestone2 = props => {
   const classes = useStyles();
   const [value, setValue] = useState(0);
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(parseInt(Math.random() * 5) + 1);
+
+  const domRef = useRef();
+
+  useEffect(() => {
+    const dom = domRef.current;
+    if (dom) {
+      const domWidth = dom.getBoundingClientRect().width;
+      const parentNode = dom.parentNode;
+      const parentNodeWidth = parentNode.getBoundingClientRect().width;
+      dom.style.zoom = parentNodeWidth / domWidth * 0.9;
+    }
+  });
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -168,6 +221,39 @@ const Milestone2 = props => {
         <Grid item xs={12}>
           <Paper className={classes.paper}>
             <h2>Affinity Diagram</h2>
+            我們將所有訪談逐字稿嘬出來的note拿掉其中沒有涵蓋足夠概念的note與沒有深層概念的note，並合併意思完全一樣的note，最後總共整理出120張note。
+            <br/>
+            將這些note中概念相近的分在一群，得到29個label，接者將這些label在一次合併到更大的概念下，做出12個第二層標籤。
+            <br/>
+            最後從這12個第二層標籤中，合併對於之後設計產品方向相近的label，得到第一層的標籤。
+            <br/>
+            同時這4個第一層標籤也是我們這次affinity diagram的key finding。
+            <Row className={classes.statistic}>
+              <Col span={6}>
+                <Statistic title="Note數" suffix="張" value={120} />
+              </Col>
+              <Col span={6}>
+                <Statistic title="第三層標籤" suffix="張" value={29} />
+              </Col>
+              <Col span={6}>
+                <Statistic title="第二層標籤" suffix="張" value={12} />
+              </Col>
+              <Col span={6}>
+                <Statistic title="第一層標籤" suffix="張" value={4} />
+              </Col>
+            </Row>
+            <RootRef rootRef={domRef}>
+              <div className={classes.affinityDiagramContainer}>
+                {
+                  affinityDiagram.map((x,i) => (
+                    <div className={"holder " + (page === i + 1 ? "active" : "")} onClick={() => setPage(i + 1)}>
+                      <AffinityDiagram data={x} />
+                    </div>
+                  ))
+                }
+              </div>
+            </RootRef>
+            <div style={{margin: 20}} />
             {
               affinityDiagram.map((x,i) => (
                 <Grow in={page === i + 1} mountOnEnter unmountOnExit>
@@ -186,6 +272,109 @@ const Milestone2 = props => {
         </Grid>
       </Slide>
 
+      <Slide direction="left" in={value ===1} mountOnEnter unmountOnExit>
+        <Grid item xs={12}>
+          <Paper className={classes.paper}>
+            <h2>Key Finding</h2>
+            <Alert variant="outlined" severity="info" className={classes.highlight} icon={<SearchIcon />}>
+              <AlertTitle>Finding 1</AlertTitle>
+              常因隨手放、沒歸位及或使用頻率低會造成不知道東西放哪，從而找不到東西。
+            </Alert>
+            <Alert variant="outlined" severity="info" className={classes.highlight} icon={<StorageIcon />}>
+              <AlertTitle>Finding 2</AlertTitle>
+              妥善分類可以方便未來尋找，但若是收到收太隱密的地方，時間一久，也有可能忘記自己當初把東西收在哪裡。
+            </Alert>
+            <Alert variant="outlined" severity="info" className={classes.highlight} icon={<GroupIcon />}>
+              <AlertTitle>Finding 3</AlertTitle>
+              找不到東西時，會先請親友幫忙找，若非重要物品且有其他替代品，就會先以其他物品替代，因為某天可能該物品就會不經意出現。
+            </Alert>
+            <Alert variant="outlined" severity="info" className={classes.highlight} icon={<PhoneAndroidIcon />}>
+              <AlertTitle>Finding 4</AlertTitle>
+              希望有一款APP，可以用拍照和語音的方式輸入或存檔，用視覺化的方式呈現，並可以製作個人的虛擬空間，有分類規劃、共同編輯、提醒功能，還可以用標籤分類及搜尋。希望APP簡易操作不耗時。
+            </Alert>
+
+          </Paper>
+        </Grid>
+      </Slide>
+
+      <Slide direction="left" in={value ===1} mountOnEnter unmountOnExit>
+        <Grid item xs={12}>
+          <Paper className={classes.paper}>
+            <h2>Take away message</h2>
+          </Paper>
+        </Grid>
+      </Slide>
+
+      <Slide direction="left" in={value === 1} mountOnEnter unmountOnExit>
+        <Grid item xs={12} sm={6}>
+            <Paper className={classes.paper}>
+              <h2>之後的設計重點</h2>
+              設計一款APP
+              <div style={{margin: 10}} />
+              <Alert
+                variant="outlined"
+                severity="success"
+                className={classes.highlight}
+                icon={<><PhotoCameraIcon /><AddIcon /><MicIcon /></>}
+              >
+                可以透過<b>拍照</b>和<b>語音</b>的方式輸入或存檔物品擺放位置
+              </Alert>
+              <Alert
+                variant="outlined"
+                severity="success"
+                className={classes.highlight}
+                icon={<><VisibilityIcon /><AddIcon /><StreetviewIcon /></>}
+              >
+                用<b>視覺化</b>的方式呈現，並可以製作個人<b>虛擬空間</b>
+              </Alert>
+              <Alert
+                variant="outlined"
+                severity="success"
+                className={classes.highlight}
+                icon={<><GroupIcon /><AddIcon /><NotificationsIcon /></>}
+              >
+                並擁有<b>分類規劃</b>、<b>共同編輯</b>、<b>提醒功能</b>
+              </Alert>
+              <Alert
+                variant="outlined"
+                severity="success"
+                className={classes.highlight}
+                icon={<><LocalOfferIcon /><AddIcon /><SearchIcon /></>}
+              >
+                還可以用<b>標籤</b>分類及<b>搜尋</b>
+              </Alert>
+
+            </Paper>
+        </Grid>
+      </Slide>
+
+      <Slide direction="left" in={value === 1} mountOnEnter unmountOnExit>
+        <Grid item xs={12} sm={6}>
+            <Paper className={classes.paper}>
+              <h2>要考慮的重點</h2>
+              <List className={classes.list}>
+                {
+                  thinkingPoint.map(x => (
+                    <ListItem key={value} role={undefined} dense>
+                      <ListItemIcon>
+                        <Checkbox
+                          edge="start"
+                          tabIndex={-1}
+                          disableRipple
+                          checked
+                        />
+                      </ListItemIcon>
+                      <ListItemText>
+                        {x}
+                      </ListItemText>
+                    </ListItem>
+                  ))
+                }
+              </List>
+
+            </Paper>
+        </Grid>
+      </Slide>
 
     </Grid>
   );

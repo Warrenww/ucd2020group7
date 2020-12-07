@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
+      margin: '0 1em',
     },
     '& .arrow': {
       position: 'sticky',
@@ -41,11 +42,12 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: '1.5em',
     textAlign: 'justify',
     background: prop => prop.depth === 0 ? '#7ab987' : (prop.depth === 1 ? '#dea9a9' : '#a3d4d7'),
+    opacity: prop => prop.hide ? 0 : 1,
   }
 }));
 
-const Note = ({content, depth, isLong}) => {
-  const classes = useStyles({depth, isLong});
+const Note = ({content, depth, isLong, hide}) => {
+  const classes = useStyles({depth, isLong, hide});
 
   return (
     <div className={classes.note}>
@@ -57,8 +59,6 @@ const Note = ({content, depth, isLong}) => {
 const AffinityDiagram = ({data}) => {
   const classes = useStyles();
   const domRef = useRef();
-  const [width, setWidth] = useState(0);
-  const [parentWidth, setParentWidth] = useState(0);
   const [showArrow, setShowArrow] = useState(false);
 
   useEffect(() => {
@@ -67,8 +67,6 @@ const AffinityDiagram = ({data}) => {
     const parentNode = dom.parentNode;
     const parentNodeWidth = parentNode.getBoundingClientRect().width;
 
-    setWidth(domWidth);
-    setParentWidth(parentNodeWidth);
     if (domWidth > parentNodeWidth) {
       setShowArrow(true);
       parentNode.scrollTo({
@@ -105,18 +103,18 @@ const AffinityDiagram = ({data}) => {
     <div className={classes.tree} style={{touchAction: showArrow ? 'none' : 'auto'}}>
       <RootRef rootRef={domRef}>
         <div className="Column">
-          <Note content={data.key} depth={0} isLong={data.key.length > 80}/>
+          <Note content={data.key} hide={data.key.length === 0} depth={0} isLong={data.key.length > 80}/>
           <div className="Row">
             {
               data.children ? (
                 data.children.map(child =>
                   <div className="Column">
-                    <Note content={child.key} depth={1} isLong={child.key.length > 80}/>
+                    <Note content={child.key} depth={1} hide={child.key.length === 0} isLong={child.key.length > 80}/>
                     <div className="Row">
                       {
                         child.children? (
                           child.children.map(grendchild =>
-                            <Note content={grendchild.key} depth={2} isLong={grendchild.key.length > 80}/>
+                            <Note content={grendchild.key} depth={2} hide={grendchild.key.length === 0} isLong={grendchild.key.length > 80}/>
                           )
                         ) : <></>
                       }
