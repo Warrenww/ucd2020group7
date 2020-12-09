@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ca72ca3b888410092656675eac8221d3",
+    "revision": "1800fb212282b2cfa30f57c639dbbc34",
     "url": "/ucd2020group7/index.html"
   },
   {
-    "revision": "56f59af528bebef0b776",
+    "revision": "b30d97471221fdd6c270",
     "url": "/ucd2020group7/static/css/2.9d6f32cf.chunk.css"
   },
   {
-    "revision": "0839e2b465d2ca45066c",
+    "revision": "4ffc16c29b92cd8ea6f3",
     "url": "/ucd2020group7/static/css/main.69eda509.chunk.css"
   },
   {
-    "revision": "56f59af528bebef0b776",
-    "url": "/ucd2020group7/static/js/2.65e90c75.chunk.js"
+    "revision": "b30d97471221fdd6c270",
+    "url": "/ucd2020group7/static/js/2.5611216f.chunk.js"
   },
   {
     "revision": "04481d0dabbbcb233a3b18232ad9aa7f",
-    "url": "/ucd2020group7/static/js/2.65e90c75.chunk.js.LICENSE.txt"
+    "url": "/ucd2020group7/static/js/2.5611216f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0839e2b465d2ca45066c",
-    "url": "/ucd2020group7/static/js/main.b0f0253a.chunk.js"
+    "revision": "4ffc16c29b92cd8ea6f3",
+    "url": "/ucd2020group7/static/js/main.b560d62b.chunk.js"
   },
   {
     "revision": "e06442d49b0024ed3b48",
@@ -230,6 +230,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "f4e17f44cec5bdd440c3f6f114bab00e",
     "url": "/ucd2020group7/static/media/cabinet.f4e17f44.jpg"
+  },
+  {
+    "revision": "5dcc8548299c33513bde899dc5b4eb68",
+    "url": "/ucd2020group7/static/media/design_on_computer.5dcc8548.jpg"
   },
   {
     "revision": "9542e2f03e4fa8d32a74034b60dddf8c",
