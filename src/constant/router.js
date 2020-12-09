@@ -33,6 +33,11 @@ export default [
     text: "Lo-Fi Propotype",
   },
   {
+    link: '/milestone/5',
+    icon: <Avatar style={styles.avatar}>M5</Avatar>,
+    text: "Hi-Fi Propotype",
+  },
+  {
     link: '/aboutUs',
     icon: <InfoIcon />,
     text: "About us"  ,

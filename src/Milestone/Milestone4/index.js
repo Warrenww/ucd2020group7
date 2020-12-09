@@ -11,8 +11,10 @@ import {
   Zoom,
   Tooltip,
   Hidden,
+  Divider,
 } from '@material-ui/core';
 import { Alert, AlertTitle, Skeleton } from '@material-ui/lab';
+
 import SearchIcon from '@material-ui/icons/Search';
 import CategoryIcon from '@material-ui/icons/Category';
 import PeopleIcon from '@material-ui/icons/People';
@@ -20,6 +22,21 @@ import PhoneIphoneIcon from '@material-ui/icons/PhoneIphone';
 import WidgetsIcon from '@material-ui/icons/Widgets';
 import AddLocationIcon from '@material-ui/icons/AddLocation';
 import EditIcon from '@material-ui/icons/Edit';
+import ShareIcon from '@material-ui/icons/Share';
+import VisibilityIcon from '@material-ui/icons/Visibility';
+import LockIcon from '@material-ui/icons/Lock';
+import LocalOfferIcon from '@material-ui/icons/LocalOffer';
+import PhotoCameraIcon from '@material-ui/icons/PhotoCamera';
+import HistoryIcon from '@material-ui/icons/History';
+import NfcIcon from '@material-ui/icons/Nfc';
+import NoteIcon from '@material-ui/icons/Note';
+import StorageIcon from '@material-ui/icons/Storage';
+import LocationOnIcon from '@material-ui/icons/LocationOn';
+import PermDeviceInformationIcon from '@material-ui/icons/PermDeviceInformation';
+import ScreenLockPortraitIcon from '@material-ui/icons/ScreenLockPortrait';
+import PaymentIcon from '@material-ui/icons/Payment';
+import SportsEsportsIcon from '@material-ui/icons/SportsEsports';
+
 import Photo001 from '../../images/001.jpg';
 import Photo002 from '../../images/002.jpg';
 import Photo003 from '../../images/003.jpg';
@@ -62,15 +79,16 @@ const useStyles = makeStyles((theme) => ({
     "& .sketchHolder": {
       "& h3": {
         margin: 0,
-        marginBottom: 10,
-        paddingBottom: 10,
         width: '100%',
-        borderBottom: '1px solid #333',
         textAlign: 'center',
       },
       "& img": {
         width: '100%',
       }
+    },
+    "& .MuiDivider-root": {
+      width: '90%',
+      margin: '1em 0',
     }
   },
   conceptDescription: {
@@ -207,9 +225,9 @@ const Milestone4 = props => {
           </div>
           <Grid container justify="center" className="sketchHolder" spacing={3}>
             <Hidden mdDown>
-              <Grid item container justify="center" xs={12} md={4}> <h3>Concept 1</h3> </Grid>
-              <Grid item container justify="center" xs={12} md={4}> <h3>Concept 2</h3> </Grid>
-              <Grid item container justify="center" xs={12} md={4}> <h3>Concept 3</h3> </Grid>
+              <Grid item container justify="center" xs={12} md={4}> <h3>Concept 1</h3> <Divider /> </Grid>
+              <Grid item container justify="center" xs={12} md={4}> <h3>Concept 2</h3> <Divider /> </Grid>
+              <Grid item container justify="center" xs={12} md={4}> <h3>Concept 3</h3> <Divider /> </Grid>
             </Hidden>
             <Grid item container justify="center" xs={12} md={4}>
             {
@@ -248,7 +266,107 @@ const Milestone4 = props => {
       <Grid item xs={12}>
         <Paper className={classes.paper}>
           <h2>Before & After</h2>
+          從每位組員的Sketch到Lofi prototype，我們將每個concept取出，討論其可行性，將其中較可行的concept留下，
+          作為Lofi prototype呈現的內容。
+        </Paper>
+      </Grid>
 
+      <Grid item xs={12} md={6}>
+        <Paper className={classes.paper}>
+          <h2>Concept that remain</h2>
+          <h3>Requirement 1</h3>
+          <Alert severity="success" variant="outlined" className={classes.highlight} icon={<ShareIcon />}>
+              <AlertTitle><b>使用APP創建虛擬共享空間</b></AlertTitle>
+              APP創建帳號相對容易，且手機已被大眾廣泛使用。用APP創建虛擬共享空間，使用及紀錄都很便利。
+          </Alert>
+          <Alert severity="success" variant="outlined" className={classes.highlight} icon={<VisibilityIcon />}>
+              <AlertTitle><b>可以自訂義2D平面空間規劃，讓成員以視覺化方式管理空間</b></AlertTitle>
+              使用者可以針對自己的需求建立空間，以視覺化的方式呈現更加直觀。
+          </Alert>
+          <Alert severity="success" variant="outlined" className={classes.highlight} icon={<LockIcon />}>
+              <AlertTitle><b>透過APP紀錄物品/個人物品</b></AlertTitle>
+              透過權限設定，讓共享空間的成員可以擁有不同的隱私層級
+          </Alert>
+          <Divider />
+          <h3>Requirement 2</h3>
+          <Alert severity="success" variant="outlined" className={classes.highlight} icon={<EditIcon />}>
+            <AlertTitle><b>透過APP紀錄物品</b></AlertTitle>
+            良好的紀錄及整理有利於搜尋
+          </Alert>
+          <Alert severity="success" variant="outlined" className={classes.highlight} icon={<SearchIcon />}>
+            <AlertTitle><b>建立APP搜尋功能</b></AlertTitle>
+            可以快速查找資料，短時間找到目標物品
+          </Alert>
+          <Alert severity="success" variant="outlined" className={classes.highlight} icon={<LocalOfferIcon />}>
+            <AlertTitle><b>以標籤的形式分類物品</b></AlertTitle>
+            使用者對單一物品可能只有模糊的記憶，給予物品賦予標籤可以增加搜尋到目標物品的可能性
+          </Alert>
+          <Alert severity="success" variant="outlined" className={classes.highlight} icon={<PhotoCameraIcon />}>
+            <AlertTitle><b>紀錄物品的相片</b></AlertTitle>
+            搜尋物品時看到相片，可以更直觀地選擇相對應的物品以及回憶物品位置。
+          </Alert>
+          <Divider />
+          <h3>Requirement 3</h3>
+          <Alert severity="success" variant="outlined" className={classes.highlight} icon={<HistoryIcon />}>
+            <AlertTitle><b>透過APP記錄物品使用的狀態(是否在原位、上次使用者是誰)</b></AlertTitle>
+            養成良好的紀錄習慣進而養成物品歸位的習慣
+          </Alert>
+        </Paper>
+      </Grid>
+
+      <Grid item xs={12} md={6}>
+        <Paper className={classes.paper}>
+          <h2>Concept that fade out</h2>
+          <h3>Requirement 1</h3>
+          <Alert severity="error" variant="outlined" className={classes.highlight} icon={<NfcIcon />}>
+              <AlertTitle><b>使用NFC 標籤記錄物品到共用的資料庫</b></AlertTitle>
+              需要其他硬體的支援，每件物品上標籤過程較為繁瑣
+          </Alert>
+          <Alert severity="error" variant="outlined" className={classes.highlight} icon={<NoteIcon />}>
+              <AlertTitle><b>紙本工具，例如:共同筆記本、大白板</b></AlertTitle>
+
+          </Alert>
+          <Alert severity="error" variant="outlined" className={classes.highlight} icon={<LockIcon />}>
+              <AlertTitle><b>暫時提供權限給家人朋友編輯</b></AlertTitle>
+              權限控制較為繁瑣
+          </Alert>
+          <Alert severity="error" variant="outlined" className={classes.highlight} icon={<StorageIcon />}>
+              <AlertTitle><b>使用資料庫存放所有物品的紀錄，共用物品的所有人會從資料庫更新物品紀錄</b></AlertTitle>
+              資料庫設計與安全性考量
+          </Alert>
+          <Divider />
+          <h3>Requirement 2</h3>
+          <Alert severity="error" variant="outlined" className={classes.highlight} icon={<SearchIcon />}>
+            <AlertTitle><b>使用智慧眼鏡紀錄物品位置，透過智慧眼鏡搜尋物品</b></AlertTitle>
+            需要額外的硬體配置，智慧眼鏡技術尚未成熟
+          </Alert>
+          <Alert severity="error" variant="outlined" className={classes.highlight} icon={<LocationOnIcon />}>
+            <AlertTitle><b>使用小型定位器，透過定位方式知道物品的位置</b></AlertTitle>
+            需要額外硬體配置，每個物品都加上定位器較為麻煩
+          </Alert>
+          <Alert severity="error" variant="outlined" className={classes.highlight} icon={<HistoryIcon />}>
+            <AlertTitle><b>系統利用AI幫忙回憶可能出現的地點，或提供替代方案</b></AlertTitle>
+            良好的AI model可能較難設計及訓練，需要考慮各種因素
+          </Alert>
+          <Divider />
+          <h3>Requirement 3</h3>
+          <Alert severity="error" variant="outlined" className={classes.highlight} icon={<PermDeviceInformationIcon />}>
+            <AlertTitle><b>使用家電、家具上的小型定位器或是掃描器，透過偵測物品是否在該在的位置上，進一步發出提醒</b></AlertTitle>
+            使用家電、家具上的小型定位器或是掃描器，透過偵測物品是否在該在的位置上，進一步發出提醒
+            硬體設備要放在每一個物品上面較無法普及，可能會有性能上或是價錢上的考量。
+          </Alert>
+          <Alert severity="error" variant="outlined" className={classes.highlight} icon={<ScreenLockPortraitIcon />}>
+            <AlertTitle><b>懲罰機制，手機鎖屏一段時間</b></AlertTitle>
+            方法太過激進，使用者可能會考慮直接不使用此方法
+          </Alert>
+          <Alert severity="error" variant="outlined" className={classes.highlight} icon={<PaymentIcon />}>
+            <AlertTitle><b>懲罰機制，透過微電擊或是扣款等等，讓使用者對於亂丟物品這個壞習慣有更深的印象。</b></AlertTitle>
+            方法太過激進，使用者可能會考慮直接不使用此方法
+          </Alert>
+          <Alert severity="error" variant="outlined" className={classes.highlight} icon={<SportsEsportsIcon />}>
+            <AlertTitle><b>在手機APP裡面設計遊戲，透過遊戲機制，請使用者養成紀錄物品及檢查物品的好習慣。</b></AlertTitle>
+            遊戲機制可能缺乏使用的動力，無法維持長時間習慣性的使用。
+          </Alert>
         </Paper>
       </Grid>
 

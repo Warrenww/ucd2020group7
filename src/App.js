@@ -12,6 +12,7 @@ import {
   Toolbar,
   IconButton,
   Button,
+  Hidden,
 } from '@material-ui/core';
 import Sidebar from './Components/Sidebar';
 import Milestone from './Milestone';
@@ -19,6 +20,8 @@ import AboutUs from './AboutUs';
 import MenuIcon from '@material-ui/icons/Menu';
 
 import routerConfig from './constant/router';
+import logoImage from '../src/images/logo.png';
+
 
 import 'antd/dist/antd.css';
 
@@ -40,6 +43,7 @@ const useStyles = makeStyles({
   AppBar: {
     backgroundColor: "#33333388",
     backdropFilter: "blur(5px)",
+    userSelect: "none",
     "& a": {
       color: 'inherit',
       textDecoration: 'none',
@@ -53,6 +57,11 @@ const useStyles = makeStyles({
         color: 'white',
         textTransform: 'none',
       }
+    },
+    "& .logo": {
+      height: 60,
+      paddingRight: 10,
+      filter: 'invert(1)',
     }
   },
 });
@@ -83,17 +92,20 @@ function App(props) {
             <MenuIcon/>
           </IconButton>
           <Link to="/">
+            <img src={logoImage} alt="logo" className="logo"/>
             UCD 2020 Group 7
           </Link>
-          <div className="links">
-            {
-              routerConfig.map(x => (
-                <Button>
-                  <Link to={x.link} key={x.text}> {x.text} </Link>
-                </Button>
-              ))
-            }
-          </div>
+          <Hidden smDown>
+            <div className="links">
+              {
+                routerConfig.map(x => (
+                  <Button>
+                    <Link to={x.link} key={x.text}> {x.text} </Link>
+                  </Button>
+                ))
+              }
+            </div>
+          </Hidden>
 
         </Toolbar>
       </AppBar>
