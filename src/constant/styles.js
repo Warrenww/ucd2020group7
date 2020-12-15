@@ -47,6 +47,14 @@ export default makeStyles((theme) =>({
     display: 'flex',
     alignItems: 'center',
     flexDirection: 'column',
+    '& h2, & h3': {
+      fontWeight: 'bold',
+      textAlign: 'center',
+    },
+    "& .MuiDivider-root": {
+      width: '90%',
+      margin: '1em 0',
+    },
   },
   highlight: {
     width: '100%',
@@ -240,10 +248,6 @@ export default makeStyles((theme) =>({
         width: '100%',
       }
     },
-    "& .MuiDivider-root": {
-      width: '90%',
-      margin: '1em 0',
-    },
   },
   conceptDescription: {
     padding: '1em',
@@ -252,5 +256,30 @@ export default makeStyles((theme) =>({
   videoDescription: {
     width: '80%',
     marginBottom: 20,
+  },
+// MilMilestone 5
+  quote: {
+    maxWidth: 400,
+    lineHeight: 2,
+    position: 'relative',
+    padding: '1.5em',
+    marginTop: '1em',
+    '&:before, &:after': {
+      content: '""',
+      width: '2em',
+      height: '2em',
+      borderBottom: '5px solid #555',
+      borderRight: '5px solid #555',
+      position: 'absolute',
+      bottom: 0,
+      right: 0,
+    },
+    '&:before': {
+      top: 0,
+      left: 0,
+      border: 0,
+      borderTop: '5px solid #555',
+      borderLeft: '5px solid #555',
+    }
   },
 }));
