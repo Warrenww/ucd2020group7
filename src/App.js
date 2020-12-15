@@ -16,6 +16,7 @@ import {
 } from '@material-ui/core';
 import Sidebar from './Components/Sidebar';
 import Milestone from './Milestone';
+import Home from './Home';
 import AboutUs from './AboutUs';
 import MenuIcon from '@material-ui/icons/Menu';
 
@@ -73,13 +74,11 @@ function App(props) {
   const handleDrawerOpen = _ => setOpen(true);
   const handleDrawerClose = _ => setOpen(false);
 
-  const Home = props => (<h1>Home</h1>);
-
   useEffect(()=>{
     const params = (new URL(document.location)).searchParams;
     const path = params.get('path');
     if (path){
-    setRedirect(path);
+      setRedirect(path);
     }
   },[])
 
