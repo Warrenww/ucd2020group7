@@ -14,15 +14,19 @@ import {
   TableBody,
   Hidden,
   Divider,
+  Grow,
 } from '@material-ui/core';
 import { Alert, AlertTitle } from '@material-ui/lab';
+import { Pagination } from 'antd';
 import useStyles from '../../constant/styles';
 import { circumstances, table, feedbacks } from './data';
+import Compare from './Compare';
 
 const Milestone5 = () => {
   const classes = useStyles();
   const [activeCircumstance, setActiveCircumstance] = useState(parseInt(circumstances.length * Math.random()));
   const [activeFeedback, setActiveFeedback] = useState(parseInt(feedbacks.length * Math.random()));
+  const [page, setPage] = useState(1);
 
   return (
     <Grid container spacing={3} direction="row" justify="center" alignItems="stretch">
@@ -102,11 +106,51 @@ const Milestone5 = () => {
           <h3>改進面向</h3>
           {
             feedbacks.map((feedback, i) => (
-              <Alert severity="warning" variant={i === activeFeedback ? "filled" : "outlined"} className={classes.highlight} icon={feedback.icon}>
+              <Alert
+                severity="warning"
+                variant={i === activeFeedback ? "filled" : "outlined"}
+                className={classes.highlight} icon={feedback.icon}
+                onClick={() => setActiveFeedback(i)}
+              >
                   <AlertTitle>{feedback.title}</AlertTitle>
               </Alert>
             ))
           }
+        </Paper>
+      </Grid>
+
+      <Grid item xs={12}>
+        <Paper className={`${classes.paper} ${classes.widgetsPaper}`}>
+          <h2>From Lo-Fi Prototype To Hi-Fi Prototype</h2>
+          針對每一個回饋的面向，我們調整了數個Lo-fi prototype中的設計，以下詳述了我們如何從Lo-fi prototype演化到Hi-Fi prototype的過程。
+          <div>
+            {
+              feedbacks.map((f, i) => (
+                <Chip
+                  icon={f.icon}
+                  label={f.title}
+                  clickable
+                  color="primary"
+                  variant={activeFeedback === i ? "default" : "outlined"}
+                  onClick={() => setActiveFeedback(i) || setPage(1)}
+                />
+              ))
+            }
+          </div>
+          {
+            feedbacks[activeFeedback].children.map((x,i) => (
+              <Grow in={page === i + 1} mountOnEnter unmountOnExit>
+                <Compare data={x} />
+              </Grow>
+            ))
+          }
+          <Pagination
+            className={classes.pagination}
+            current={page}
+            total={feedbacks[activeFeedback].children.length}
+            pageSize={1}
+            onChange={page => setPage(page)}
+          />
         </Paper>
       </Grid>
 
