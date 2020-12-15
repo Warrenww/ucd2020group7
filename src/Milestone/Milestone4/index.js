@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
 import {
   Grid,
@@ -43,77 +42,7 @@ import Photo003 from '../../images/003.jpg';
 import Photo004 from '../../images/004.jpg';
 import Photo005 from '../../images/005.jpg';
 import { sketch, situation, videoList } from './data';
-
-const useStyles = makeStyles((theme) => ({
-  paper: {
-    border: 0,
-    borderRadius: 3,
-    padding: '30px',
-    position: 'relative',
-    display: 'flex',
-    alignItems: 'center',
-    flexDirection: 'column',
-    "& .MuiChip-root": {
-      margin: 10,
-    },
-    "& .AvatarContainer": {
-      display: 'flex',
-      marginBottom: 20,
-      "& .MuiAvatar-root": {
-        margin: 10,
-        width: 40,
-        height: 40,
-        cursor: 'pointer',
-        boxShadow: '2px 2px 10px #333',
-        transition: '.3s ease-in-out',
-      },
-      "& .MuiAvatar-root:hover": {
-        transform: 'scale(1.2)',
-      },
-      "& .active": {
-        boxShadow: '2px 2px 10px #7a654d',
-        transform: 'scale(1.2)',
-        border: '3px solid #e4988a',
-      }
-    },
-    "& .sketchHolder": {
-      "& h3": {
-        margin: 0,
-        width: '100%',
-        textAlign: 'center',
-      },
-      "& img": {
-        width: '100%',
-      }
-    },
-    "& .MuiDivider-root": {
-      width: '90%',
-      margin: '1em 0',
-    }
-  },
-  conceptDescription: {
-    padding: '1em',
-    borderTop: '1px solid #ccc',
-  },
-  highlight: {
-    width: '100%',
-    maxWidth: 600,
-    marginBottom: 20,
-  },
-  videoDescription: {
-    width: '80%',
-    marginBottom: 20,
-  },
-  backdrop: {
-    zIndex: theme.zIndex.drawer + 1,
-    color: '#fff',
-    backdropFilter: 'blur(5px)',
-    "& img": {
-      maxWidth: '90%',
-      maxHeight: '90%',
-    }
-  },
-}));
+import useStyles from '../../constant/styles';
 
 const Milestone4 = props => {
   const classes = useStyles();
@@ -174,7 +103,7 @@ const Milestone4 = props => {
       </Grid>
 
       <Grid item xs={12}>
-        <Paper className={classes.paper}>
+        <Paper className={`${classes.paper} ${classes.widgetsPaper}`}>
           <h2>Sketch</h2>
           <p>
             以下是組員們對於每個Design Requirement畫出來的3個發想<br/>
@@ -371,7 +300,7 @@ const Milestone4 = props => {
       </Grid>
 
       <Grid item xs={12}>
-        <Paper className={classes.paper}>
+        <Paper className={`${classes.paper} ${classes.widgetsPaper}`}>
           <h2>LoFi Prototype</h2>
           <p>
           最後決定使用APP來達成我們的 Design Requirements，以下是3個使用情境與對應的操作影片

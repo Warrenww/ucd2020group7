@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import {
   Paper,
   Grid,
@@ -21,76 +20,7 @@ import personaImage2 from '../../images/persona 2.png';
 import senarioImage1 from '../../images/senario 1.png';
 import senarioImage2 from '../../images/senario 2.png';
 
-
-const useStyles = makeStyles((theme) => ({
-  paper: {
-    border: 0,
-    borderRadius: 3,
-    padding: '30px',
-    position: 'relative',
-    display: 'flex',
-    alignItems: 'center',
-    flexDirection: 'column',
-  },
-  behaviorVariableContainer: {
-    width: '100%',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'flex-start',
-    position: 'relative',
-    margin: '1em 0',
-    marginTop: '3em',
-  },
-  behaviorVariableText: {
-    width: '10%',
-    textAlign: 'center',
-    fontSize: '.8em',
-    fontWeight: 'bold',
-  },
-  behaviorVariableTrack: {
-    width: '80%',
-    height: '4px',
-    background: '#ccc',
-    borderRadius: '5px',
-    marginTop: 'calc(.5em + 2px)',
-  },
-  behaviorVariableUser: {
-    position: 'absolute',
-    top: '-2.5em',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  stepper: {
-    width: '100%',
-  },
-  content: {
-    width: '100%',
-    textAlign: 'justify',
-    padding: '0 3em',
-  },
-  buttonGroup: {
-    margin: 10,
-    alignSelf: 'flex-end',
-    '& button': {
-      margin: 10,
-    }
-  },
-  personaImage: {
-    borderRadius: 10,
-    overflow: 'hidden',
-    cursor: 'pointer',
-    '& img': {
-      width: '100%',
-    }
-  },
-  backdrop: {
-    zIndex: theme.zIndex.drawer + 1,
-    color: '#fff',
-    backdropFilter: 'blur(5px)',
-  },
-}));
+import useStyles from '../../constant/styles';
 
 const Milestone3 = props => {
   const classes = useStyles();
@@ -146,7 +76,7 @@ const Milestone3 = props => {
             </Step>
           ))}
         </Stepper>
-        <div className={classes.content}>
+        <div className={classes.tabContent}>
           {contents[activeStep]}
         </div>
         <div className={classes.buttonGroup}>

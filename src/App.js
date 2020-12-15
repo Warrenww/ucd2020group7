@@ -6,7 +6,6 @@ import {
   Redirect,
   Link,
 } from "react-router-dom";
-import { makeStyles } from '@material-ui/core/styles';
 import {
   AppBar,
   Toolbar,
@@ -21,51 +20,10 @@ import AboutUs from './AboutUs';
 import MenuIcon from '@material-ui/icons/Menu';
 
 import routerConfig from './constant/router';
+import useStyles from './constant/styles';
 import logoImage from '../src/images/logo.png';
 
-
 import 'antd/dist/antd.css';
-
-const useStyles = makeStyles({
-  App: {
-    backgroundColor: "#ccc",
-    height: "100vh",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    fontSize: "1em",
-    color: "white",
-    overflowY: "scroll",
-    scrollBehavior: "smooth",
-    '&::-webkit-scrollbar': {
-      width: 0,
-    },
-  },
-  AppBar: {
-    backgroundColor: "#33333388",
-    backdropFilter: "blur(5px)",
-    userSelect: "none",
-    "& a": {
-      color: 'inherit',
-      textDecoration: 'none',
-    },
-    "& .links": {
-      flex: 1,
-      padding: '0 2em',
-      display: 'flex',
-      justifyContent: 'flex-end',
-      '& a': {
-        color: 'white',
-        textTransform: 'none',
-      }
-    },
-    "& .logo": {
-      height: 60,
-      paddingRight: 10,
-      filter: 'invert(1)',
-    }
-  },
-});
 
 function App(props) {
   const classes = useStyles();

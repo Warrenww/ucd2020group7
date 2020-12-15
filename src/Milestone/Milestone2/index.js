@@ -1,5 +1,4 @@
 import React, {useState, useRef, useEffect} from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import {
   Grid,
   Paper,
@@ -39,61 +38,7 @@ import AddIcon from '@material-ui/icons/Add';
 
 import AffinityDiagram from './AffinityDiagram';
 import { steps, contents, table, affinityDiagram, thinkingPoint } from './data';
-
-const useStyles = makeStyles((theme) => ({
-  paper: {
-    border: 0,
-    borderRadius: 3,
-    padding: '30px',
-    position: 'relative',
-    display: 'flex',
-    alignItems: 'center',
-    flexDirection: 'column',
-  },
-  content: {
-    width: '100%',
-    textAlign: 'justify',
-    padding: '3em',
-  },
-  table: {
-    width: 'auto',
-    margin: 'auto',
-    marginTop: 20,
-  },
-  highlight: {
-    width: '100%',
-    maxWidth: 600,
-    marginBottom: 20,
-  },
-  pagination: {
-    marginTop: 20,
-  },
-  affinityDiagramContainer: {
-    display: 'flex',
-    width: 'max-content',
-    '& .holder': {
-      cursor: 'pointer',
-      padding: '2em',
-      borderRadius: '3em',
-      margin: '2em',
-    },
-    '& .holder:hover, & .active': {
-      background: '#ddd6',
-    }
-  },
-  statistic: {
-    width: '100%',
-    margin: '2em',
-    textAlign: 'center',
-  },
-  list: {
-    '& .MuiListItemText-root': {
-      alignItems: 'center',
-      display: 'flex',
-      '& span': {fontSize: '1em'}
-    }
-  },
-}));
+import useStyles from '../../constant/styles';
 
 const Milestone2 = props => {
   const classes = useStyles();
@@ -133,7 +78,7 @@ const Milestone2 = props => {
              )
            }
           </Tabs>
-          <div className={classes.content}>
+          <div className={classes.tabContent}>
             {contents[value]}
           </div>
         </Paper>
