@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2f62ec1e9f5f3cefb6cc7e10ab8b6b68",
+    "revision": "0dab21ec8c2a80877783a7bddec8178f",
     "url": "/ucd2020group7/index.html"
   },
   {
-    "revision": "cd43573004baa813ccfb",
+    "revision": "3621b72e56a44f01ddda",
     "url": "/ucd2020group7/static/css/2.9d6f32cf.chunk.css"
   },
   {
-    "revision": "97c2f0fd332f3e5b962c",
+    "revision": "3a2806928844f4353879",
     "url": "/ucd2020group7/static/css/main.69eda509.chunk.css"
   },
   {
-    "revision": "cd43573004baa813ccfb",
-    "url": "/ucd2020group7/static/js/2.f58c8093.chunk.js"
+    "revision": "3621b72e56a44f01ddda",
+    "url": "/ucd2020group7/static/js/2.9d12c9c5.chunk.js"
   },
   {
     "revision": "04481d0dabbbcb233a3b18232ad9aa7f",
-    "url": "/ucd2020group7/static/js/2.f58c8093.chunk.js.LICENSE.txt"
+    "url": "/ucd2020group7/static/js/2.9d12c9c5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "97c2f0fd332f3e5b962c",
-    "url": "/ucd2020group7/static/js/main.e76c269b.chunk.js"
+    "revision": "3a2806928844f4353879",
+    "url": "/ucd2020group7/static/js/main.a70ca518.chunk.js"
   },
   {
     "revision": "e06442d49b0024ed3b48",
@@ -228,6 +228,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ucd2020group7/static/media/R3C3.b3b04652.jpg"
   },
   {
+    "revision": "1028b395f5ff16a4f1aa82716512867a",
+    "url": "/ucd2020group7/static/media/auth.1028b395.jpg"
+  },
+  {
+    "revision": "bf82932e4ad6a53ac1086b158a300cf1",
+    "url": "/ucd2020group7/static/media/auth.bf82932e.png"
+  },
+  {
     "revision": "f4e17f44cec5bdd440c3f6f114bab00e",
     "url": "/ucd2020group7/static/media/cabinet.f4e17f44.jpg"
   },
@@ -242,6 +250,46 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "10203450032319e1c4004046afb12d16",
     "url": "/ucd2020group7/static/media/discussion.10203450.jpg"
+  },
+  {
+    "revision": "5a022dacdb31162753d44a94469ce8bd",
+    "url": "/ucd2020group7/static/media/editItem.5a022dac.png"
+  },
+  {
+    "revision": "067d7871d0df11d2c6461b4b4e9493a7",
+    "url": "/ucd2020group7/static/media/grid.067d7871.png"
+  },
+  {
+    "revision": "6c15c1c1c3b5364099045ed64f8b5606",
+    "url": "/ucd2020group7/static/media/index.6c15c1c1.jpg"
+  },
+  {
+    "revision": "9255b85f60120c6ea8de30de8f6d6346",
+    "url": "/ucd2020group7/static/media/indoorDesign.9255b85f.jpg"
+  },
+  {
+    "revision": "701d355ebad9a64d26546320b7ae6281",
+    "url": "/ucd2020group7/static/media/infoCard.701d355e.png"
+  },
+  {
+    "revision": "954cfd42cc5a47bffe954838e18d365b",
+    "url": "/ucd2020group7/static/media/infoCard.954cfd42.jpg"
+  },
+  {
+    "revision": "9c7f552e71fd55727b4edf65f5d2074f",
+    "url": "/ucd2020group7/static/media/infoCard_alt.9c7f552e.jpg"
+  },
+  {
+    "revision": "d9b22904dbd6cecdeff24f5eaed90dfb",
+    "url": "/ucd2020group7/static/media/infoCard_alt.d9b22904.png"
+  },
+  {
+    "revision": "523946c9ae54aa7d36a9acc5154809ad",
+    "url": "/ucd2020group7/static/media/invite.523946c9.png"
+  },
+  {
+    "revision": "8f59f888fe9eafe90e909bac45d7c7f8",
+    "url": "/ucd2020group7/static/media/newPlace.8f59f888.jpg"
   },
   {
     "revision": "16057bf6712be2fb36c9211b68ec17e3",
@@ -266,6 +314,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "9c720157b494249c57b29c611b89c794",
     "url": "/ucd2020group7/static/media/senario 2.9c720157.png"
+  },
+  {
+    "revision": "62c3335843986a7181623d6b5f95a348",
+    "url": "/ucd2020group7/static/media/takePicture.62c33358.png"
+  },
+  {
+    "revision": "8485f30534498c0721f0b7a171d7077c",
+    "url": "/ucd2020group7/static/media/takePicture.8485f305.jpg"
   },
   {
     "revision": "531e3d8771d4b7a50cfb4c7f2e483c61",
