@@ -16,10 +16,10 @@ import {
   Divider,
   Grow,
 } from '@material-ui/core';
-import { Alert, AlertTitle } from '@material-ui/lab';
+import { Alert, AlertTitle, Skeleton } from '@material-ui/lab';
 import { Pagination } from 'antd';
 import useStyles from '../../constant/styles';
-import { circumstances, table, feedbacks } from './data';
+import { circumstances, table, feedbacks, videoList } from './data';
 import Compare from './Compare';
 
 const Milestone5 = () => {
@@ -27,6 +27,7 @@ const Milestone5 = () => {
   const [activeCircumstance, setActiveCircumstance] = useState(parseInt(circumstances.length * Math.random()));
   const [activeFeedback, setActiveFeedback] = useState(parseInt(feedbacks.length * Math.random()));
   const [page, setPage] = useState(1);
+  const [activeVideo, setActiveVideo] = useState(parseInt(videoList.length * Math.random()));
 
   return (
     <Grid container spacing={3} direction="row" justify="center" alignItems="stretch">
@@ -151,6 +152,34 @@ const Milestone5 = () => {
             pageSize={1}
             onChange={page => setPage(page)}
           />
+        </Paper>
+      </Grid>
+
+      <Grid item xs={12}>
+        <Paper className={`${classes.paper} ${classes.widgetsPaper}`}>
+          <h2>Hi-Fi Prototype</h2>
+          <p>
+            最後我們使用Figma來完成我們的Hi-Fi prototype，以下是{videoList.length}個使用情境與對應的操作影片
+          </p>
+          <div>
+            {
+                videoList.map((x, i) => (
+                  <Chip
+                    icon={<></>}
+                    label={`情境 ${i + 1}`}
+                    clickable
+                    color="primary"
+                    variant={activeVideo === i ? "default" : "outlined"}
+                    onClick={activeVideo === i ? () => setActiveVideo(-1) : () => setActiveVideo(i)}
+                  />
+                ))
+            }
+          </div>
+          {
+            videoList[activeVideo] ?
+              <iframe width="640" height="360" title="video" src={videoList[activeVideo]} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              : <Skeleton variant="rect" width={640} height={360} />
+          }
         </Paper>
       </Grid>
 
