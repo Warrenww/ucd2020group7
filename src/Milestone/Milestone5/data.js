@@ -233,10 +233,26 @@ const feedbacks = [
 ];
 
 const videoList = [
-    'https://drive.google.com/file/d/1lzGpZXx5VI-wDiugTOXJ4oeniOJ3x-TZ/preview',
-    'https://drive.google.com/file/d/1aOekWDDahB7biqTb61PP3FSRVyWvy6Lz/preview',
-    'https://drive.google.com/file/d/1PHy1RE7GhF4OSOHngOd2Kk_jZLK3gYB8/preview',
-    'https://drive.google.com/file/d/1C-dmfEGVDZwmp6OG5FCxFSrtN9Tv_87r/preview',
+    {
+      title: '情境一',
+      nodeId: '249%3A1812',
+      video: 'https://drive.google.com/file/d/1lzGpZXx5VI-wDiugTOXJ4oeniOJ3x-TZ/preview',
+    },
+    {
+      title: '情境二',
+      nodeId: '278%3A2084',
+      video: 'https://drive.google.com/file/d/1aOekWDDahB7biqTb61PP3FSRVyWvy6Lz/preview',
+    },
+    {
+      title: '情境三',
+      nodeId: '410%3A0',
+      video: 'https://drive.google.com/file/d/1PHy1RE7GhF4OSOHngOd2Kk_jZLK3gYB8/preview',
+    },
+    {
+      title: '情境四',
+      nodeId: '249%3A1812',
+      video: 'https://drive.google.com/file/d/1C-dmfEGVDZwmp6OG5FCxFSrtN9Tv_87r/preview',
+    },
 ];
 
 export {

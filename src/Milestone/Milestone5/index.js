@@ -167,7 +167,7 @@ const Milestone5 = () => {
                 videoList.map((x, i) => (
                   <Chip
                     icon={<></>}
-                    label={`情境 ${i + 1}`}
+                    label={x.title}
                     clickable
                     color="primary"
                     variant={activeVideo === i ? "default" : "outlined"}
@@ -178,7 +178,7 @@ const Milestone5 = () => {
           </div>
           {
             videoList[activeVideo] ?
-              <iframe width="640" height="360" title="video" src={videoList[activeVideo]} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe width="640" height="360" title="video" src={videoList[activeVideo].video} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               : <Skeleton variant="rect" width={640} height={360} />
           }
 
@@ -186,9 +186,9 @@ const Milestone5 = () => {
       </Grid>
 
       <Grid item xs={12}>
-        <Paper className={classes.paper}>
+        <Paper className={`${classes.paper} ${classes.widgetsPaper}`}>
           <h2>Hi-Fi Prototype Figma Demo</h2>
-          <FigmaDemo />
+          <FigmaDemo activeVideo={activeVideo}/>
         </Paper>
       </Grid>
 

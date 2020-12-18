@@ -9,13 +9,12 @@ import {
 } from '@material-ui/core';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import CachedIcon from '@material-ui/icons/Cached';
+import { videoList } from './data';
 
-const Node_0 = '249%3A1812';
-
-const FigmaDemo = () => {
+const FigmaDemo = ({activeVideo, setActiveVideo}) => {
   const classes = useStyles();
   const [figmaURL, setFigmaURL] = useState('');
-  const [nodeId, setNodeId] = useState(Node_0);
+  const [nodeId, setNodeId] = useState(videoList[activeVideo].nodeId || '249%3A1812');
   const [embedURL, setEmbedURL] = useState('');
   const [showTip, setShowTip] = useState(true);
   const [key, setKey] = useState(0);
@@ -27,7 +26,12 @@ const FigmaDemo = () => {
   useEffect(() => {
     const url = `https://www.figma.com/embed?embed_host=share&url=${window.encodeURIComponent(figmaURL)}`;
     setEmbedURL(url);
-  },[figmaURL]);
+  }, [figmaURL]);
+
+  useEffect(() => {
+    console.log(activeVideo, videoList[activeVideo].nodeId);
+    setNodeId(videoList[activeVideo].nodeId || '');
+  }, [activeVideo])
 
   return (
     <Grid container spacing={3}>
@@ -37,6 +41,9 @@ const FigmaDemo = () => {
         </div>
       </Grid>
       <Grid item container justify="center" alignItems="center" xs={12} md={6} direction="column">
+        <div>
+          <h3>{ videoList[activeVideo].title }</h3>
+        </div>
         <FormGroup row>
           <FormControlLabel
             control={
