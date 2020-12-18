@@ -321,15 +321,62 @@ export default makeStyles((theme) =>({
     height: 650,
     width: 320,
     borderRadius: 50,
-    border: '5px solid #888',
+    border: '5px solid #FAEDE5',
+    boxShadow: '3px 3px 15px 3px #888',
 
-    '& iframe': {
+    '& .FigmaIframe': {
       width: 400,
       height: 800,
       position: 'relative',
       top: -80,
       left: -45,
     },
-
-  }
+    '& .loading': {
+      position: 'absolute',
+      zIndex: 2,
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      '& svg': {
+        fontSize: 60,
+        color: '#ccc',
+      },
+      '&:after': {
+        content: '""',
+        width: 100,
+        height: 5,
+        backgroundColor: '#ccc',
+        animation: "$loading 3000ms ",
+        position: 'absolute',
+        top: 'calc(50% + 40px)',
+        borderRadius: 10,
+        animationIterationCount: 'infinite',
+        transformOrigin: 'left',
+      },
+    },
+    '& .loaded': {
+      '& ~ .loading': {
+        zIndex: -1,
+      }
+    },
+  },
+// animation
+  "@keyframes loading": {
+    "0%": {
+      transform: 'scaleX(0)',
+      transformOrigin: 'left',
+    },
+    "50%": {
+      transform: 'scaleX(.5)',
+      transformOrigin: 'right',
+    },
+    "100%": {
+      transform: 'scaleX(0)',
+      transformOrigin: 'right',
+    }
+  },
 }));

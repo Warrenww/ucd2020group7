@@ -19,36 +19,23 @@ import {
 import { Alert, AlertTitle, Skeleton } from '@material-ui/lab';
 import { Pagination } from 'antd';
 import useStyles from '../../constant/styles';
-import { circumstances, table, feedbacks, videoList } from './data';
+import { circumstances, table, feedbacks } from './data';
 import Compare from './Compare';
 import FigmaDemo from './FigmaDemo';
+import Chips from './Chips';
 
 const Milestone5 = () => {
   const classes = useStyles();
   const [activeCircumstance, setActiveCircumstance] = useState(parseInt(circumstances.length * Math.random()));
   const [activeFeedback, setActiveFeedback] = useState(parseInt(feedbacks.length * Math.random()));
   const [page, setPage] = useState(1);
-  const [activeVideo, setActiveVideo] = useState(parseInt(videoList.length * Math.random()));
 
   return (
     <Grid container spacing={3} direction="row" justify="center" alignItems="stretch">
       <Grid item xs={12}>
         <Paper className={`${classes.paper} ${classes.widgetsPaper}`}>
           <h2>測試任務</h2>
-          <div>
-            {
-              circumstances.map((c, i) => (
-                <Chip
-                  icon={<></>}
-                  label={`${c.index} ${c.title}`}
-                  clickable
-                  color="primary"
-                  variant={activeCircumstance === i ? "default" : "outlined"}
-                  onClick={() => setActiveCircumstance(i)}
-                />
-              ))
-            }
-          </div>
+          <Chips activeCircumstance={activeCircumstance} setActiveCircumstance={setActiveCircumstance} />
           <div className={classes.quote}>
             <h3>情境</h3>
             { circumstances[activeCircumstance].description }
@@ -160,25 +147,12 @@ const Milestone5 = () => {
         <Paper className={`${classes.paper} ${classes.widgetsPaper}`}>
           <h2>Hi-Fi Prototype 使用情境影片</h2>
           <p>
-            最後我們使用Figma來完成我們的Hi-Fi prototype，以下是{videoList.length}個使用情境與對應的操作影片與Figma操作連結
+            最後我們使用Figma來完成我們的Hi-Fi prototype，以下是{circumstances.length}個使用情境與對應的操作影片與Figma操作連結
           </p>
-          <div>
-            {
-                videoList.map((x, i) => (
-                  <Chip
-                    icon={<></>}
-                    label={x.title}
-                    clickable
-                    color="primary"
-                    variant={activeVideo === i ? "default" : "outlined"}
-                    onClick={activeVideo === i ? () => setActiveVideo(-1) : () => setActiveVideo(i)}
-                  />
-                ))
-            }
-          </div>
+          <Chips activeCircumstance={activeCircumstance} setActiveCircumstance={setActiveCircumstance} />
           {
-            videoList[activeVideo] ?
-              <iframe width="640" height="360" title="video" src={videoList[activeVideo].video} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            circumstances[activeCircumstance] ?
+              <iframe width="640" height="360" title="video" src={circumstances[activeCircumstance].video} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               : <Skeleton variant="rect" width={640} height={360} />
           }
 
@@ -188,7 +162,7 @@ const Milestone5 = () => {
       <Grid item xs={12}>
         <Paper className={`${classes.paper} ${classes.widgetsPaper}`}>
           <h2>Hi-Fi Prototype Figma Demo</h2>
-          <FigmaDemo activeVideo={activeVideo}/>
+          <FigmaDemo activeCircumstance={activeCircumstance}/>
         </Paper>
       </Grid>
 

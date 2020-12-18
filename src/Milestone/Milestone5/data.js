@@ -29,6 +29,8 @@ const circumstances = [
       '邀請王大明',
       '同意王大明加入(任務complete)',
     ],
+    nodeId: '249%3A1812',
+    video: 'https://drive.google.com/file/d/1lzGpZXx5VI-wDiugTOXJ4oeniOJ3x-TZ/preview',
   },
   {
     index: '情境二',
@@ -39,6 +41,8 @@ const circumstances = [
       '在公用區中新增櫃子–文具櫃',
       '新增chromecast',
     ],
+    nodeId: '278%3A2084',
+    video: 'https://drive.google.com/file/d/1aOekWDDahB7biqTb61PP3FSRVyWvy6Lz/preview',
   },
   {
     index: '情境三',
@@ -49,6 +53,8 @@ const circumstances = [
       '取出chromecast',
       '並記錄已取出物品',
     ],
+    nodeId: '410%3A0',
+    video: 'https://drive.google.com/file/d/1PHy1RE7GhF4OSOHngOd2Kk_jZLK3gYB8/preview',
   },
   {
     index: '情境四',
@@ -58,6 +64,8 @@ const circumstances = [
       '將你原本放在你辦公區的書桌抽屜A的剪刀更改位置到公用區的文具櫃',
       '將剪刀的權限設置為公開',
     ],
+    nodeId: '670%3A13120',
+    video: 'https://drive.google.com/file/d/1C-dmfEGVDZwmp6OG5FCxFSrtN9Tv_87r/preview',
   },
 ];
 
@@ -232,32 +240,8 @@ const feedbacks = [
   }
 ];
 
-const videoList = [
-    {
-      title: '情境一',
-      nodeId: '249%3A1812',
-      video: 'https://drive.google.com/file/d/1lzGpZXx5VI-wDiugTOXJ4oeniOJ3x-TZ/preview',
-    },
-    {
-      title: '情境二',
-      nodeId: '278%3A2084',
-      video: 'https://drive.google.com/file/d/1aOekWDDahB7biqTb61PP3FSRVyWvy6Lz/preview',
-    },
-    {
-      title: '情境三',
-      nodeId: '410%3A0',
-      video: 'https://drive.google.com/file/d/1PHy1RE7GhF4OSOHngOd2Kk_jZLK3gYB8/preview',
-    },
-    {
-      title: '情境四',
-      nodeId: '249%3A1812',
-      video: 'https://drive.google.com/file/d/1C-dmfEGVDZwmp6OG5FCxFSrtN9Tv_87r/preview',
-    },
-];
-
 export {
   circumstances,
   table,
   feedbacks,
-  videoList,
 };
