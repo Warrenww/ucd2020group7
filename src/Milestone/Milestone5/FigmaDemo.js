@@ -20,6 +20,7 @@ const FigmaDemo = ({activeCircumstance}) => {
   const [embedURL, setEmbedURL] = useState('');
   const [showTip, setShowTip] = useState(true);
   const [key, setKey] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     setFigmaURL(`https://www.figma.com/proto/uMxc0ySbI9ZfKIFe81qfiy/i-Remember_HiFi_1?node-id=${nodeId}&scaling=scale-down&hotspot-hints=${Number(showTip)}&hide-ui=1`)
@@ -28,21 +29,18 @@ const FigmaDemo = ({activeCircumstance}) => {
   useEffect(() => {
     const url = `https://www.figma.com/embed?embed_host=share&url=${window.encodeURIComponent(figmaURL)}`;
     setEmbedURL(url);
+    setIsLoading(true);
   }, [figmaURL]);
 
   useEffect(() => {
     setNodeId(circumstances[activeCircumstance].nodeId || '');
   }, [activeCircumstance]);
 
-  const handleLoad = (e) => {
-    e.target.classList.add('loaded');
-  }
-
   return (
     <Grid container spacing={3}>
       <Grid item xs={12} md={6} container justify="center" alignItems="center" direction="column">
         <div className={classes.figmaContainer}>
-          <iframe onLoad={e => handleLoad(e)} className="FigmaIframe" title="Figma demo" src={embedURL} key={key} allowfullscreen> </iframe>
+          <iframe onLoad={() => setIsLoading(false)} className={`FigmaIframe ${isLoading ? '' : 'loaded'}`} title="Figma demo" src={embedURL} key={key} allowfullscreen> </iframe>
           <div className="loading">
             <AppleIcon />
           </div>
@@ -66,7 +64,7 @@ const FigmaDemo = ({activeCircumstance}) => {
         <Divider />
 
         <div style={{display: 'flex', width: '100%', justifyContent: 'space-around'}}>
-          <Button onClick={() => setKey(key + 1)} color="primary" variant="contained">
+          <Button onClick={() => setKey(key + 1) || setIsLoading(true)} color="primary" variant="contained">
             <CachedIcon /> 重新整理Figma
           </Button>
 

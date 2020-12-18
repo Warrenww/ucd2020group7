@@ -341,6 +341,7 @@ export default makeStyles((theme) =>({
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
+      backdropFilter: 'blur(5px)',
       '& svg': {
         fontSize: 60,
         color: '#ccc',
@@ -371,7 +372,7 @@ export default makeStyles((theme) =>({
       transformOrigin: 'left',
     },
     "50%": {
-      transform: 'scaleX(.5)',
+      transform: 'scaleX(.4)',
       transformOrigin: 'right',
     },
     "100%": {
