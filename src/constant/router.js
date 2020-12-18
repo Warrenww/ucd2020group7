@@ -41,4 +41,9 @@ export default [
     icon: <InfoIcon />,
     text: "About us"  ,
   },
+  {
+    link: '/faq',
+    icon: <InfoIcon />,
+    text: "FAQ"  ,
+  },
 ];

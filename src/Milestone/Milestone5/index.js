@@ -21,6 +21,7 @@ import { Pagination } from 'antd';
 import useStyles from '../../constant/styles';
 import { circumstances, table, feedbacks, videoList } from './data';
 import Compare from './Compare';
+import FigmaDemo from './FigmaDemo';
 
 const Milestone5 = () => {
   const classes = useStyles();
@@ -157,9 +158,9 @@ const Milestone5 = () => {
 
       <Grid item xs={12}>
         <Paper className={`${classes.paper} ${classes.widgetsPaper}`}>
-          <h2>Hi-Fi Prototype</h2>
+          <h2>Hi-Fi Prototype 使用情境影片</h2>
           <p>
-            最後我們使用Figma來完成我們的Hi-Fi prototype，以下是{videoList.length}個使用情境與對應的操作影片
+            最後我們使用Figma來完成我們的Hi-Fi prototype，以下是{videoList.length}個使用情境與對應的操作影片與Figma操作連結
           </p>
           <div>
             {
@@ -180,6 +181,14 @@ const Milestone5 = () => {
               <iframe width="640" height="360" title="video" src={videoList[activeVideo]} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               : <Skeleton variant="rect" width={640} height={360} />
           }
+
+        </Paper>
+      </Grid>
+
+      <Grid item xs={12}>
+        <Paper className={classes.paper}>
+          <h2>Hi-Fi Prototype Figma Demo</h2>
+          <FigmaDemo />
         </Paper>
       </Grid>
 

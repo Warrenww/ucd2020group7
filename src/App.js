@@ -17,6 +17,7 @@ import Sidebar from './Components/Sidebar';
 import Milestone from './Milestone';
 import Home from './Home';
 import AboutUs from './AboutUs';
+import Faq from './Faq';
 import MenuIcon from '@material-ui/icons/Menu';
 
 import routerConfig from './constant/router';
@@ -82,6 +83,9 @@ function App(props) {
             </Route>
             <Route path="/milestone/:id">
               <Milestone />
+            </Route>
+            <Route path="/faq">
+              <Faq />
             </Route>
           </Switch>
       </Router>

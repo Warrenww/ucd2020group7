@@ -313,4 +313,23 @@ export default makeStyles((theme) =>({
       },
     },
   },
+  figmaContainer: {
+    position: 'relative',
+    overflow: 'hidden',
+    background: '#333',
+    margin: '1em',
+    height: 650,
+    width: 320,
+    borderRadius: 50,
+    border: '5px solid #888',
+
+    '& iframe': {
+      width: 400,
+      height: 800,
+      position: 'relative',
+      top: -80,
+      left: -45,
+    },
+
+  }
 }));
