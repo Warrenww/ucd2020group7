@@ -42,7 +42,7 @@ const Milestone1 = props => {
       </Grid>
       {
         properties.map((p, i) => (
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} sm={6} key={p.title}>
             <Paper className={classes.paper}>
               <h4>{p.title}</h4>
               <div>{data[active][p.key]}</div>

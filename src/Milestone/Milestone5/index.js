@@ -96,6 +96,7 @@ const Milestone5 = () => {
           {
             feedbacks.map((feedback, i) => (
               <Alert
+                key={`feedback-alert-${i}`}
                 severity="warning"
                 variant={i === activeFeedback ? "filled" : "outlined"}
                 className={classes.highlight} icon={feedback.icon}
@@ -116,6 +117,7 @@ const Milestone5 = () => {
             {
               feedbacks.map((f, i) => (
                 <Chip
+                  key={`feedback-chip-${i}`}
                   icon={f.icon}
                   label={f.title}
                   clickable
@@ -127,11 +129,7 @@ const Milestone5 = () => {
             }
           </div>
           {
-            feedbacks[activeFeedback].children.map((x,i) => (
-              <Grow in={page === i + 1} mountOnEnter unmountOnExit>
-                <Compare data={x} />
-              </Grow>
-            ))
+            feedbacks[activeFeedback].children.map((x,i) => ( <Compare data={x} key={`feedback-${i}`} /> ))
           }
           <Pagination
             className={classes.pagination}
@@ -152,7 +150,7 @@ const Milestone5 = () => {
           <Chips activeCircumstance={activeCircumstance} setActiveCircumstance={setActiveCircumstance} />
           {
             circumstances[activeCircumstance] ?
-              <iframe width="640" height="360" title="video" src={circumstances[activeCircumstance].video} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe width="640" height="360" title="video" src={circumstances[activeCircumstance].video} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
               : <Skeleton variant="rect" width={640} height={360} />
           }
 

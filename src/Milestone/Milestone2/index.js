@@ -191,7 +191,7 @@ const Milestone2 = props => {
               <div className={classes.affinityDiagramContainer}>
                 {
                   affinityDiagram.map((x,i) => (
-                    <div className={"holder " + (page === i + 1 ? "active" : "")} onClick={() => setPage(i + 1)}>
+                    <div key={`affinity-diagram-indicator-${i}`} className={"holder " + (page === i + 1 ? "active" : "")} onClick={() => setPage(i + 1)}>
                       <AffinityDiagram data={x} />
                     </div>
                   ))
@@ -201,7 +201,7 @@ const Milestone2 = props => {
             <div style={{margin: 20}} />
             {
               affinityDiagram.map((x,i) => (
-                <Grow in={page === i + 1} mountOnEnter unmountOnExit>
+                <Grow in={page === i + 1} mountOnEnter unmountOnExit key={`affinity-diagram-${i}`}>
                   <AffinityDiagram data={x} />
                 </Grow>
               ))

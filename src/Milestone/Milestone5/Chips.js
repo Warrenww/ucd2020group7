@@ -7,6 +7,7 @@ const Chips = ({activeCircumstance, setActiveCircumstance}) => (
     {
       circumstances.map((c, i) => (
         <Chip
+          key={`circumstances-${i}`}
           icon={<></>}
           label={`${c.index} ${c.title}`}
           clickable

@@ -50,7 +50,7 @@ const Milestone3 = props => {
           data.data.map(user => {
             const color = ['U01','U03','U07'].includes(user.user) ? "#ed6a5a" : (['U02','U04','U05','U09'].includes(user.user) ? "#36c9c6": "#f4f1bb")
             return (
-              <Tooltip title={`${user.position}%`} placement='top' arrow>
+              <Tooltip title={`${user.position}%`} placement='top' arrow key={user.user}>
                 <span className={classes.behaviorVariableUser} style={{ left: `calc(10% + ${user.position}% * 0.8)`}}>
                   <PersonIcon style={{
                     color: color,
@@ -71,7 +71,7 @@ const Milestone3 = props => {
         <Paper className={classes.paper}>
         <Stepper activeStep={activeStep} alternativeLabel className={classes.stepper}>
           {steps.map((label, index) => (
-            <Step key={label} onClick={() => setActiveStep(index)} completed={false}>
+            <Step key={label} onClick={() => setActiveStep(index)} completed={false} >
               <StepLabel><h3>{label}</h3></StepLabel>
             </Step>
           ))}
@@ -91,7 +91,7 @@ const Milestone3 = props => {
             <Paper className={classes.paper}>
               <h2>主要行為變數</h2>
               {
-                behaviorVariables.filter(x => !x.sub).map(x => <BehaviorVariable data={x}/>)
+                behaviorVariables.filter(x => !x.sub).map((x, i) => <BehaviorVariable key={`main-behavior-${i}`} data={x}/>)
               }
             </Paper>
         </Grid>
@@ -101,7 +101,7 @@ const Milestone3 = props => {
             <Paper className={classes.paper}>
               <h2>次要行為變數</h2>
               {
-                behaviorVariables.filter(x => x.sub).map(x => <BehaviorVariable data={x} />)
+                behaviorVariables.filter(x => x.sub).map((x, i) => <BehaviorVariable key={`sub-behavior-${i}`} data={x} />)
               }
             </Paper>
         </Grid>

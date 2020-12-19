@@ -336,7 +336,7 @@ const Milestone4 = props => {
           </div>
           {
             activeVideo ?
-              <iframe width="560" height="315" title="video" src={videoList[activeVideo]} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe width="560" height="315" title="video" src={videoList[activeVideo]} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
             : <Skeleton variant="rect" width={560} height={315} />
           }
 

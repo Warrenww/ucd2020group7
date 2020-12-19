@@ -40,7 +40,7 @@ const FigmaDemo = ({activeCircumstance}) => {
     <Grid container spacing={3}>
       <Grid item xs={12} md={6} container justify="center" alignItems="center" direction="column">
         <div className={classes.figmaContainer}>
-          <iframe onLoad={() => setIsLoading(false)} className={`FigmaIframe ${isLoading ? '' : 'loaded'}`} title="Figma demo" src={embedURL} key={key} allowfullscreen> </iframe>
+          <iframe onLoad={() => setIsLoading(false)} className={`FigmaIframe ${isLoading ? '' : 'loaded'}`} title="Figma demo" src={embedURL} key={key} allowFullScreen> </iframe>
           <div className="loading">
             <AppleIcon />
           </div>

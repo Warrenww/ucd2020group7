@@ -57,8 +57,8 @@ function App(props) {
             <div className="links">
               {
                 routerConfig.map(x => (
-                  <Button>
-                    <Link to={x.link} key={x.text}> {x.text} </Link>
+                  <Button key={x.text}>
+                    <Link to={x.link}> {x.text} </Link>
                   </Button>
                 ))
               }
