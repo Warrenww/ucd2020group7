@@ -22,11 +22,11 @@ import {
 import { Alert, AlertTitle } from '@material-ui/lab';
 import { Pagination, Statistic, Row, Col } from 'antd';
 
-import Icons from '../../constant/icons';
+import Icons from '../../constants/icons';
 
 import AffinityDiagram from './AffinityDiagram';
 import { steps, contents, table, affinityDiagram, thinkingPoint } from './data';
-import useStyles from '../../constant/styles';
+import useStyles from '../../constants/styles';
 
 const Milestone2 = props => {
   const classes = useStyles();

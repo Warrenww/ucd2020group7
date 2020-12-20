@@ -5,9 +5,9 @@ import {
 } from '@material-ui/core';
 import { PlayState, Tween } from 'react-gsap';
 
-import Icons from '../../constant/icons';
+import Icons from '../../constants/icons';
 import useOnScreen from '../../Util/useOnScreen';
-import useStyles from '../../constant/styles';
+import useStyles from '../../constants/styles';
 
 const BehaviorVariable = ({data, style = {}}) => {
   const classes = useStyles();

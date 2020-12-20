@@ -1,13 +1,14 @@
 import React from 'react';
-import { gsap } from "gsap";
-
+import useStyles from '../constants/styles';
+import Animation from './Animation';
 
 
 const Home = () => {
+  const classes = useStyles();
 
   return (
-    <div>
-      
+    <div style={{marginTop: 100}}>
+      <Animation />
     </div>
   );
 }

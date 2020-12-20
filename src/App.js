@@ -20,8 +20,8 @@ import AboutUs from './AboutUs';
 import Faq from './Faq';
 import MenuIcon from '@material-ui/icons/Menu';
 
-import routerConfig from './constant/router';
-import useStyles from './constant/styles';
+import routerConfig from './constants/router';
+import useStyles from './constants/styles';
 import logoImage from '../src/images/logo.png';
 
 import 'antd/dist/antd.css';

@@ -14,7 +14,7 @@ import {
 } from '@material-ui/core';
 import { Alert, AlertTitle, Skeleton } from '@material-ui/lab';
 
-import Icons from '../../constant/icons';
+import Icons from '../../constants/icons';
 
 import Photo001 from '../../images/001.jpg';
 import Photo002 from '../../images/002.jpg';
@@ -23,7 +23,7 @@ import Photo004 from '../../images/004.jpg';
 import Photo005 from '../../images/005.jpg';
 
 import { sketch, situation, videoList, conceptRemaining, conceptFadeOut } from './data';
-import useStyles from '../../constant/styles';
+import useStyles from '../../constants/styles';
 
 const Milestone4 = props => {
   const classes = useStyles();

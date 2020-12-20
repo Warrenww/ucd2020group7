@@ -6,7 +6,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 
-import routerConfig from '../constant/router';
+import routerConfig from '../constants/router';
 
 const styles = {
   Menu: {

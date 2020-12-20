@@ -404,6 +404,28 @@ export default makeStyles((theme) =>({
       }
     },
   },
+// Home page
+  videoCanvas: {
+    position:'relative',
+    width: 1920,
+    height: 1080,
+    zoom: .5,
+    display: 'flex',
+
+    '&>div': {
+      flex: 1,
+      alignSelf: 'flex-end',
+    },
+  },
+  retangleBackground: {
+    backgroundColor: props => props.color,
+    width: props => props.width,
+    height: props => props.height,
+    transformOrigin: props => `calc(${props.width} - 20em)`,
+    position: 'absolute',
+    top: '50%',
+    left: props =>`calc(50% - ${props.width} / 2)`
+  },
 // animation
   "@keyframes loading": {
     "0%": {

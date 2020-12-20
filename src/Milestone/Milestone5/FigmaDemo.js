@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import useStyles from '../../constant/styles';
+import useStyles from '../../constants/styles';
 import {
   Grid,
   Button,

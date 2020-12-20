@@ -18,7 +18,7 @@ import personaImage2 from '../../images/persona 2.png';
 import senarioImage1 from '../../images/senario 1.png';
 import senarioImage2 from '../../images/senario 2.png';
 
-import useStyles from '../../constant/styles';
+import useStyles from '../../constants/styles';
 
 const Milestone3 = props => {
   const classes = useStyles();
