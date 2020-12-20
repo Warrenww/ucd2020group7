@@ -14,7 +14,6 @@ import {
   TableBody,
   Hidden,
   Divider,
-  Grow,
 } from '@material-ui/core';
 import { Alert, AlertTitle, Skeleton } from '@material-ui/lab';
 import { Pagination } from 'antd';
@@ -129,7 +128,7 @@ const Milestone5 = () => {
             }
           </div>
           {
-            feedbacks[activeFeedback].children.map((x,i) => ( <Compare data={x} key={`feedback-${i}`} /> ))
+            feedbacks[activeFeedback].children.map((x,i) => ( <Compare data={x} show={page === i + 1} key={`feedback-${i}`} /> ))
           }
           <Pagination
             className={classes.pagination}

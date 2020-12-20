@@ -6,7 +6,7 @@ import discussionImage from '../images/discussion.jpg';
 
 const useStyles = makeStyles({
   header: {
-    minHeight: 300,
+    minHeight: 360,
     backgroundImage: props => `url(${props.image})`,
     width: '100vw',
     backgroundSize: 'cover',
