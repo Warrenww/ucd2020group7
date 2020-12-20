@@ -163,6 +163,45 @@ export default makeStyles((theme) =>({
       '& span': {fontSize: '1em'}
     }
   },
+  tree: {
+    maxWidth: '100%',
+    overflow: 'hidden',
+    display: 'flex',
+    position: 'relative',
+    userSelect: 'none',
+    '& .Row': {
+      display: 'flex',
+      flexDirection: 'row',
+    },
+    '& .Column': {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      margin: '0 1em',
+    },
+    '& .arrow': {
+      position: 'sticky',
+      fontSize: '60px',
+      color: '#aaa',
+      top: 'calc(50% - 30px)',
+      cursor: 'pointer',
+    },
+    '& .arrow.left': {right: 'calc(100% - 2em)'},
+    '& .arrow.right': {right: '1em'},
+  },
+  note: {
+    display: 'flex',
+    width: prop => prop.isLong ? 300 : 200,
+    height: 200,
+    padding: 20,
+    margin: 10,
+    borderRadius: 5,
+    boxShadow: '1px 1px 5px #555',
+    lineHeight: '1.5em',
+    textAlign: 'justify',
+    background: prop => prop.depth === 0 ? '#7ab987' : (prop.depth === 1 ? '#dea9a9' : '#a3d4d7'),
+    opacity: prop => prop.hide ? 0 : 1,
+  },
 // Milestone 3
   behaviorVariableContainer: {
     width: '100%',

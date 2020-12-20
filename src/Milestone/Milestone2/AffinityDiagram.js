@@ -1,50 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import { RootRef } from '@material-ui/core';
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
-import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
-
-const useStyles = makeStyles((theme) => ({
-  tree: {
-    maxWidth: '100%',
-    overflow: 'hidden',
-    display: 'flex',
-    position: 'relative',
-    userSelect: 'none',
-    '& .Row': {
-      display: 'flex',
-      flexDirection: 'row',
-    },
-    '& .Column': {
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      margin: '0 1em',
-    },
-    '& .arrow': {
-      position: 'sticky',
-      fontSize: '60px',
-      color: '#aaa',
-      top: 'calc(50% - 30px)',
-      cursor: 'pointer',
-    },
-    '& .arrow.left': {right: 'calc(100% - 2em)'},
-    '& .arrow.right': {right: '1em'},
-  },
-  note: {
-    display: 'flex',
-    width: prop => prop.isLong ? 300 : 200,
-    height: 200,
-    padding: 20,
-    margin: 10,
-    borderRadius: 5,
-    boxShadow: '1px 1px 5px #555',
-    lineHeight: '1.5em',
-    textAlign: 'justify',
-    background: prop => prop.depth === 0 ? '#7ab987' : (prop.depth === 1 ? '#dea9a9' : '#a3d4d7'),
-    opacity: prop => prop.hide ? 0 : 1,
-  }
-}));
+import Icons from '../../constant/icons';
+import useStyles from '../../constant/styles';
 
 const Note = ({content, depth, isLong, hide}) => {
   const classes = useStyles({depth, isLong, hide});
@@ -129,8 +86,8 @@ const AffinityDiagram = ({data}) => {
       {
         showArrow ?
         <>
-          <ArrowForwardIosIcon className="arrow right" onClick={() => handleScroll(1)}/>
-          <ArrowBackIosIcon className="arrow left" onClick={() => handleScroll(-1)}/>
+          <Icons.ArrowForwardIos className="arrow right" onClick={() => handleScroll(1)}/>
+          <Icons.ArrowBackIos className="arrow left" onClick={() => handleScroll(-1)}/>
         </>
         : <></>
       }

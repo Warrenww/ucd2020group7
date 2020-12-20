@@ -37,11 +37,6 @@ export default [
     text: "Hi-Fi Propotype",
   },
   {
-    link: '/aboutUs',
-    icon: <InfoIcon />,
-    text: "About us"  ,
-  },
-  {
     link: '/faq',
     icon: <InfoIcon />,
     text: "FAQ"  ,

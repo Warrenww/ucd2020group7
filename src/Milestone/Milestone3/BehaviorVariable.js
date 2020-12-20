@@ -4,9 +4,9 @@ import {
   Chip,
 } from '@material-ui/core';
 import { PlayState, Tween } from 'react-gsap';
-import useOnScreen from '../../constant/useOnScreen';
 
-import PersonIcon from '@material-ui/icons/Person';
+import Icons from '../../constant/icons';
+import useOnScreen from '../../Util/useOnScreen';
 import useStyles from '../../constant/styles';
 
 const BehaviorVariable = ({data, style = {}}) => {
@@ -31,7 +31,7 @@ const BehaviorVariable = ({data, style = {}}) => {
             return (
               <Tooltip title={`${user.position}%`} placement='top' arrow key={user.user} >
                 <span className={classes.behaviorVariableUser} style={{ left: `calc(10% + ${user.position}% * 0.8)`}}>
-                  <PersonIcon style={{
+                  <Icons.Person style={{
                     color: color,
                     width: 40,
                     height: 40,
