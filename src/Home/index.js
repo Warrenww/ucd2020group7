@@ -15,7 +15,7 @@ const Home = () => {
 
   return (
     <div style={{marginTop: 100}}>
-      <Animation isDev zoom={zoom}/>
+      <Animation isDev={false} zoom={zoom}/>
     </div>
   );
 }
