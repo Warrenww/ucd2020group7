@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grow } from '@material-ui/core';
-import useStyles from '../../constant/styles';
+import useStyles from '../../constants/styles';
 
 const Compare = ({
   data: {

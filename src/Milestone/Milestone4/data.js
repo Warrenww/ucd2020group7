@@ -50,7 +50,7 @@ import sketch005R3C1 from '../../images/sketch/005/R3C1.png';
 import sketch005R3C2 from '../../images/sketch/005/R3C2.png';
 import sketch005R3C3 from '../../images/sketch/005/R3C3.png';
 
-import Icons from '../../constant/icons';
+import Icons from '../../constants/icons';
 
 const sketch = [
   sketch001R1C1,

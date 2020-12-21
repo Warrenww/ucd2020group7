@@ -17,7 +17,7 @@ import {
 } from '@material-ui/core';
 import { Alert, AlertTitle, Skeleton } from '@material-ui/lab';
 import { Pagination } from 'antd';
-import useStyles from '../../constant/styles';
+import useStyles from '../../constants/styles';
 import { circumstances, table, feedbacks } from './data';
 import Compare from './Compare';
 import FigmaDemo from './FigmaDemo';

@@ -4,7 +4,7 @@ import {
   Paper,
   Container,
 } from '@material-ui/core';
-import useStyles from '../constant/styles';
+import useStyles from '../constants/styles';
 import Header from '../Components/Header';
 
 const Faq = () => {

@@ -404,6 +404,63 @@ export default makeStyles((theme) =>({
       }
     },
   },
+// Home page
+  videoCanvas: {
+    position:'relative',
+    width: 1920,
+    height: 1080,
+    zoom: props => props.zoom || 1,
+    display: 'flex',
+    border: props => props.isDev ? '1px solid' : 'none',
+    '&>div': {
+      flex: 1,
+      alignSelf: 'flex-end',
+    },
+    overflow: 'hidden',
+  },
+  retangleBackground: {
+    backgroundColor: props => props.color,
+    width: props => props.width,
+    height: props => props.height,
+    transformOrigin: props => `calc(${props.width}px * 0.8)`,
+    position: 'absolute',
+    top: 600,
+    left: props =>`calc(50% - ${props.width / 2}px)`
+  },
+  circleBackground: {
+    backgroundColor: props => props.color,
+    width: props => props.radius,
+    height: props => props.radius,
+    transformOrigin: 'center',
+    borderRadius: '50%',
+    position: 'absolute',
+    top: 100,
+    left: props => `calc(50% - ${props.radius / 2}px)`,
+    zIndex: 3,
+  },
+  textTitleContainer: {
+    width: props => props.width,
+    position: 'absolute',
+    top: 600,
+    fontSize: '60px',
+    lineHeight: props => props.height + 'px',
+    display: 'flex',
+    left: props =>`calc(50% - ${props.width / 2}px)`,
+    padding: '0 5%',
+    justifyContent: 'space-between',
+    fontWeight: 'bold',
+    zIndex: 2,
+  },
+  textSubTitle: {
+    position: 'absolute',
+    fontSize: 40,
+    top: 510,
+    left: 'calc(50% - 100px)',
+    width: 200,
+    textAlign: 'center',
+    fontWeight: 'bold',
+    textShadow: '0 0 10px black',
+  },
 // animation
   "@keyframes loading": {
     "0%": {

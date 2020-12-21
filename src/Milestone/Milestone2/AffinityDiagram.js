@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { RootRef } from '@material-ui/core';
-import Icons from '../../constant/icons';
-import useStyles from '../../constant/styles';
+import Icons from '../../constants/icons';
+import useStyles from '../../constants/styles';
 
 const Note = ({content, depth, isLong, hide}) => {
   const classes = useStyles({depth, isLong, hide});

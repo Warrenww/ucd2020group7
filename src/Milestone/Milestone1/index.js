@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import {data, properties} from './data';
-import useStyles from '../../constant/styles';
+import useStyles from '../../constants/styles';
 
 const ImagePaper = ({
   title,
