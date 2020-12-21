@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3175e42f098b2e8d18eab86699f4cfbf",
+    "revision": "1043b61cd46ea46e4d7ef76b63a69236",
     "url": "/ucd2020group7/index.html"
   },
   {
-    "revision": "bbeadb316bc4a9a64afc",
+    "revision": "7a9962d171ce5212f8bb",
     "url": "/ucd2020group7/static/css/2.9d6f32cf.chunk.css"
   },
   {
-    "revision": "89b042e08d1e26a775a5",
+    "revision": "324354d2d9f5bc98f57e",
     "url": "/ucd2020group7/static/css/main.69eda509.chunk.css"
   },
   {
-    "revision": "bbeadb316bc4a9a64afc",
-    "url": "/ucd2020group7/static/js/2.27a58bfd.chunk.js"
+    "revision": "7a9962d171ce5212f8bb",
+    "url": "/ucd2020group7/static/js/2.1b1a427b.chunk.js"
   },
   {
     "revision": "5fc7773d10f1bedac22d2597cbecc1c0",
-    "url": "/ucd2020group7/static/js/2.27a58bfd.chunk.js.LICENSE.txt"
+    "url": "/ucd2020group7/static/js/2.1b1a427b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "89b042e08d1e26a775a5",
-    "url": "/ucd2020group7/static/js/main.fa66d489.chunk.js"
+    "revision": "324354d2d9f5bc98f57e",
+    "url": "/ucd2020group7/static/js/main.085c9c36.chunk.js"
   },
   {
     "revision": "e06442d49b0024ed3b48",
@@ -236,6 +236,18 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ucd2020group7/static/media/auth.bf82932e.png"
   },
   {
+    "revision": "73b085500ee3862aac58ca2624e1af43",
+    "url": "/ucd2020group7/static/media/box (1).73b08550.png"
+  },
+  {
+    "revision": "ff257fab6a22d76f980cd6a6566bac9d",
+    "url": "/ucd2020group7/static/media/box.ff257fab.png"
+  },
+  {
+    "revision": "d6525f0f10a5cb48340c9538d05ac8e4",
+    "url": "/ucd2020group7/static/media/cabinet.d6525f0f.png"
+  },
+  {
     "revision": "f4e17f44cec5bdd440c3f6f114bab00e",
     "url": "/ucd2020group7/static/media/cabinet.f4e17f44.jpg"
   },
@@ -252,8 +264,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ucd2020group7/static/media/discussion.10203450.jpg"
   },
   {
+    "revision": "659d62e29ac5f61b75273312aceb0130",
+    "url": "/ucd2020group7/static/media/dossier.659d62e2.png"
+  },
+  {
     "revision": "5a022dacdb31162753d44a94469ce8bd",
     "url": "/ucd2020group7/static/media/editItem.5a022dac.png"
+  },
+  {
+    "revision": "9d0fc455fdd9f59a3ba8dad640afbfa4",
+    "url": "/ucd2020group7/static/media/file-cabinet.9d0fc455.png"
   },
   {
     "revision": "067d7871d0df11d2c6461b4b4e9493a7",

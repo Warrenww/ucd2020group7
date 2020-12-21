@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/ucd2020group7/static/css/main.69eda509.chunk.css",
-    "main.js": "/ucd2020group7/static/js/main.fa66d489.chunk.js",
-    "main.js.map": "/ucd2020group7/static/js/main.fa66d489.chunk.js.map",
+    "main.js": "/ucd2020group7/static/js/main.085c9c36.chunk.js",
+    "main.js.map": "/ucd2020group7/static/js/main.085c9c36.chunk.js.map",
     "runtime-main.js": "/ucd2020group7/static/js/runtime-main.a75d693d.js",
     "runtime-main.js.map": "/ucd2020group7/static/js/runtime-main.a75d693d.js.map",
     "static/css/2.9d6f32cf.chunk.css": "/ucd2020group7/static/css/2.9d6f32cf.chunk.css",
-    "static/js/2.27a58bfd.chunk.js": "/ucd2020group7/static/js/2.27a58bfd.chunk.js",
-    "static/js/2.27a58bfd.chunk.js.map": "/ucd2020group7/static/js/2.27a58bfd.chunk.js.map",
+    "static/js/2.1b1a427b.chunk.js": "/ucd2020group7/static/js/2.1b1a427b.chunk.js",
+    "static/js/2.1b1a427b.chunk.js.map": "/ucd2020group7/static/js/2.1b1a427b.chunk.js.map",
     "index.html": "/ucd2020group7/index.html",
-    "precache-manifest.6285d24d3b0e23021ed9d8f9b0160547.js": "/ucd2020group7/precache-manifest.6285d24d3b0e23021ed9d8f9b0160547.js",
+    "precache-manifest.892bd9044a13b36f9edbe7d44090e650.js": "/ucd2020group7/precache-manifest.892bd9044a13b36f9edbe7d44090e650.js",
     "service-worker.js": "/ucd2020group7/service-worker.js",
     "static/css/2.9d6f32cf.chunk.css.map": "/ucd2020group7/static/css/2.9d6f32cf.chunk.css.map",
     "static/css/main.69eda509.chunk.css.map": "/ucd2020group7/static/css/main.69eda509.chunk.css.map",
-    "static/js/2.27a58bfd.chunk.js.LICENSE.txt": "/ucd2020group7/static/js/2.27a58bfd.chunk.js.LICENSE.txt",
+    "static/js/2.1b1a427b.chunk.js.LICENSE.txt": "/ucd2020group7/static/js/2.1b1a427b.chunk.js.LICENSE.txt",
     "static/media/001.jpg": "/ucd2020group7/static/media/001.6172e05e.jpg",
     "static/media/002.jpg": "/ucd2020group7/static/media/002.f557bb1a.jpg",
     "static/media/003.jpg": "/ucd2020group7/static/media/003.2dc6210d.jpg",
@@ -48,11 +48,16 @@
     "static/media/R3C3.JPG": "/ucd2020group7/static/media/R3C3.8d258e84.JPG",
     "static/media/auth.jpg": "/ucd2020group7/static/media/auth.1028b395.jpg",
     "static/media/auth.png": "/ucd2020group7/static/media/auth.bf82932e.png",
+    "static/media/box (1).png": "/ucd2020group7/static/media/box (1).73b08550.png",
+    "static/media/box.png": "/ucd2020group7/static/media/box.ff257fab.png",
+    "static/media/cabinet.png": "/ucd2020group7/static/media/cabinet.d6525f0f.png",
     "static/media/cabinet.jpg": "/ucd2020group7/static/media/cabinet.f4e17f44.jpg",
     "static/media/design_on_computer.jpg": "/ucd2020group7/static/media/design_on_computer.5dcc8548.jpg",
     "static/media/discussion-2.jpg": "/ucd2020group7/static/media/discussion-2.9542e2f0.jpg",
     "static/media/discussion.jpg": "/ucd2020group7/static/media/discussion.10203450.jpg",
+    "static/media/dossier.png": "/ucd2020group7/static/media/dossier.659d62e2.png",
     "static/media/editItem.png": "/ucd2020group7/static/media/editItem.5a022dac.png",
+    "static/media/file-cabinet.png": "/ucd2020group7/static/media/file-cabinet.9d0fc455.png",
     "static/media/grid.png": "/ucd2020group7/static/media/grid.067d7871.png",
     "static/media/index.jpg": "/ucd2020group7/static/media/index.6c15c1c1.jpg",
     "static/media/indoorDesign.jpg": "/ucd2020group7/static/media/indoorDesign.9255b85f.jpg",
@@ -75,8 +80,8 @@
   "entrypoints": [
     "static/js/runtime-main.a75d693d.js",
     "static/css/2.9d6f32cf.chunk.css",
-    "static/js/2.27a58bfd.chunk.js",
+    "static/js/2.1b1a427b.chunk.js",
     "static/css/main.69eda509.chunk.css",
-    "static/js/main.fa66d489.chunk.js"
+    "static/js/main.085c9c36.chunk.js"
   ]
 }
