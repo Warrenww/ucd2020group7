@@ -17,10 +17,10 @@ const Animation = ({isDev = false, zoom}) => {
 
   return (
     <div className={classes.videoCanvas}>
-        <Wrapper playState={PlayState.stop}>
+        <Wrapper>
           <Timeline
             playState={playState}
-            onComplete={() => !isDev && setPlayState(PlayState.reverse)}
+            onComplete={() => !isDev && setTimeout(() => setPlayState(PlayState.reverse), 5000)}
             onReverseComplete={() => !isDev && setTimeout(() => setPlayState(PlayState.play), 1000)}
           >
             <IconBackground />

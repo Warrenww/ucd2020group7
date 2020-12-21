@@ -31,13 +31,33 @@ export default makeStyles((theme) =>({
       '& a': {
         color: 'white',
         textTransform: 'none',
-      }
+      },
+      '& button': {
+        position: 'relative',
+      },
+      '& button::after': {
+        width: '90%',
+        height: 0,
+        transition: '.3s ease-in-out height',
+        backgroundColor: '#fff8',
+        position: 'absolute',
+        bottom: 0,
+        content: '""',
+      },
+      '& button:hover::after, & button.active::after': {
+        height: 3,
+      },
     },
     "& .logo": {
       height: 60,
       paddingRight: 10,
       filter: 'invert(1)',
     }
+  },
+  AppBarTop: {
+    backgroundColor: "transparent",
+    boxShadow: 'none',
+    backdropFilter: 'none',
   },
   paper: {
     border: 0,
@@ -417,6 +437,7 @@ export default makeStyles((theme) =>({
       alignSelf: 'flex-end',
     },
     overflow: 'hidden',
+    userSelect: 'none',
   },
   retangleBackground: {
     backgroundColor: props => props.color,
@@ -460,6 +481,12 @@ export default makeStyles((theme) =>({
     textAlign: 'center',
     fontWeight: 'bold',
     textShadow: '0 0 10px black',
+  },
+  videoCanvasHolder: {
+    width: '100%',
+    display: 'flex',
+    justifyContent: 'center',
+    background: 'rebeccapurple',
   },
 // animation
   "@keyframes loading": {

@@ -15,7 +15,7 @@ import {
 import { Alert, AlertTitle, Skeleton } from '@material-ui/lab';
 
 import Icons from '../../constants/icons';
-
+import BlankSpace from '../../Components/BlankSpace';
 import Photo001 from '../../images/001.jpg';
 import Photo002 from '../../images/002.jpg';
 import Photo003 from '../../images/003.jpg';
@@ -181,7 +181,7 @@ const Milestone4 = props => {
           <h2>Before & After</h2>
           從每位組員的Sketch到Lofi prototype，我們將每個concept取出，討論其可行性，將其中較可行的concept留下，
           作為Lofi prototype呈現的內容。
-          <div style={{margin: '1em'}}/>
+          <BlankSpace />
           <Grid container spacing={6} justify="center">
           {
             [1, 2, 3].map(i => (

@@ -30,6 +30,7 @@ import AddIcon from '@material-ui/icons/Add';
 import PersonIcon from '@material-ui/icons/Person';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+import MenuIcon from '@material-ui/icons/Menu';
 
 export default  {
   ArrowForwardIos: ArrowForwardIosIcon,
@@ -64,4 +65,5 @@ export default  {
   Group: GroupIcon,
   Mic: MicIcon,
   PhoneAndroid: PhoneAndroidIcon,
+  Menu: MenuIcon,
 };

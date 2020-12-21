@@ -30,7 +30,7 @@ const circumstances = [
       '同意王大明加入(任務complete)',
     ],
     nodeId: '249%3A1812',
-    video: 'https://drive.google.com/file/d/1lzGpZXx5VI-wDiugTOXJ4oeniOJ3x-TZ/preview',
+    video: 'https://drive.google.com/file/d/1dYd8KVoOyVSDPMSEg-k0F-0HdkCMac2t/preview',
   },
   {
     index: '情境二',
@@ -42,7 +42,7 @@ const circumstances = [
       '新增chromecast',
     ],
     nodeId: '278%3A2084',
-    video: 'https://drive.google.com/file/d/1aOekWDDahB7biqTb61PP3FSRVyWvy6Lz/preview',
+    video: 'https://drive.google.com/file/d/1bOsA8UiRJact6kSFLXYIc4-fnRoQSkSK/preview',
   },
   {
     index: '情境三',
@@ -54,7 +54,7 @@ const circumstances = [
       '並記錄已取出物品',
     ],
     nodeId: '410%3A0',
-    video: 'https://drive.google.com/file/d/1PHy1RE7GhF4OSOHngOd2Kk_jZLK3gYB8/preview',
+    video: 'https://drive.google.com/file/d/1EmqQ2nnXk1FFAxBoqrUadLonX2nvxY_A/preview',
   },
   {
     index: '情境四',
@@ -65,7 +65,7 @@ const circumstances = [
       '將剪刀的權限設置為公開',
     ],
     nodeId: '670%3A13120',
-    video: 'https://drive.google.com/file/d/1C-dmfEGVDZwmp6OG5FCxFSrtN9Tv_87r/preview',
+    video: 'https://drive.google.com/file/d/1Cnsan86wYvc3h9zwNQ7iLB73KMn7lz-t/preview',
   },
 ];
 

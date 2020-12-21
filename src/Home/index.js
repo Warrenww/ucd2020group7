@@ -14,7 +14,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div style={{marginTop: 100}}>
+    <div className={classes.videoCanvasHolder}>
       <Animation isDev={false} zoom={zoom}/>
     </div>
   );
