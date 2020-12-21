@@ -446,7 +446,8 @@ export default makeStyles((theme) =>({
     transformOrigin: props => `calc(${props.width}px * 0.8)`,
     position: 'absolute',
     top: 600,
-    left: props =>`calc(50% - ${props.width / 2}px)`
+    left: props =>`calc(50% - ${props.width / 2}px)`,
+    zIndex: 2,
   },
   circleBackground: {
     backgroundColor: props => props.color,
@@ -470,17 +471,19 @@ export default makeStyles((theme) =>({
     padding: '0 5%',
     justifyContent: 'space-between',
     fontWeight: 'bold',
-    zIndex: 2,
+    zIndex: 3,
+    textShadow: '0 0 10px black',
   },
   textSubTitle: {
     position: 'absolute',
-    fontSize: 40,
-    top: 510,
+    fontSize: 50,
+    top: 720,
     left: 'calc(50% - 100px)',
     width: 200,
     textAlign: 'center',
     fontWeight: 'bold',
     textShadow: '0 0 10px black',
+    zIndex: 1,
   },
   videoCanvasHolder: {
     width: '100%',
