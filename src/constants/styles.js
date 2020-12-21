@@ -409,12 +409,13 @@ export default makeStyles((theme) =>({
     position:'relative',
     width: 1920,
     height: 1080,
-    zoom: .5,
+    zoom: props => props.zoom || 1,
     display: 'flex',
-
+    border: props => props.isDev ? '1px solid' : 'none',
     '&>div': {
       flex: 1,
       alignSelf: 'flex-end',
+
     },
   },
   retangleBackground: {
