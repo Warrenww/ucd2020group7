@@ -431,6 +431,7 @@ export default makeStyles((theme) =>({
     height: 1080,
     zoom: props => props.zoom || 1,
     display: 'flex',
+    margin: 'auto',
     border: props => props.isDev ? '1px solid' : 'none',
     '&>div': {
       flex: 1,
@@ -448,6 +449,7 @@ export default makeStyles((theme) =>({
     top: 600,
     left: props =>`calc(50% - ${props.width / 2}px)`,
     zIndex: 2,
+    boxShadow: '0 0 10px #555',
   },
   circleBackground: {
     backgroundColor: props => props.color,

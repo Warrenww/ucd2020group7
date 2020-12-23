@@ -22,7 +22,7 @@ import Photo003 from '../../images/003.jpg';
 import Photo004 from '../../images/004.jpg';
 import Photo005 from '../../images/005.jpg';
 
-import { sketch, situation, videoList, conceptRemaining, conceptFadeOut } from './data';
+import { sketch, situation, videoList, requirements } from './data';
 import useStyles from '../../constants/styles';
 
 const Milestone4 = props => {
@@ -68,18 +68,14 @@ const Milestone4 = props => {
 
             <Grid item xs={12} md={6}>
               <h2>Design Requirement</h2>
-              <Alert severity="warning" variant={activeRequirement === 1 ? "filled" : "outlined"} className={classes.highlight} icon={<Icons.People />}>
-                  <AlertTitle>Requirement 1</AlertTitle>
-                  如何讓家人/同事共同管理空間內的東西
-              </Alert>
-              <Alert severity="warning" variant={activeRequirement === 2 ? "filled" : "outlined"} className={classes.highlight} icon={<Icons.Search />}>
-                  <AlertTitle>Requirement 2</AlertTitle>
-                  快速找到找不到的東西
-              </Alert>
-              <Alert severity="warning" variant={activeRequirement === 3 ? "filled" : "outlined"} className={classes.highlight} icon={<Icons.Widgets />}>
-                  <AlertTitle>Requirement 3</AlertTitle>
-                  改善東西亂丟(隨手放)的行為
-              </Alert>
+              {
+                requirements.map((x, i) => (
+                  <Alert severity="warning" variant={activeRequirement === i + 1 ? "filled" : "outlined"} className={classes.highlight} icon={x.icon}>
+                    <AlertTitle>Requirement {i + 1}</AlertTitle>
+                    {x.content}
+                  </Alert>
+                ))
+              }
             </Grid>
 
           </Grid>
@@ -182,15 +178,16 @@ const Milestone4 = props => {
           從每位組員的Sketch到Lofi prototype，我們將每個concept取出，討論其可行性，將其中較可行的concept留下，
           作為Lofi prototype呈現的內容。
           <BlankSpace />
-          <Grid container spacing={6} justify="center">
+          <Grid container spacing={3} justify="center">
           {
             [1, 2, 3].map(i => (
               <>
                 <Grid item xs={12}><h2>Requirement {i}</h2></Grid>
+                <Grid item xs={12}><h3>{requirements[i - 1].content}</h3></Grid>
                 <Grid item xs={12} md={6}>
                   <h3>Concept that remain</h3>
                   {
-                      conceptRemaining.filter(x => x.requirement === i).map(x => (
+                      requirements[i - 1].concept.remain.map(x => (
                         <Alert key={x.title} severity="success" variant="outlined" className={classes.highlight} icon={x.icon}>
                           <AlertTitle><b>{x.title}</b></AlertTitle>
                           {x.content}
@@ -199,9 +196,9 @@ const Milestone4 = props => {
                   }
                 </Grid>
                 <Grid item xs={12} md={6}>
-                  <h3>Concept that fade out</h3>
+                  <h3>Concept that dropped</h3>
                   {
-                      conceptFadeOut.filter(x => x.requirement === i).map(x => (
+                      requirements[i - 1].concept.drop.map(x => (
                         <Alert key={x.title} severity="error" variant="outlined" className={classes.highlight} icon={x.icon}>
                           <AlertTitle><b>{x.title}</b></AlertTitle>
                           {x.content}
