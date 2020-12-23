@@ -11,9 +11,10 @@ import {
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import CachedIcon from '@material-ui/icons/Cached';
 import AppleIcon from '@material-ui/icons/Apple';
+import Chips from './Chips';
 import { circumstances } from './data';
 
-const FigmaDemo = ({activeCircumstance}) => {
+const FigmaDemo = ({activeCircumstance, setActiveCircumstance}) => {
   const classes = useStyles();
   const [figmaURL, setFigmaURL] = useState('');
   const [nodeId, setNodeId] = useState(circumstances[activeCircumstance].nodeId || '');
@@ -52,6 +53,8 @@ const FigmaDemo = ({activeCircumstance}) => {
         </Button>
       </Grid>
       <Grid item container justify="center" alignItems="center" xs={12} md={6} direction="column">
+        <Chips activeCircumstance={activeCircumstance} setActiveCircumstance={setActiveCircumstance} />
+
         <div>
           <h3>{ circumstances[activeCircumstance].index }</h3>
           <h3>{ circumstances[activeCircumstance].title }</h3>

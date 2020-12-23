@@ -156,10 +156,10 @@ const Milestone5 = () => {
         </Paper>
       </Grid>
 
-      <Grid item xs={12}>
+      <Grid item xs={12} id='figma'>
         <Paper className={`${classes.paper} ${classes.widgetsPaper}`}>
           <h2>Hi-Fi Prototype Figma Demo</h2>
-          <FigmaDemo activeCircumstance={activeCircumstance}/>
+          <FigmaDemo activeCircumstance={activeCircumstance} setActiveCircumstance={setActiveCircumstance}/>
         </Paper>
       </Grid>
 

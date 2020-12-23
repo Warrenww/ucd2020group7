@@ -1,4 +1,5 @@
 <script type="text/javascript">
   const path = window.location.pathname.replace("/ucd2020group7","");
-  window.location.replace('/ucd2020group7?path='+path);
+  const search = '&' + window.location.search.slice(1);
+  window.location.replace('/ucd2020group7?path=' + path + search);
 </script>

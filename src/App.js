@@ -15,19 +15,18 @@ import Faq from './Faq';
 import useStyles from './constants/styles';
 import 'antd/dist/antd.css';
 
-
-
 function App(props) {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
   const [redirect, setRedirect] = useState(false);
 
-
   useEffect(()=>{
     const params = (new URL(document.location)).searchParams;
     const path = params.get('path');
     if (path){
-      setRedirect(path);
+      params.delete('path');
+      const search = params.toString();
+      setRedirect(path + (search ? '?' + search : ''));
     }
   },[]);
 

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Paper,
   Grid,
@@ -10,7 +10,6 @@ import {
   Backdrop,
   Zoom,
 } from '@material-ui/core';
-
 import BehaviorVariable from "./BehaviorVariable";
 import { steps, contents, behaviorVariables } from './data';
 import personaImage1 from '../../images/persona 1.png';
@@ -25,6 +24,13 @@ const Milestone3 = props => {
   const [activeStep, setActiveStep] = useState(0);
   const [showPersona, setShowPersona] = useState(false);
   const [activePersona, setActivePersona] = useState(null);
+
+  useEffect(() => {
+    const params = (new URL(document.location)).searchParams;
+    const tab = params.get('tab');
+    if (tab === 'persona') setActiveStep(1);
+    if (tab === 'scenario') setActiveStep(2);
+  }, []);
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);

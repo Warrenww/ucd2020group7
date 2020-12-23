@@ -30,10 +30,15 @@ import useStyles from '../../constants/styles';
 
 const Milestone2 = props => {
   const classes = useStyles();
+  const domRef = useRef();
   const [value, setValue] = useState(0);
   const [page, setPage] = useState(parseInt(Math.random() * 5) + 1);
 
-  const domRef = useRef();
+  useEffect(() => {
+    const params = (new URL(document.location)).searchParams;
+    const tab = params.get('tab');
+    if (tab === 'affinityDiagram') setValue(1);
+  }, []);
 
   useEffect(() => {
     const dom = domRef.current;

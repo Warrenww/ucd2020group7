@@ -491,6 +491,14 @@ export default makeStyles((theme) =>({
     justifyContent: 'center',
     background: 'rebeccapurple',
   },
+  timeLine: {
+    '&::before': {
+      content: '""',
+    },
+    '&::after': {
+      content: '""',
+    },
+  },
 // animation
   "@keyframes loading": {
     "0%": {
