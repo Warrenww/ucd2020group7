@@ -26,7 +26,8 @@ function App(props) {
     if (path){
       params.delete('path');
       const search = params.toString();
-      setRedirect(path + (search ? '?' + search : ''));
+      const hash = (new URL(document.location)).hash;
+      setRedirect(path + (search ? '?' + search : '') + (hash ? hash : ''));
     }
   },[]);
 

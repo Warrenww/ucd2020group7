@@ -487,18 +487,34 @@ export default makeStyles((theme) =>({
     textShadow: '0 0 10px black',
     zIndex: 1,
   },
-  videoCanvasHolder: {
-    width: '100%',
-    display: 'flex',
-    justifyContent: 'center',
-    background: 'rebeccapurple',
-  },
   timeLine: {
     '&::before': {
       content: '""',
     },
     '&::after': {
       content: '""',
+    },
+  },
+  homePageBlock: {
+    padding: props => props.padding === undefined ? '2em' : props.padding,
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    background: props => props.color || '#ccc',
+    '& h2, & h3': {
+      fontWeight: 'bold',
+      textAlign: 'center',
+    },
+  },
+  memberCard: {
+    borderRadius: 20,
+    '& .MuiAvatar-root': {
+      width: 100,
+      height: 100,
+      boxShadow: '0 0 5px #555',
+      marginBottom: 10,
     },
   },
 // animation

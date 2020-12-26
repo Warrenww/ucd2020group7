@@ -4,6 +4,7 @@ import {
 } from '@material-ui/core';
 import useStyles from '../constants/styles';
 import Animation from './Animation';
+import Introduction from './Introduction';
 
 
 const Home = () => {
@@ -17,11 +18,9 @@ const Home = () => {
   }, []);
 
   return (
-    <Grid container className={classes.videoCanvasHolder}>
-    <Animation isDev={false} zoom={zoom}/>
-      <Grid item xs={12} className={classes.timeLine}>
-
-      </Grid>
+    <Grid container>
+      <Animation isDev={false} zoom={zoom}/>
+      <Introduction />
     </Grid>
   );
 }

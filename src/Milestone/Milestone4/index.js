@@ -83,7 +83,7 @@ const Milestone4 = props => {
       </Grid>
 
       <Grid item xs={12}>
-        <Paper className={`${classes.paper} ${classes.widgetsPaper}`}>
+        <Paper className={`${classes.paper} ${classes.widgetsPaper}`} id='sketch'>
           <h2>Sketch</h2>
           <p>
             以下是組員們對於每個Design Requirement畫出來的3個發想<br/>
