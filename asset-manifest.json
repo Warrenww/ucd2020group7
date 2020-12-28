@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/ucd2020group7/static/css/main.69eda509.chunk.css",
-    "main.js": "/ucd2020group7/static/js/main.2af1c0b4.chunk.js",
-    "main.js.map": "/ucd2020group7/static/js/main.2af1c0b4.chunk.js.map",
+    "main.js": "/ucd2020group7/static/js/main.f06440e5.chunk.js",
+    "main.js.map": "/ucd2020group7/static/js/main.f06440e5.chunk.js.map",
     "runtime-main.js": "/ucd2020group7/static/js/runtime-main.a75d693d.js",
     "runtime-main.js.map": "/ucd2020group7/static/js/runtime-main.a75d693d.js.map",
     "static/css/2.9d6f32cf.chunk.css": "/ucd2020group7/static/css/2.9d6f32cf.chunk.css",
-    "static/js/2.c6cae3ca.chunk.js": "/ucd2020group7/static/js/2.c6cae3ca.chunk.js",
-    "static/js/2.c6cae3ca.chunk.js.map": "/ucd2020group7/static/js/2.c6cae3ca.chunk.js.map",
+    "static/js/2.7e3998ff.chunk.js": "/ucd2020group7/static/js/2.7e3998ff.chunk.js",
+    "static/js/2.7e3998ff.chunk.js.map": "/ucd2020group7/static/js/2.7e3998ff.chunk.js.map",
     "index.html": "/ucd2020group7/index.html",
-    "precache-manifest.cf2ec899994204fffaa67bf8139fea73.js": "/ucd2020group7/precache-manifest.cf2ec899994204fffaa67bf8139fea73.js",
+    "precache-manifest.a3310342b73a5fa42010dea3daa08365.js": "/ucd2020group7/precache-manifest.a3310342b73a5fa42010dea3daa08365.js",
     "service-worker.js": "/ucd2020group7/service-worker.js",
     "static/css/2.9d6f32cf.chunk.css.map": "/ucd2020group7/static/css/2.9d6f32cf.chunk.css.map",
     "static/css/main.69eda509.chunk.css.map": "/ucd2020group7/static/css/main.69eda509.chunk.css.map",
-    "static/js/2.c6cae3ca.chunk.js.LICENSE.txt": "/ucd2020group7/static/js/2.c6cae3ca.chunk.js.LICENSE.txt",
+    "static/js/2.7e3998ff.chunk.js.LICENSE.txt": "/ucd2020group7/static/js/2.7e3998ff.chunk.js.LICENSE.txt",
     "static/media/001.jpg": "/ucd2020group7/static/media/001.6172e05e.jpg",
     "static/media/002.jpg": "/ucd2020group7/static/media/002.f557bb1a.jpg",
     "static/media/003.jpg": "/ucd2020group7/static/media/003.2dc6210d.jpg",
@@ -66,22 +66,26 @@
     "static/media/infoCard_alt.jpg": "/ucd2020group7/static/media/infoCard_alt.9c7f552e.jpg",
     "static/media/infoCard_alt.png": "/ucd2020group7/static/media/infoCard_alt.d9b22904.png",
     "static/media/invite.png": "/ucd2020group7/static/media/invite.523946c9.png",
+    "static/media/job-interview.png": "/ucd2020group7/static/media/job-interview.c66715f9.png",
     "static/media/newPlace.jpg": "/ucd2020group7/static/media/newPlace.8f59f888.jpg",
     "static/media/persona 1.png": "/ucd2020group7/static/media/persona 1.16057bf6.png",
     "static/media/persona 2.png": "/ucd2020group7/static/media/persona 2.ebc8072f.png",
     "static/media/phone_older.jpg": "/ucd2020group7/static/media/phone_older.2a336c74.jpg",
+    "static/media/prototype.png": "/ucd2020group7/static/media/prototype.1b322a98.png",
     "static/media/prototype.jpg": "/ucd2020group7/static/media/prototype.6e6c1c1c.jpg",
+    "static/media/prototyping.png": "/ucd2020group7/static/media/prototyping.09be5866.png",
     "static/media/senario 1.png": "/ucd2020group7/static/media/senario 1.a2519c74.png",
     "static/media/senario 2.png": "/ucd2020group7/static/media/senario 2.9c720157.png",
     "static/media/takePicture.png": "/ucd2020group7/static/media/takePicture.62c33358.png",
     "static/media/takePicture.jpg": "/ucd2020group7/static/media/takePicture.8485f305.jpg",
-    "static/media/walking.jpg": "/ucd2020group7/static/media/walking.531e3d87.jpg"
+    "static/media/walking.jpg": "/ucd2020group7/static/media/walking.531e3d87.jpg",
+    "static/media/woman.png": "/ucd2020group7/static/media/woman.3a5e4af3.png"
   },
   "entrypoints": [
     "static/js/runtime-main.a75d693d.js",
     "static/css/2.9d6f32cf.chunk.css",
-    "static/js/2.c6cae3ca.chunk.js",
+    "static/js/2.7e3998ff.chunk.js",
     "static/css/main.69eda509.chunk.css",
-    "static/js/main.2af1c0b4.chunk.js"
+    "static/js/main.f06440e5.chunk.js"
   ]
 }
