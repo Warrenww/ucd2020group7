@@ -6,7 +6,7 @@ import CircleLogo from './CircleLogo';
 import TextTitle from './TextTitle';
 import IconBackground from './IconBackground';
 import useStyles from '../../constants/styles';
-
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 const Animation = ({isDev = false, zoom}) => {
   const classes = useStyles({isDev, zoom: zoom * .8, padding: 0, color: 'rebeccapurple'});
@@ -37,6 +37,13 @@ const Animation = ({isDev = false, zoom}) => {
             </Tween>
           </Timeline>
         </Wrapper>
+      </div>
+      <div className={classes.more} onClick={() => document.getElementById('timeline').scrollIntoView()}>
+        <Timeline playState={playState} >
+          <Tween from={{y: -100, opacity: 0}} ease="elastic.Out(1,0.2)" duration={5}>
+            <ExpandMoreIcon />
+          </Tween>
+        </Timeline>
       </div>
     </Grid>
   );

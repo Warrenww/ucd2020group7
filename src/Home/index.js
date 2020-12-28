@@ -19,7 +19,7 @@ const Home = () => {
   }, []);
 
   return (
-    <Grid container>
+    <Grid container classNmae={classes.homeContainer}>
       <Animation isDev={false} zoom={zoom}/>
       <MyTimeLine />
       <Introduction />

@@ -515,10 +515,20 @@ export default makeStyles((theme) =>({
     alignItems: 'center',
     justifyContent: 'center',
     background: props => props.color || '#ccc',
+    minHeight: '100vh',
+    position: 'relative',
     '& h2, & h3': {
       fontWeight: 'bold',
       textAlign: 'center',
     },
+  },
+  more: {
+    position: 'absolute',
+    bottom: '1em',
+    cursor: 'pointer',
+    '& svg': {
+      fontSize: '3em',
+    }
   },
   memberCard: {
     borderRadius: 20,
@@ -553,8 +563,47 @@ export default makeStyles((theme) =>({
     backgroundBlendMode: 'multiply',
     color: 'white',
     backgroundAttachment: 'fixed',
+    textAlign: 'center',
+    position: 'relative',
+    overflow: 'hidden',
+    '&::after': {
+      content: '"前往頁面 >"',
+      position: 'absolute',
+      width: '100%',
+      height: '100%',
+      zIndex: -1,
+      background: '#3335',
+      top: 0,
+      left: 0,
+      backdropFilter: 'blur(5px)',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      transition: 'opacity .3s ease-in-out',
+      opacity: 0,
+      fontSize: '2em',
+      fontWeight: 'bold',
+    },
+    '&:hover::after': {
+      zIndex: 2,
+      opacity: 1,
+    },
     '& h2': {
       color: 'white',
+    },
+  },
+  timeLineItem: {
+    [theme.breakpoints.down('sm')]: {
+      '& .MuiTimelineOppositeContent-root': {
+        display: 'none',
+      },
+    },
+    '& .MuiTimelineDot-root': {
+      padding: 0,
+    },
+    '& .MuiAvatar-root': {
+      width: 50,
+      height: 50,
     },
   },
 // animation

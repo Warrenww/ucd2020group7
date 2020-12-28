@@ -34,7 +34,7 @@ const Introduction = () => {
   return (
     <Grid item xs={12} className={classes.homePageBlock}>
       <h2>組員介紹</h2>
-      <Grid container spacing={3} alignItems="start" justify="center">
+      <Grid container spacing={3} alignItems="flex-start" justify="center">
         <Reveal>
           <Tween from={{y: 10, opacity: 0}} stagger={0.2} ease="power2.inOut">
             <MemberCard name="邱筠絜" photo={Photo001} department="交通大學 資訊工程學系"/>

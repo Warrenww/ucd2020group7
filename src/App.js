@@ -9,7 +9,6 @@ import Sidebar from './Components/Sidebar';
 import NavigationBar from './Components/NavigationBar';
 import Milestone from './Milestone';
 import Home from './Home';
-import AboutUs from './AboutUs';
 import Faq from './Faq';
 
 import useStyles from './constants/styles';
@@ -46,9 +45,6 @@ function App(props) {
         <Switch>
           <Route exact path="/">
             <Home />
-          </Route>
-          <Route path="/aboutUs">
-            <AboutUs />
           </Route>
           <Route path="/milestone/:id">
             <Milestone />
