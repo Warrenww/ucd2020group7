@@ -487,12 +487,24 @@ export default makeStyles((theme) =>({
     textShadow: '0 0 10px black',
     zIndex: 1,
   },
-  timeLine: {
+  firstBlock: {
+    position: 'relative',
+    minHeight: 200,
+    '&::before, &::after': {
+      // content: '""',
+      width: '60vw',
+      height: '20vw',
+      position: 'absolute',
+      top: '-10vw',
+      borderRadius: '50%',
+    },
     '&::before': {
-      content: '""',
+      background: 'white',
+      left: '-10vw',
     },
     '&::after': {
-      content: '""',
+      background: 'rebeccapurple',
+      right: '-10vw',
     },
   },
   homePageBlock: {
@@ -510,11 +522,39 @@ export default makeStyles((theme) =>({
   },
   memberCard: {
     borderRadius: 20,
+    overflow: 'hidden',
+    '& h3': {
+      zIndex: 2,
+      width: '100%',
+      background: '#fff9',
+      marginBottom: 0,
+    },
     '& .MuiAvatar-root': {
       width: 100,
       height: 100,
       boxShadow: '0 0 5px #555',
       marginBottom: 10,
+      transition: '.3s ease-in-out',
+    },
+     '&:hover': {
+       padding: 0,
+       '& .MuiAvatar-root': {
+         width: '100%',
+         height: '100%',
+         borderRadius: 0,
+         marginBottom: -70,
+       }
+     },
+  },
+  timeLinePaper: {
+    padding: '1em',
+    backgroundImage: props => `url('${props.background}')`,
+    backgroundColor: '#3338',
+    backgroundBlendMode: 'multiply',
+    color: 'white',
+    backgroundAttachment: 'fixed',
+    '& h2': {
+      color: 'white',
     },
   },
 // animation

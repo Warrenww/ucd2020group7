@@ -9,7 +9,7 @@ import useStyles from '../../constants/styles';
 
 
 const Animation = ({isDev = false, zoom}) => {
-  const classes = useStyles({isDev, zoom: zoom * .5, padding: 0, color: 'rebeccapurple'});
+  const classes = useStyles({isDev, zoom: zoom * .8, padding: 0, color: 'rebeccapurple'});
   const titleWidth = 900;
   const titleHeight = 100;
   const titleDuration = 1.5;

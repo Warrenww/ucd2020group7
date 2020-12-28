@@ -5,6 +5,7 @@ import {
 import useStyles from '../constants/styles';
 import Animation from './Animation';
 import Introduction from './Introduction';
+import MyTimeLine from './Timeline';
 
 
 const Home = () => {
@@ -20,6 +21,7 @@ const Home = () => {
   return (
     <Grid container>
       <Animation isDev={false} zoom={zoom}/>
+      <MyTimeLine />
       <Introduction />
     </Grid>
   );
