@@ -609,6 +609,13 @@ export default makeStyles((theme) =>({
   poster: {
     margin: 'auto',
   },
+// FAQ
+  faq: {
+    width: '100%',
+    '& .ant-collapse-header': {
+      fontWeight: 'bold',
+    },
+  },
 // animation
   "@keyframes loading": {
     "0%": {
