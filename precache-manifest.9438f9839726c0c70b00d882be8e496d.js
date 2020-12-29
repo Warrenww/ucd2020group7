@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "921e50894fcc74306d3626c3d6586706",
+    "revision": "999232283a97df2a55efa46b05a0152d",
     "url": "/ucd2020group7/index.html"
   },
   {
-    "revision": "74d3e8a8e24717714a1a",
+    "revision": "915a3c3bb5aa0a7ec076",
     "url": "/ucd2020group7/static/css/2.9d6f32cf.chunk.css"
   },
   {
-    "revision": "0ae905b633c8abdb6a84",
-    "url": "/ucd2020group7/static/css/main.69eda509.chunk.css"
+    "revision": "2c3fc9fc7d8b4f81e195",
+    "url": "/ucd2020group7/static/css/main.721d5f38.chunk.css"
   },
   {
-    "revision": "74d3e8a8e24717714a1a",
-    "url": "/ucd2020group7/static/js/2.7e3998ff.chunk.js"
+    "revision": "915a3c3bb5aa0a7ec076",
+    "url": "/ucd2020group7/static/js/2.3b03abc7.chunk.js"
   },
   {
     "revision": "5fc7773d10f1bedac22d2597cbecc1c0",
-    "url": "/ucd2020group7/static/js/2.7e3998ff.chunk.js.LICENSE.txt"
+    "url": "/ucd2020group7/static/js/2.3b03abc7.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0ae905b633c8abdb6a84",
-    "url": "/ucd2020group7/static/js/main.f06440e5.chunk.js"
+    "revision": "2c3fc9fc7d8b4f81e195",
+    "url": "/ucd2020group7/static/js/main.ced067b4.chunk.js"
   },
   {
     "revision": "e06442d49b0024ed3b48",
@@ -326,6 +326,18 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "2a336c74eac1461fbdaea580cc37e3e1",
     "url": "/ucd2020group7/static/media/phone_older.2a336c74.jpg"
+  },
+  {
+    "revision": "6a190abda47619d11fe13fae5333a927",
+    "url": "/ucd2020group7/static/media/poster (Large).6a190abd.jpg"
+  },
+  {
+    "revision": "385c8b352c29967edae0b30ae2dd5f97",
+    "url": "/ucd2020group7/static/media/poster.385c8b35.jpg"
+  },
+  {
+    "revision": "f13b7fd378040b672804b7ac92eb78a7",
+    "url": "/ucd2020group7/static/media/posterIcon.f13b7fd3.png"
   },
   {
     "revision": "1b322a98db7b6c151e5a4d3ba19fdc90",
