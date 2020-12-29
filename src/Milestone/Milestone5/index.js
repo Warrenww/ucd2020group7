@@ -19,6 +19,7 @@ import { Alert, AlertTitle, Skeleton } from '@material-ui/lab';
 import { Pagination } from 'antd';
 import useStyles from '../../constants/styles';
 import BlankSpace from '../../Components/BlankSpace';
+import FloatIn from '../../Components/FloatIn';
 import { circumstances, table, feedbacks } from './data';
 import Compare from './Compare';
 import FigmaDemo from './FigmaDemo';
@@ -36,10 +37,12 @@ const Milestone5 = () => {
         <Paper className={`${classes.paper} ${classes.widgetsPaper}`}>
           <h2>測試任務</h2>
           <Chips activeCircumstance={activeCircumstance} setActiveCircumstance={setActiveCircumstance} />
-          <div className={classes.quote}>
-            <h3>情境</h3>
-            { circumstances[activeCircumstance].description }
-          </div>
+          <FloatIn>
+            <div className={classes.quote}>
+              <h3>情境</h3>
+              { circumstances[activeCircumstance].description }
+            </div>
+          </FloatIn>
           <h3>流程</h3>
           <Stepper alternativeLabel className={classes.stepper} disabled>
             {circumstances[activeCircumstance].step.map((label, index) => (
@@ -89,6 +92,7 @@ const Milestone5 = () => {
 
             <Grid item xs={12} md={6}>
               <h3>改進面向</h3>
+              <FloatIn direction="right">
               {
                 feedbacks.map((feedback, i) => (
                   <Alert
@@ -102,6 +106,7 @@ const Milestone5 = () => {
                   </Alert>
                 ))
               }
+              </FloatIn>
             </Grid>
 
           </Grid>
