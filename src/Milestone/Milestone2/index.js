@@ -18,16 +18,25 @@ import {
   ListItemIcon,
   Checkbox,
   ListItemText,
+  Button,
 } from '@material-ui/core';
 import { Alert, AlertTitle } from '@material-ui/lab';
-import { Pagination, Statistic, Row, Col } from 'antd';
+import { Image, Pagination, Statistic, Row, Col } from 'antd';
 
 import Icons from '../../constants/icons';
 import FloatIn from '../../Components/FloatIn';
+import BlankSpace from '../../Components/BlankSpace';
 
 import AffinityDiagram from './AffinityDiagram';
 import { steps, contents, table, affinityDiagram, thinkingPoint } from './data';
 import useStyles from '../../constants/styles';
+
+import affinityDiagramPhoto from '../../images/affinity diagram/Affinity diagram.jpg';
+import affinityDiagramPhoto_1 from '../../images/affinity diagram/Affinity diagram 1.jpg';
+import affinityDiagramPhoto_2 from '../../images/affinity diagram/Affinity diagram 2.jpg';
+import affinityDiagramPhoto_3 from '../../images/affinity diagram/Affinity diagram 3.jpg';
+import affinityDiagramPhoto_4 from '../../images/affinity diagram/Affinity diagram 4.jpg';
+import affinityDiagramPhoto_5 from '../../images/affinity diagram/Affinity diagram 5.jpg';
 
 const Milestone2 = props => {
   const classes = useStyles();
@@ -209,6 +218,8 @@ const Milestone2 = props => {
               pageSize={1}
               onChange={page => setPage(page)}
             />
+            <BlankSpace />
+            <Button onClick={() => setValue(2)}>點此看Affinity diagram原始照片</Button>
           </Paper>
         </Grid>
       </Slide>
@@ -313,6 +324,41 @@ const Milestone2 = props => {
         </Grid>
       </Slide>
 
+      <Slide direction="left" in={value ===2} mountOnEnter unmountOnExit>
+        <Grid item xs={12}>
+          <Paper className={classes.paper}>
+            <h2>Affinity diagram 實際照片</h2>
+            <div className={classes.imageGroup}>
+              <Image.PreviewGroup>
+                <Image
+                  width={200}
+                  src={affinityDiagramPhoto}
+                />
+                <Image
+                  width={200}
+                  src={affinityDiagramPhoto_1}
+                />
+                <Image
+                  width={200}
+                  src={affinityDiagramPhoto_2}
+                />
+                <Image
+                  width={200}
+                  src={affinityDiagramPhoto_3}
+                />
+                <Image
+                  width={200}
+                  src={affinityDiagramPhoto_4}
+                />
+                <Image
+                  width={200}
+                  src={affinityDiagramPhoto_5}
+                />
+              </Image.PreviewGroup>
+            </div>
+          </Paper>
+        </Grid>
+      </Slide>
     </Grid>
   );
 };

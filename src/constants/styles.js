@@ -222,6 +222,14 @@ export default makeStyles((theme) =>({
     background: prop => prop.depth === 0 ? '#7ab987' : (prop.depth === 1 ? '#dea9a9' : '#a3d4d7'),
     opacity: prop => prop.hide ? 0 : 1,
   },
+  imageGroup: {
+    display: 'flex',
+    justifyContent: 'center',
+    flexWrap: 'wrap',
+    '& .ant-image': {
+      margin: '1em',
+    }
+  },
 // Milestone 3
   behaviorVariableContainer: {
     width: '100%',
