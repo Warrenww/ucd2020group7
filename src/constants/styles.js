@@ -606,6 +606,9 @@ export default makeStyles((theme) =>({
       height: 50,
     },
   },
+  poster: {
+    margin: 'auto',
+  },
 // animation
   "@keyframes loading": {
     "0%": {

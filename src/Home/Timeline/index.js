@@ -1,94 +1,67 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React,{ useState } from 'react';
 import {
   Grid,
-  Paper,
   Hidden,
+  Avatar,
 } from '@material-ui/core';
-import {
-  Timeline,
-  TimelineItem,
-  TimelineOppositeContent,
-  TimelineSeparator,
-  TimelineDot,
-  TimelineConnector,
-  TimelineContent,
-} from '@material-ui/lab';
-import { Tween, Reveal } from 'react-gsap';
+import { Timeline } from '@material-ui/lab';
+import { Image } from 'antd';
 
+import StyledTimeLineItem from './StyledTimeLineItem';
 import useStyles from '../../constants/styles';
 import header from '../../Milestone/headerConfig';
-
-const StyledTimeLineItem = ({icon, title, content, background, href}) => {
-  const classes = useStyles({background});
-
-  return (
-    <Reveal>
-      <TimelineItem className={classes.timeLineItem}>
-        <TimelineOppositeContent>
-        </TimelineOppositeContent>
-        <TimelineSeparator>
-          <Tween from={{scale: 0}}>
-            <TimelineDot>
-              {icon}
-            </TimelineDot>
-          </Tween>
-          <Tween from={{scaleY: 0}}>
-            <TimelineConnector />
-          </Tween>
-        </TimelineSeparator>
-        <Tween from={{y: 50, opacity: 0}}>
-          <TimelineContent>
-            <Link to={href}>
-              <Paper elevation={3} className={classes.timeLinePaper}>
-                  <h2>{title}</h2>
-                  {content}
-              </Paper>
-            </Link>
-          </TimelineContent>
-        </Tween>
-      </TimelineItem>
-    </Reveal>
-  );
-};
+import posterImage from '../../images/poster.jpg';
+import posterIconImage from '../../images/posterIcon.png';
+import posterLargeImage from '../../images/poster (Large).jpg';
 
 const MyTimeLine = () => {
   const classes = useStyles({color: '#ffd'});
+  const [showPoster, setShowPoster] = useState(false);
+
+  const TimelineItems = () => header.map((item, index) => (
+    <StyledTimeLineItem
+      title={item.title}
+      content={item.intro}
+      background={item.image}
+      icon={item.icon}
+      href={item.href}
+      key={item.title}
+    />
+  )).concat([
+    (
+      <StyledTimeLineItem
+        title="poster"
+        content=""
+        background={posterImage}
+        icon={<Avatar alt="" src={posterIconImage} />}
+        href=''
+        onClick={() => setShowPoster(true)}
+        key="poster"
+        isLast
+      />
+    ),
+  ]);
 
   return (
     <Grid item xs={12} className={`${classes.homePageBlock} ${classes.firstBlock}`} id="timeline">
       <Hidden mdUp>
         <Timeline>
-        {
-          header.map((item, index) => (
-            <StyledTimeLineItem
-              title={item.title}
-              content={item.intro}
-              background={item.image}
-              icon={item.icon}
-              href={item.href}
-              key={item.title}
-            />
-          ))
-        }
+          <TimelineItems />
         </Timeline>
       </Hidden>
       <Hidden smDown>
       <Timeline align="alternate">
-      {
-        header.map((item, index) => (
-          <StyledTimeLineItem
-            title={item.title}
-            content={item.intro}
-            background={item.image}
-            icon={item.icon}
-            href={item.href}
-            key={item.title}
-          />
-        ))
-      }
+        <TimelineItems />
       </Timeline>
       </Hidden>
+      <Image
+        width={0}
+        src={posterLargeImage}
+        preview={{
+          visible: showPoster,
+          onVisibleChange: (visible, prevVisible) => setShowPoster(visible),
+        }}
+      />
     </Grid>
   );
 }
