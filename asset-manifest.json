@@ -1,24 +1,30 @@
 {
   "files": {
     "main.css": "/ucd2020group7/static/css/main.721d5f38.chunk.css",
-    "main.js": "/ucd2020group7/static/js/main.98c9fdd1.chunk.js",
-    "main.js.map": "/ucd2020group7/static/js/main.98c9fdd1.chunk.js.map",
+    "main.js": "/ucd2020group7/static/js/main.baa2ee25.chunk.js",
+    "main.js.map": "/ucd2020group7/static/js/main.baa2ee25.chunk.js.map",
     "runtime-main.js": "/ucd2020group7/static/js/runtime-main.a75d693d.js",
     "runtime-main.js.map": "/ucd2020group7/static/js/runtime-main.a75d693d.js.map",
     "static/css/2.9d6f32cf.chunk.css": "/ucd2020group7/static/css/2.9d6f32cf.chunk.css",
-    "static/js/2.90d69669.chunk.js": "/ucd2020group7/static/js/2.90d69669.chunk.js",
-    "static/js/2.90d69669.chunk.js.map": "/ucd2020group7/static/js/2.90d69669.chunk.js.map",
+    "static/js/2.9246277f.chunk.js": "/ucd2020group7/static/js/2.9246277f.chunk.js",
+    "static/js/2.9246277f.chunk.js.map": "/ucd2020group7/static/js/2.9246277f.chunk.js.map",
     "index.html": "/ucd2020group7/index.html",
-    "precache-manifest.45e01be3850e97ee2f1aadc0d4b689d9.js": "/ucd2020group7/precache-manifest.45e01be3850e97ee2f1aadc0d4b689d9.js",
+    "precache-manifest.934a355392cec8cc76aa23a14014ccfe.js": "/ucd2020group7/precache-manifest.934a355392cec8cc76aa23a14014ccfe.js",
     "service-worker.js": "/ucd2020group7/service-worker.js",
     "static/css/2.9d6f32cf.chunk.css.map": "/ucd2020group7/static/css/2.9d6f32cf.chunk.css.map",
     "static/css/main.721d5f38.chunk.css.map": "/ucd2020group7/static/css/main.721d5f38.chunk.css.map",
-    "static/js/2.90d69669.chunk.js.LICENSE.txt": "/ucd2020group7/static/js/2.90d69669.chunk.js.LICENSE.txt",
+    "static/js/2.9246277f.chunk.js.LICENSE.txt": "/ucd2020group7/static/js/2.9246277f.chunk.js.LICENSE.txt",
     "static/media/001.jpg": "/ucd2020group7/static/media/001.6172e05e.jpg",
     "static/media/002.jpg": "/ucd2020group7/static/media/002.f557bb1a.jpg",
     "static/media/003.jpg": "/ucd2020group7/static/media/003.2dc6210d.jpg",
     "static/media/004.jpg": "/ucd2020group7/static/media/004.a01f504d.jpg",
     "static/media/005.jpg": "/ucd2020group7/static/media/005.5c6dd51f.jpg",
+    "static/media/Affinity diagram 1.jpg": "/ucd2020group7/static/media/Affinity diagram 1.1b6dda7e.jpg",
+    "static/media/Affinity diagram 2.jpg": "/ucd2020group7/static/media/Affinity diagram 2.2b1ca4ec.jpg",
+    "static/media/Affinity diagram 3.jpg": "/ucd2020group7/static/media/Affinity diagram 3.217ca478.jpg",
+    "static/media/Affinity diagram 4.jpg": "/ucd2020group7/static/media/Affinity diagram 4.b25ff2f4.jpg",
+    "static/media/Affinity diagram 5.jpg": "/ucd2020group7/static/media/Affinity diagram 5.ad85e742.jpg",
+    "static/media/Affinity diagram.jpg": "/ucd2020group7/static/media/Affinity diagram.f74bd991.jpg",
     "static/media/R1C1.jpg": "/ucd2020group7/static/media/R1C1.a0bad722.jpg",
     "static/media/R1C1.png": "/ucd2020group7/static/media/R1C1.c7e2e04e.png",
     "static/media/R1C1.JPG": "/ucd2020group7/static/media/R1C1.eb74dfe2.JPG",
@@ -87,8 +93,8 @@
   "entrypoints": [
     "static/js/runtime-main.a75d693d.js",
     "static/css/2.9d6f32cf.chunk.css",
-    "static/js/2.90d69669.chunk.js",
+    "static/js/2.9246277f.chunk.js",
     "static/css/main.721d5f38.chunk.css",
-    "static/js/main.98c9fdd1.chunk.js"
+    "static/js/main.baa2ee25.chunk.js"
   ]
 }

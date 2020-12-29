@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b24bdae778e3c0620a44a34aa8bc5a12",
+    "revision": "bc75ed2d4daf327cfd925727102090c8",
     "url": "/ucd2020group7/index.html"
   },
   {
-    "revision": "0a5567e66eb96d28ac53",
+    "revision": "93588389193d6844f64f",
     "url": "/ucd2020group7/static/css/2.9d6f32cf.chunk.css"
   },
   {
-    "revision": "d96f1dd76a10278ca38c",
+    "revision": "aa85c975c3452c22b868",
     "url": "/ucd2020group7/static/css/main.721d5f38.chunk.css"
   },
   {
-    "revision": "0a5567e66eb96d28ac53",
-    "url": "/ucd2020group7/static/js/2.90d69669.chunk.js"
+    "revision": "93588389193d6844f64f",
+    "url": "/ucd2020group7/static/js/2.9246277f.chunk.js"
   },
   {
     "revision": "5fc7773d10f1bedac22d2597cbecc1c0",
-    "url": "/ucd2020group7/static/js/2.90d69669.chunk.js.LICENSE.txt"
+    "url": "/ucd2020group7/static/js/2.9246277f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d96f1dd76a10278ca38c",
-    "url": "/ucd2020group7/static/js/main.98c9fdd1.chunk.js"
+    "revision": "aa85c975c3452c22b868",
+    "url": "/ucd2020group7/static/js/main.baa2ee25.chunk.js"
   },
   {
     "revision": "e06442d49b0024ed3b48",
@@ -46,6 +46,30 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "5c6dd51fdacdd4da0b007b7639617842",
     "url": "/ucd2020group7/static/media/005.5c6dd51f.jpg"
+  },
+  {
+    "revision": "1b6dda7ed43f1847162f96042e6e7fda",
+    "url": "/ucd2020group7/static/media/Affinity diagram 1.1b6dda7e.jpg"
+  },
+  {
+    "revision": "2b1ca4ecd16baf6ab86f400e7bc0b8cc",
+    "url": "/ucd2020group7/static/media/Affinity diagram 2.2b1ca4ec.jpg"
+  },
+  {
+    "revision": "217ca47898cbc59444dea8091b1cca5d",
+    "url": "/ucd2020group7/static/media/Affinity diagram 3.217ca478.jpg"
+  },
+  {
+    "revision": "b25ff2f4a015de2bd6f1cd83457548dc",
+    "url": "/ucd2020group7/static/media/Affinity diagram 4.b25ff2f4.jpg"
+  },
+  {
+    "revision": "ad85e742440f98dc0a620281764ee02e",
+    "url": "/ucd2020group7/static/media/Affinity diagram 5.ad85e742.jpg"
+  },
+  {
+    "revision": "f74bd9915dac4f6979d35957884b919a",
+    "url": "/ucd2020group7/static/media/Affinity diagram.f74bd991.jpg"
   },
   {
     "revision": "6046abe5d4a919ad3350a62645fff8de",
