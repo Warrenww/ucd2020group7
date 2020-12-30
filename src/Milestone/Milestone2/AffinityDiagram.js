@@ -2,21 +2,25 @@ import React, { useState, useEffect, useRef } from 'react';
 import { RootRef } from '@material-ui/core';
 import Icons from '../../constants/icons';
 import useStyles from '../../constants/styles';
+import FadeIn from '../../Components/FadeIn';
 
-const Note = ({content, depth, isLong, hide}) => {
-  const classes = useStyles({depth, isLong, hide});
-
-  return (
-    <div className={classes.note}>
-      {content}
-    </div>
-  );
-};
-
-const AffinityDiagram = ({data}) => {
+const AffinityDiagram = ({data, animation}) => {
   const classes = useStyles();
   const domRef = useRef();
   const [showArrow, setShowArrow] = useState(false);
+  const Wrapper = animation ? FadeIn : React.Fragment;
+
+  const Note = ({content, depth, isLong, hide}) => {
+    const classes = useStyles({depth, isLong, hide});
+
+    return (
+      <Wrapper>
+        <div className={classes.note}>
+          {content}
+        </div>
+      </Wrapper>
+    );
+  };
 
   useEffect(() => {
     const dom = domRef.current;

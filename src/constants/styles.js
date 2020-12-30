@@ -222,13 +222,23 @@ export default makeStyles((theme) =>({
     background: prop => prop.depth === 0 ? '#7ab987' : (prop.depth === 1 ? '#dea9a9' : '#a3d4d7'),
     opacity: prop => prop.hide ? 0 : 1,
   },
-  imageGroup: {
-    display: 'flex',
-    justifyContent: 'center',
-    flexWrap: 'wrap',
-    '& .ant-image': {
-      margin: '1em',
-    }
+  affinityDiagramPhoto: {
+    backgroundImage: props => `url("${props.bg}")`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    width: props => props.size * 0.8,
+    height: props => props.size * 0.8 * 0.4,
+    position: 'relative',
+    '& .highlight': {
+      height: '100%',
+      width: 20,
+      position: 'relative',
+      display: 'inline-block',
+      cursor: 'pointer',
+    },
+    '& .highlight:hover': {
+      background: '#3335',
+    },
   },
 // Milestone 3
   behaviorVariableContainer: {

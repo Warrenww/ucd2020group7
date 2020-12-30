@@ -1,7 +1,7 @@
 import React from 'react';
 import { Tween, Reveal } from 'react-gsap';
 
-const FloatIn = ({
+const FadeIn = ({
   children,
   direction,
 }) => {
@@ -34,4 +34,4 @@ const FloatIn = ({
   )
 }
 
-export default FloatIn;
+export default FadeIn;

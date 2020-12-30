@@ -14,7 +14,7 @@ import {
 } from '@material-ui/core';
 import { Alert, AlertTitle, Skeleton } from '@material-ui/lab';
 
-import FloatIn from '../../Components/FloatIn';
+import FadeIn from '../../Components/FadeIn';
 import Icons from '../../constants/icons';
 import BlankSpace from '../../Components/BlankSpace';
 import Photo001 from '../../images/001.jpg';
@@ -46,7 +46,7 @@ const Milestone4 = props => {
           <Grid container spacing={6}>
             <Grid item xs={12} md={6}>
               <h2>Key Finding</h2>
-              <FloatIn direction="left">
+              <FadeIn direction="left">
                 <Alert severity="info" variant="outlined" className={classes.highlight} icon={<Icons.Search />}>
                     <AlertTitle>Finding 1</AlertTitle>
                     常因隨手放、沒歸位及或使用頻率低會造成不知道東西放哪，從而找不到東西
@@ -63,7 +63,7 @@ const Milestone4 = props => {
                     <AlertTitle>Finding 3</AlertTitle>
                     希望有一款APP，可以用拍照和語音的方式輸入或存檔，用視覺化的方式呈現，並可以製作個人的虛擬空間，有分類規劃、共同編輯、提醒功能，還可以用標籤分類及搜尋。希望APP簡易操作不耗時。
                 </Alert>
-              </FloatIn>
+              </FadeIn>
               <Link to="/milestone/2">
                 <Button>前往 Milestone 2</Button>
               </Link>
@@ -71,7 +71,7 @@ const Milestone4 = props => {
 
             <Grid item xs={12} md={6}>
               <h2>Design Requirement</h2>
-              <FloatIn direction="right">
+              <FadeIn direction="right">
               {
                 requirements.map((x, i) => (
                   <Alert severity="warning" variant={activeRequirement === i + 1 ? "filled" : "outlined"} className={classes.highlight} icon={x.icon}>
@@ -80,7 +80,7 @@ const Milestone4 = props => {
                   </Alert>
                 ))
               }
-              </FloatIn>
+              </FadeIn>
             </Grid>
 
           </Grid>
@@ -191,7 +191,7 @@ const Milestone4 = props => {
                 <Grid item xs={12}><h3>{requirements[i - 1].content}</h3></Grid>
                 <Grid item xs={12} md={6}>
                   <h3>Concept that remain</h3>
-                  <FloatIn direction="left">
+                  <FadeIn direction="left">
                   {
                       requirements[i - 1].concept.remain.map(x => (
                         <Alert key={x.title} severity="success" variant="outlined" className={classes.highlight} icon={x.icon}>
@@ -200,11 +200,11 @@ const Milestone4 = props => {
                         </Alert>
                       ))
                   }
-                  </FloatIn>
+                  </FadeIn>
                 </Grid>
                 <Grid item xs={12} md={6}>
                   <h3>Concept that dropped</h3>
-                  <FloatIn direction="right">
+                  <FadeIn direction="right">
                   {
                       requirements[i - 1].concept.drop.map(x => (
                         <Alert key={x.title} severity="error" variant="outlined" className={classes.highlight} icon={x.icon}>
@@ -213,7 +213,7 @@ const Milestone4 = props => {
                         </Alert>
                       ))
                   }
-                  </FloatIn>
+                  </FadeIn>
                 </Grid>
                 <Divider />
               </>

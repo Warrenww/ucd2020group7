@@ -21,22 +21,16 @@ import {
   Button,
 } from '@material-ui/core';
 import { Alert, AlertTitle } from '@material-ui/lab';
-import { Image, Pagination, Statistic, Row, Col } from 'antd';
+import { Pagination, Statistic, Row, Col } from 'antd';
 
 import Icons from '../../constants/icons';
-import FloatIn from '../../Components/FloatIn';
+import FadeIn from '../../Components/FadeIn';
 import BlankSpace from '../../Components/BlankSpace';
 
 import AffinityDiagram from './AffinityDiagram';
+import AffinityDiagramPhoto from './AffinityDiagramPhoto';
 import { steps, contents, table, affinityDiagram, thinkingPoint } from './data';
 import useStyles from '../../constants/styles';
-
-import affinityDiagramPhoto from '../../images/affinity diagram/Affinity diagram.jpg';
-import affinityDiagramPhoto_1 from '../../images/affinity diagram/Affinity diagram 1.jpg';
-import affinityDiagramPhoto_2 from '../../images/affinity diagram/Affinity diagram 2.jpg';
-import affinityDiagramPhoto_3 from '../../images/affinity diagram/Affinity diagram 3.jpg';
-import affinityDiagramPhoto_4 from '../../images/affinity diagram/Affinity diagram 4.jpg';
-import affinityDiagramPhoto_5 from '../../images/affinity diagram/Affinity diagram 5.jpg';
 
 const Milestone2 = props => {
   const classes = useStyles();
@@ -142,7 +136,7 @@ const Milestone2 = props => {
         <Grid item xs={12}>
             <Paper className={classes.paper}>
               <h2>訪談主軸</h2>
-              <FloatIn direction="right">
+              <FadeIn direction="right">
                 <Alert variant="outlined" severity="info" className={classes.highlight} icon={<Icons.Search />}>
                   <AlertTitle>找東西的情況</AlertTitle>
                   描述找到/找不到東西的情況，物品的性質(使用頻率、重要性等等)。為什麼會找不到?用什麼方式找東西?
@@ -162,7 +156,7 @@ const Milestone2 = props => {
                   <AlertTitle>對於協助管理及找尋物品之系統的需求與期望</AlertTitle>
                   介面、功能、使用意願
                 </Alert>
-              </FloatIn>
+              </FadeIn>
             </Paper>
         </Grid>
       </Slide>
@@ -207,7 +201,7 @@ const Milestone2 = props => {
             {
               affinityDiagram.map((x,i) => (
                 <Grow in={page === i + 1} mountOnEnter unmountOnExit key={`affinity-diagram-${i}`}>
-                  <AffinityDiagram data={x} />
+                  <AffinityDiagram data={x} animation/>
                 </Grow>
               ))
             }
@@ -228,7 +222,7 @@ const Milestone2 = props => {
         <Grid item xs={12}>
           <Paper className={classes.paper}>
             <h2>Key Finding</h2>
-            <FloatIn direction="left">
+            <FadeIn direction="left">
               <Alert variant="outlined" severity="info" className={classes.highlight} icon={<Icons.Search />}>
                 <AlertTitle>Finding 1</AlertTitle>
                 常因隨手放、沒歸位及或使用頻率低會造成不知道東西放哪，從而找不到東西。
@@ -245,7 +239,7 @@ const Milestone2 = props => {
                 <AlertTitle>Finding 4</AlertTitle>
                 希望有一款APP，可以用拍照和語音的方式輸入或存檔，用視覺化的方式呈現，並可以製作個人的虛擬空間，有分類規劃、共同編輯、提醒功能，還可以用標籤分類及搜尋。希望APP簡易操作不耗時。
               </Alert>
-            </FloatIn>
+            </FadeIn>
           </Paper>
         </Grid>
       </Slide>
@@ -259,7 +253,7 @@ const Milestone2 = props => {
                 <h2>之後的設計重點</h2>
                 設計一款APP
                 <div style={{margin: 10}} />
-                <FloatIn direction="left">
+                <FadeIn direction="left">
                   <Alert
                     variant="outlined"
                     severity="success"
@@ -292,13 +286,13 @@ const Milestone2 = props => {
                   >
                     還可以用<b>標籤</b>分類及<b>搜尋</b>
                   </Alert>
-                </FloatIn>
+                </FadeIn>
               </Grid>
 
               <Grid item xs={12} md={6}>
                 <h2>要考慮的重點</h2>
                 <List className={classes.list}>
-                  <FloatIn direction="right">
+                  <FadeIn direction="right">
                     {
                       thinkingPoint.map(x => (
                         <ListItem key={value} role={undefined} dense>
@@ -316,7 +310,7 @@ const Milestone2 = props => {
                         </ListItem>
                       ))
                     }
-                  </FloatIn>
+                  </FadeIn>
                 </List>
               </Grid>
             </Grid>
@@ -328,34 +322,8 @@ const Milestone2 = props => {
         <Grid item xs={12}>
           <Paper className={classes.paper}>
             <h2>Affinity diagram 實際照片</h2>
-            <div className={classes.imageGroup}>
-              <Image.PreviewGroup>
-                <Image
-                  width={200}
-                  src={affinityDiagramPhoto}
-                />
-                <Image
-                  width={200}
-                  src={affinityDiagramPhoto_1}
-                />
-                <Image
-                  width={200}
-                  src={affinityDiagramPhoto_2}
-                />
-                <Image
-                  width={200}
-                  src={affinityDiagramPhoto_3}
-                />
-                <Image
-                  width={200}
-                  src={affinityDiagramPhoto_4}
-                />
-                <Image
-                  width={200}
-                  src={affinityDiagramPhoto_5}
-                />
-              </Image.PreviewGroup>
-            </div>
+            可以點擊個別部分放大
+            <AffinityDiagramPhoto />
           </Paper>
         </Grid>
       </Slide>

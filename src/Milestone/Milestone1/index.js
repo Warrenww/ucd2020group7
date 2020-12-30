@@ -3,7 +3,7 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import {data, properties} from './data';
 import useStyles from '../../constants/styles';
-import FloatIn from '../../Components/FloatIn';
+import FadeIn from '../../Components/FadeIn';
 import ImagePaper from './ImagePaper';
 
 const Milestone1 = props => {
@@ -14,22 +14,22 @@ const Milestone1 = props => {
     <Grid container spacing={3} justify="center" alignItems="stretch">
       {
         data.map((x, i) => (
-          <FloatIn>
+          <FadeIn>
             <Grid item md={4} xs={12} key={x.title} onClick={() => setActive(i)}>
               <ImagePaper {...x} active={active === i}/>
             </Grid>
-          </FloatIn>
+          </FadeIn>
         ))
       }
       <Grid item xs={12} >
-        <FloatIn>
+        <FadeIn>
           <Paper className={classes.paper}>
             <h2>{data[active].title}</h2>
             <h4>{data[active].long_intro}</h4>
           </Paper>
-        </FloatIn>
+        </FadeIn>
       </Grid>
-      <FloatIn>
+      <FadeIn>
       {
         properties.map((p, i) => (
           <Grid item xs={12} sm={6} key={p.title}>
@@ -40,7 +40,7 @@ const Milestone1 = props => {
           </Grid>
         ))
       }
-      </FloatIn>
+      </FadeIn>
     </Grid>
   )
 }
