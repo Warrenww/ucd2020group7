@@ -10,6 +10,8 @@ import interviewImage from '../images/job-interview.png';
 import womanImage from '../images/woman.png';
 import lofiPrototypeImage from '../images/prototyping.png';
 import hifiPrototypeImage from '../images/prototype.png';
+import usabilityTestImage from '../images/usabilityTest.jpg';
+import usabilityTestIcon from '../images/test.png';
 
 const header= [
   {
@@ -55,6 +57,14 @@ const header= [
     isLast: false,
     intro: (`考慮Milestone 3中做出來的2種Persona與Scenario，我們設計了4個任務來測試Lofi prototype的易用程度，並將受試者的測試回饋用於改進Hifi prototype，
 並用Figma來實作Hifi prototype，準備進行最後一步的易用性測試。`),
+  },
+  {
+    image: usabilityTestImage,
+    title: 'Usability Test',
+    href: '/milestone/6',
+    icon: <Avatar alt="" src={usabilityTestIcon} />,
+    isLast: false,
+    intro: (`最後我們找了一些測試員，將我們在Figma上的Hi-Fi Prototype交與他們測試，並從他們的後側問卷與回饋中，找出產品還不足的地方，以期在之後真的要開發產品時可以參考`),
   },
 ];
 

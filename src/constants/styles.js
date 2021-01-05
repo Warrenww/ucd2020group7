@@ -334,7 +334,7 @@ export default makeStyles((theme) =>({
     width: '80%',
     marginBottom: 20,
   },
-// MilMilestone 5
+// Milestone 5
   quote: {
     maxWidth: 400,
     lineHeight: 2,
@@ -441,6 +441,21 @@ export default makeStyles((theme) =>({
         zIndex: -1,
       }
     },
+  },
+// Milestone 6
+  slider: {
+    width: '90%',
+    maxWidth: theme.breakpoints.values.sm,
+    padding: '0 30px',
+    display: 'flex',
+    position: 'relative',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+
+    '& .ant-slider': {
+      width: '90%',
+      margin: '1em 0',
+    }
   },
 // Home page
   videoCanvas: {

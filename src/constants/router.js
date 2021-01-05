@@ -1,6 +1,7 @@
 import React from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import InfoIcon from '@material-ui/icons/Info';
+import header from '../Milestone/headerConfig';
 
 const styles = {
   avatar: {
@@ -11,31 +12,11 @@ const styles = {
 };
 
 export default [
-  {
-    link: '/milestone/1',
-    icon: <Avatar style={styles.avatar}>M1</Avatar>,
-    text: "Milestone 1",
-  },
-  {
-    link: '/milestone/2',
-    icon: <Avatar style={styles.avatar}>M2</Avatar>,
-    text: "Affinity Diagram",
-  },
-  {
-    link: '/milestone/3',
-    icon: <Avatar style={styles.avatar}>M3</Avatar>,
-    text: "Persona & Scenario",
-  },
-  {
-    link: '/milestone/4',
-    icon: <Avatar style={styles.avatar}>M4</Avatar>,
-    text: "Lo-Fi Propotype",
-  },
-  {
-    link: '/milestone/5',
-    icon: <Avatar style={styles.avatar}>M5</Avatar>,
-    text: "Hi-Fi Propotype",
-  },
+  ...(header.map(x => ({
+    link: x.href,
+    icon: x.icon,
+    text: x.title,
+  }))),
   {
     link: '/faq',
     icon: <InfoIcon />,

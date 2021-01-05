@@ -6,7 +6,6 @@ const FadeIn = ({
   direction,
 }) => {
   const directionConfig = {};
-  console.log(direction);
   switch (direction) {
     case 'up':
       directionConfig.y = -50;

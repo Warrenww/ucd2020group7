@@ -1,6 +1,7 @@
 import React from 'react';
 import { Grow } from '@material-ui/core';
 import useStyles from '../../constants/styles';
+import FadeIn from '../../Components/FadeIn';
 
 const Compare = ({
   data: {
@@ -16,7 +17,9 @@ const Compare = ({
     <Grow in={show} className={classes.compare} mountOnEnter unmountOnExit>
       <div>
         <h3>{title}</h3>
-        <div className={classes.quote}>{idea}</div>
+        <FadeIn>
+          <div className={classes.quote}>{idea}</div>
+        </FadeIn>
         <div className="row">
           <div className="column">
             <h3>Before</h3>

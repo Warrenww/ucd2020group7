@@ -30,7 +30,7 @@ const MyTimeLine = () => {
   )).concat([
     (
       <StyledTimeLineItem
-        title="poster"
+        title="Poster"
         content=""
         background={posterImage}
         icon={<Avatar alt="" src={posterIconImage} />}

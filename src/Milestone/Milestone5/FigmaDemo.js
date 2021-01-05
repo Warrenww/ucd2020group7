@@ -13,6 +13,7 @@ import CachedIcon from '@material-ui/icons/Cached';
 import AppleIcon from '@material-ui/icons/Apple';
 import Chips from './Chips';
 import { circumstances } from './data';
+import FadeIn from '../../Components/FadeIn';
 
 const FigmaDemo = ({activeCircumstance, setActiveCircumstance}) => {
   const classes = useStyles();
@@ -59,11 +60,12 @@ const FigmaDemo = ({activeCircumstance, setActiveCircumstance}) => {
           <h3>{ circumstances[activeCircumstance].index }</h3>
           <h3>{ circumstances[activeCircumstance].title }</h3>
         </div>
-        <div className={classes.quote}>
-          <h3>情境</h3>
-          { circumstances[activeCircumstance].description }
-        </div>
-
+        <FadeIn>
+          <div className={classes.quote}>
+            <h3>情境</h3>
+            { circumstances[activeCircumstance].description }
+          </div>
+        </FadeIn>
         <Divider />
 
         <div style={{display: 'flex', width: '100%', justifyContent: 'space-around'}}>
