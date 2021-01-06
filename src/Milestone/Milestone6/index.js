@@ -9,12 +9,12 @@ import {
   TableCell,
   TableBody,
   Divider,
+  Chip,
   Button,
 } from '@material-ui/core';
 import withWidth from '@material-ui/core/withWidth';
 import { Alert, AlertTitle } from '@material-ui/lab';
-import { Statistic, Row, Col, Slider, Input  } from 'antd';
-import { FrownOutlined, SmileOutlined } from '@ant-design/icons';
+import { Statistic, Row, Col } from 'antd';
 import useStyles from '../../constants/styles';
 import FadeIn from '../../Components/FadeIn';
 import BlankSpace from '../../Components/BlankSpace';
@@ -24,12 +24,6 @@ import { table, questionaire } from './data';
 const Milestone6 = ({ width }) => {
   const classes = useStyles();
   const [activeGroup, setActiveGroup] = useState(parseInt(Math.random() * questionaire.length));
-  const sliderConfig = ({max}) => ({
-    dots: true,
-    max: max,
-    min: 1,
-    step: 1,
-  });
 
   return (
     <Grid container spacing={3} direction="row" justify="center" alignItems="stretch">
@@ -94,7 +88,7 @@ const Milestone6 = ({ width }) => {
 
       <Grid item xs={12}>
         <Paper className={classes.paper}>
-          <h2>後測問卷</h2>
+          <h2>後測問卷與回答狀況</h2>
           我們針對以下幾個類別總共設計了32道問題，除了測試過程為李克特五點量表外，其餘問題皆是李克特七點量表
           <Row className={classes.statistic}>
             <FadeIn>
@@ -117,36 +111,100 @@ const Milestone6 = ({ width }) => {
             }
             </FadeIn>
           </Row>
+          <Divider />
           <FadeIn>
-          {
-            questionaire[activeGroup].question.map((x, i) => (
-                <Row key={x} className={classes.statistic}>
-                  <Col span={2}>
-                    <h3>{i + 1}</h3>
-                  </Col>
-                  <Col span={8}>
-                    <h3>{x}</h3>
-                  </Col>
-                  <Col span={14}>
-                  {
-                    questionaire[activeGroup].config.type === 'other'
-                      ? <Input />
-                      : (
-                        <div className={classes.slider}>
-                          <FrownOutlined />
-                          <Slider {...{
-                            ...sliderConfig(questionaire[activeGroup].config),
-                            defaultValue: parseInt(Math.random() * questionaire[activeGroup].config.max) + 1
-                          }} />
-                          <SmileOutlined />
-                        </div>
-                      )
-                  }
-                  </Col>
-                </Row>
-            ))
-          }
+            <TableContainer>
+              <Table className={classes.table} size="medium" aria-label="simple table">
+                <TableHead>
+                  <TableRow>
+                    <TableCell align="center">題目</TableCell>
+                    {
+                      questionaire[activeGroup].question[0].reply.map((x, i) => (
+                        <TableCell key={`table-header-${i}`}>{i + 1}分</TableCell>
+                      ))
+                    }
+                    <TableCell>平均</TableCell>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  {questionaire[activeGroup].question.map((row, i) => (
+                    <TableRow key={`table-row-${i}`}>
+                      <TableCell component="th" scope="row">
+                        <b>{row.content}</b>
+                      </TableCell>
+                      {
+                        row.reply.map(x => (
+                          <TableCell key={`table-reply-${i}`}>{x || ''}</TableCell>
+                        ))
+                      }
+                      <TableCell>
+                        {
+                          row.reply.reduce((acc, current, index) => acc + (index + 1) * current, 0) / 4
+                        }
+                      </TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </TableContainer>
           </FadeIn>
+        </Paper>
+      </Grid>
+
+      <Grid item xs={12}>
+        <Paper className={`${classes.paper} ${classes.widgetsPaper}`}>
+          <h2>測試反思</h2>
+          <Grid container spacing={6} direction="row" justify="center" alignItems="stretch">
+            <Grid item xs={12} md={6}>
+              <Alert
+                severity="error"
+                variant="outlined"
+                icon={<b>{circumstances[1].index}</b>}
+                className={classes.highlight}
+              >
+                <AlertTitle><b>{circumstances[1].title}</b></AlertTitle>
+                {circumstances[1].description}
+              </Alert>
+              當中，我們需要受測者在系統上記錄物品及其位置，主要分為兩部份，
+              <div>
+                <Chip label="在系統上建立存放的地點、位置" variant="outlined" />
+                <Chip label="記錄物品的資訊" variant="outlined" />
+              </div>
+              因為系統的特色是可以利用區塊及階層的方式顯示物品的相對位置，所以他們需要在空白的虛擬空間中進行建構，這部份正是所有受測者覺得系統困難的點。 其原因如下：
+              <ul>
+                <li>figma 本身難以模擬「拉區塊」指令，原意是希望使用者可以自由調整區塊的大小</li>
+                <li>受測者在第一次使用的時候，無法理解階層的概念，原意是想變得像檔案總管跟資料夾那樣，但因為同時加入了不一樣的條件（系統需要設定至少三階層才可以存入物品資訊），造成使用者難以上手</li>
+                <li>Figma 所顯示的畫面比我們給受測者測試的裝置的螢幕大，因此受測者需要另外滑動才可以找到某些按鍵，讓受測者到了某一頁就無法進行操作。</li>
+                <li>我們在系統的設計上也不盡完美，有些按鍵總是無法讓受測者一看就知道他的操作方式</li>
+              </ul>
+              第二部份的話經過改良後雖然有比較順利，但整體而言，可以看到受測者們都會覺得任務二難以完成。
+            </Grid>
+
+            <Grid item xs={12} md={6}>
+              <Alert
+                severity="warning"
+                variant="outlined"
+                icon={<b>{circumstances[2].index}</b>}
+                className={classes.highlight}
+              >
+                <AlertTitle><b>{circumstances[2].title}</b></AlertTitle>
+                {circumstances[2].description}
+              </Alert>
+              <div>
+                任務三的部份為搜尋物品，這個結果跟我們所預期的不一樣的是，我們原本以為受測者都會直接使用放大鏡，結果大家都會用區塊顯示或列表顯示的頁面中進行物品的搜尋。
+              </div>
+              <div>
+                原因可能是因為放大鏡大部份時間都因為Figma 所顯示的畫面比我們的手機螢幕大，所以被放在螢幕底部，所以一直沒被發現。
+              </div>
+            </Grid>
+          </Grid>
+        </Paper>
+      </Grid>
+
+      <Grid item xs={12}>
+        <Paper className={classes.paper}>
+          <h2>Future work</h2>
+          因為用區塊及階層的方式顯示物品的相對位置是iRemember的其中一個特色，也是乎合一開始我們受訪者使用需求的設計，因此我們會希望把它改良得更乎合使用者的使用行為，習慣，除了介面上的更改，也會考慮「系統需要設定至少三階層才可以存入物品資訊」的條件的廢存。
         </Paper>
       </Grid>
 
